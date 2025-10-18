@@ -1,0 +1,104 @@
+.timelineStory {
+  width: 100%;
+  height: 50vh;
+  border: 1px solid blue;
+  position: relative;
+  overflow: hidden;
+}
+.timelineStory .singleSlide {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.timelineStory .singleSlide #slideDescription {
+  width: 40%;
+  height: 100%;
+  padding-left: 30px;
+  color: #FFFFFF;
+  border: 1px solid white;
+}
+.timelineStory .singleSlide #slideDescription i {
+  cursor: pointer;
+  font-size: 68px !important;
+}
+.timelineStory .singleSlide #slideDescription i:hover {
+  font-size: 65px !important;
+  text-shadow: 3px 0px 2px black;
+}
+.timelineStory .singleSlide #slideDescription i:active {
+  font-size: 68px !important;
+  text-shadow: 0px 0px 0px black;
+}
+.timelineStory .singleSlide #slideDescription #prevSlide {
+  position: absolute;
+  top: 10px;
+}
+.timelineStory .singleSlide #slideDescription #nextSlide {
+  position: absolute;
+  bottom: 10px;
+}
+.timelineStory .singleSlide #slidePic {
+  width: 60%;
+  position: relative;
+  display: flex;
+}
+.timelineStory .singleSlide #slidePic p {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 25px;
+}
+.timelineStory .singleSlide #slidePic #picNote {
+  text-shadow: 1px 1px 2px #000, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000;
+  background-color: rgba(0, 0, 0, 0.5764705882);
+  padding: 0px 10px;
+  font-size: 20px !important;
+}
+.timelineStory .singleSlide #slidePic #picNote.darker {
+  opacity: 1 !important;
+}
+.timelineStory .singleSlide #slideImg {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  -o-object-position: center !important;
+     object-position: center !important;
+}
+.timelineStory .singleSlide #slideText {
+  width: 90%;
+  border: 1px solid white;
+}
+.timelineStory .singleSlide #timeline {
+  position: relative;
+}
+.timelineStory .singleSlide #timeline #lineWhite {
+  width: 1px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  left: calc(50% + 30px);
+}
+.timelineStory .singleSlide #timeline #lineWhite.bottomHalf {
+  height: 50%;
+  bottom: 0%;
+}
+.timelineStory .singleSlide #timeline #lineWhite.topHalf {
+  height: 50%;
+  top: 0%;
+}
+.timelineStory .singleSlide #timeline #circleWhite {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 20px);
+  transform: translate(-50%, -50%); /* Center it */
+  background-color: white;
+}/*# sourceMappingURL=timeline-story.css.map */

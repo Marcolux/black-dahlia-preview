@@ -1,5 +1,6 @@
 {
-  "name": "react_website",
+  "name": "black-dahlia",
+  "homepage": "https://marcolux.github.io/black-dahlia-preview/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,6 +25,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build && npm run spa-fallback",
+    "deploy": "gh-pages -d build -b live",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -44,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }

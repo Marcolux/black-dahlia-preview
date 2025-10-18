@@ -1,0 +1,17 @@
+.navBar {
+  background-color: var(--navbar-background);
+  min-height: var(--navbar-height);
+}
+.navBar .navLinks {
+  text-decoration: none;
+  color: var(--primary-font-color);
+  font-size: var(--navbar-fontsize);
+  font-family: var(--navbar-fontFamily);
+  font-weight: var(--navbar-fontWeight);
+}
+.navBar .navLinks:not(:last-child) {
+  margin-right: 20px;
+}
+.navBar .navLinks p {
+  margin: 0px;
+}/*# sourceMappingURL=navigation-bar.css.map */
