@@ -25,6 +25,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "spa-fallback": "node -e \"require('fs').copyFileSync('build/index.html','build/404.html')\"",
     "predeploy": "npm run build && npm run spa-fallback",
     "deploy": "gh-pages -d build -b live",
     "test": "react-scripts test",
