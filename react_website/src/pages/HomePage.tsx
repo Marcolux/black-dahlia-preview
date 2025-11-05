@@ -6,7 +6,7 @@ const HomePage = () => {
     return(
         <div className="page">
             <h1>HOME PAGE</h1>
-
+                BLACK DAHLIA PREVIEW SITE
             <h4>Time Line Story</h4>
             <TimeLineStory className="my-20"/>
         </div>

@@ -3,6 +3,13 @@
   "homepage": "https://marcolux.github.io/black-dahlia-preview/",
   "version": "0.1.0",
   "private": true,
+    "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "spa-fallback": "node -e \"require('fs').copyFileSync('build/index.html','build/404.html')\"",
+    "predeploy": "npm run build && npm run spa-fallback",
+    "deploy": "gh-pages -d build -b live"
+  },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
@@ -21,15 +28,6 @@
     "sass": "^1.79.4",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "spa-fallback": "node -e \"require('fs').copyFileSync('build/index.html','build/404.html')\"",
-    "predeploy": "npm run build && npm run spa-fallback",
-    "deploy": "gh-pages -d build -b live",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
