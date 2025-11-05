@@ -1,15 +1,21 @@
 import { Routes, Route } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
+//********** Components ************/ 
 import NavigationBar from './components/NavigationBar/NavigationBar';
 import NavigationBarSmallScreen from './components/NavigationBarSmallScreen/NavigationBarSmallScreen';
-import HomePage from './pages/HomePage';
-import Page2 from './pages/Page2';
-import Page1 from './pages/Page1';
-
 import Footer from './components/Footer/Footer';
 
+//********** Pages ************/ 
+import HomePage from './pages/HomePage/HomePage';
+import AboutPage from './pages/AboutPage/AboutPage';
+import ContactPage from './pages/ContactPage/ContactPage';
+import ServicesPage from './pages/ServicesPage/ServicesPage';
+import PortfolioPage from './pages/PortfolioPage/PortfolioPage';
+import MembershipPage from './pages/MembershipPage/MembershipPage';
+
+//********** Styles ************/ 
 import './style/App.scss';
-import { useEffect, useState } from 'react';
 
 function App() {
   const [smallScreenView, setSmallScreenView] = useState('Regular')
@@ -37,8 +43,11 @@ function App() {
       
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/Carousels" element={<Page1 />} />
-        <Route path="/page_2" element={<Page2 />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/membership" element={<MembershipPage />} />
       </Routes>
 
       <Footer/>
