@@ -7,12 +7,13 @@ import NavigationBarSmallScreen from './components/NavigationBarSmallScreen/Navi
 import Footer from './components/Footer/Footer';
 
 //********** Pages ************/ 
-import HomePage from './pages/HomePage/HomePage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import ContactPage from './pages/ContactPage/ContactPage';
-import ServicesPage from './pages/ServicesPage/ServicesPage';
-import PortfolioPage from './pages/PortfolioPage/PortfolioPage';
+import ExploreTiersPage from './pages/ExploreTiersPage/ExploreTiersPage';
+import HomePage from './pages/HomePage/HomePage';
 import MembershipPage from './pages/MembershipPage/MembershipPage';
+import PortfolioPage from './pages/PortfolioPage/PortfolioPage';
+import ServicesPage from './pages/ServicesPage/ServicesPage';
 
 //********** Styles ************/ 
 import './style/App.scss';
@@ -42,12 +43,13 @@ function App() {
       }
       
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/portfolio" element={<PortfolioPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/membership" element={<MembershipPage />} />
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/about" element={<AboutPage/>} />
+        <Route path="/contact" element={<ContactPage/>} />
+        <Route path="/portfolio" element={<PortfolioPage/>} />
+        <Route path="/services" element={<ServicesPage/>} />
+        <Route path="/membership" element={<MembershipPage/>} />
+        <Route path="/services/explore-tiers" element={<ExploreTiersPage/>} />
       </Routes>
 
       <Footer/>

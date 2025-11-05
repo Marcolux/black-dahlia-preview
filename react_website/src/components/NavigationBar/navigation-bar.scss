@@ -1,7 +1,13 @@
 
 .navBar {
+    display: flex ; 
+    align-items: center;
+    justify-content: center;
     background-color: var(--navbar-background);
     min-height: var(--navbar-height);
+    &.homeBar  {
+        background-color: var(--navbar-home-bg);
+    }
     .navLinks {
         text-decoration: none;
         &:not(:last-child) {

@@ -6,9 +6,15 @@
 .text-semibold {font-weight:600 !important;}
 .text-bold {font-weight:700 !important;}
 .text-italic {font-style: italic;}
-.text-white{color: #fff !important;}
+.text-white{color: #EAEAEA !important;}
 .hide {display: none !important;}
 .show {display: flex;}
+
+.primaryBtn {
+	background-color: var(--primary-btn-bg);
+	padding: 17px 40px;
+	border-radius: 63px;
+}
 
 /* SCROLLBAR SETTINGS*/
 ::-webkit-scrollbar {

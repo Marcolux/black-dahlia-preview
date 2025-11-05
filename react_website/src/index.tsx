@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <MainRouter basename="/black-dahlia-preview">
+    <MainRouter basename="/">
       <App />
     </MainRouter>
   </React.StrictMode>

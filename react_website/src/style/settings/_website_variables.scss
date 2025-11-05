@@ -1,26 +1,35 @@
-$primary-color: #3498db;
-$primary-font-color: yellow;
+$primary-color: #34151D;
+$secondary-color: #A49586;
+$ternary-color: #232325;
+$accent-color: #AE8560;
+$black-dahlia-white: #E1D8CE;
 :root {
     --primary-font-color: #000000;
-    --page-primary-backgroung: #d5daf6;
     --white-text: #ffffff;
 
-    /*==== GENERAL ====*/
+    //*==== GENERAL ====*/
     --padding-xs: 5px;
     --padding-sm: 10px;
     --padding-md: 20px;
     --padding-lg: 30px;
     --padding-xl: 40px;
-    --h-100: 100;
+    --h-100: 100dvh;
+
+    //*==== Btn ====*/
+    --primary-btn-bg: $accent-color;
+    --primary-btn-font-size: 16px;
 
 
-    /*==== NAVIGATION BAR ====*/
-    --navbar-height: 40px;
-    --navbar-background: #98c0da;
+    //*==== NAVIGATION BAR ====*/
+    --navbar-height: 62px;
+    --navbar-bg: #34151D;
+    --navbar-home-bg: $black-dahlia-white;
     --navbar-fontsize: 16px;
+    --navbar-fontsize-2: 20px;
     --navbar-fontFamily: 'Inter';
     --navbar-fontWeight: 600;
 
-    /*==== FOOTER ====*/
+    //*==== FOOTER ====*/
     --footer-height: 60px;
+    --footer-bg: $primary-color;
 }
