@@ -1,5 +1,82 @@
 #HomePage {
-    h1 {
-        color: rgb(0, 98, 0);
+    background-color: var( --secondary-color);
+    padding: 0px !important;
+    #home_hero{
+        padding-bottom: 10px;
+        margin-bottom: 70px;
+        height: calc(100dvh - 110px);
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        position: relative;
+        
+        img {
+            max-height: calc(100% - 140px);
+        }
+        #landingBtn {
+            position: absolute;
+            bottom: 50px;
+            right: calc(50% - 200px);
+        }
+    }
+    #offer {
+        align-items: center;
+        background: linear-gradient(
+            to bottom,
+            #000 0%,
+            #000 75%,
+            var(--secondary-color) 75%,
+            var(--secondary-color) 100%
+        );
+        color: var(--white-text);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: visible;
+        padding: 85px 0px;
+        h1 {
+            font-size: 64px;
+            text-transform: uppercase;
+            margin: 0px;
+        }
+        #offer-cards-wrapper {
+            gap: 85px;
+            justify-content: center;
+            margin: 70px 0px;
+            .offer-cards {
+                aspect-ratio: 1/1;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                width: 224px;
+                background-color: var(--black-dahlia-white);
+                border-radius: 40px;
+                color: #000;
+                p {
+                    font-size: 40px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    #transition-img {
+        height: 100dvh;
+        max-width: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    #why-black-dahlia {
+        height: 100dvh;
+        padding: 85px 0px;
+        h1 {
+            font-size: 64px;
+            text-transform: uppercase;
+            margin: 0px;
+            width: 100%;
+            text-align: center;
+        }
     }
 }

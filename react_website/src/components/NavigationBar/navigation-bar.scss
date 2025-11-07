@@ -1,24 +1,75 @@
 
 .navBar {
-    display: flex ; 
     align-items: center;
-    justify-content: center;
     background-color: var(--navbar-background);
+    display: flex ; 
+    justify-content: center;
     min-height: var(--navbar-height);
     &.homeBar  {
-        background-color: var(--navbar-home-bg);
+        flex-direction: column;
+        #upper_home_bar {
+            align-items: center;
+            background-color: var(--navbar-home-bg);
+            display: flex;
+            justify-content: space-between;
+            max-height: 110px;
+            padding: 10px 10%;
+            position: relative;
+            width: 100%;
+            #homepage_logo {
+                max-height: 100px;
+            }
+            #dahlia_logo_wrapper {
+                align-items: center;
+                background-color: var(--navbar-home-bg);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                height: fit-content;
+                left: calc(50% - 115px);
+                padding: 20px;
+                position: absolute;
+                top: 0;
+                #homepage_dahlia_logo {
+                    aspect-ratio: 1/1;
+                    max-height: 210px;
+                }
+            }
+        }
+        #homePageLinks {
+            align-self: flex-end;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 1em;
+            justify-content: center;
+            padding-top: 30px;
+            position: absolute;
+            top: 110px;
+            width: calc(50vw - 115px);
+            z-index: 2;
+            .navLinks { 
+                font-size: var(--navbar-fontsize-2);
+                color: var(--white-text);
+            }
+        }
+    }
+    &.notHome {
+        background-color: var(--navbar-bg);
+        padding: 15px 60px;
+        justify-content: space-between;
+        #homePageLinks { 
+            column-gap: 30px;
+        }
+        .navLinks {
+            font-size: var(--navbar-fontsize);
+            color: var(--white-text);
+        }
     }
     .navLinks {
         text-decoration: none;
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-        color: var(--primary-font-color);
         font-size: var(--navbar-fontsize);
-        font-family: var(--navbar-fontFamily);
-        font-weight: var(--navbar-fontWeight);
-        p {
-            margin: 0px;
-        }
+        color: var(--white-text);
+        text-transform: uppercase;
+        p {margin: 0px;}
     }
   }
