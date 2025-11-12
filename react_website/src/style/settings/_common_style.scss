@@ -17,7 +17,7 @@
 	font-family: var(--primary-font);
 	font-size: 16px;
 	max-height: fit-content;
-	padding: 17px 40px;
+	padding: 18px 56px;
 }
 .secondaryBtn {
 	background-color: var(--primary-color);
@@ -46,4 +46,10 @@
 ::-webkit-scrollbar-thumb {
 	background-color: #000000b1;
 	border-radius: 3px;
+}
+
+/* FOOTER */
+
+footer {
+	background-color: var(--primary-color);
 }

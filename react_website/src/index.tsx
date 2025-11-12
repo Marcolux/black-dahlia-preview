@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <MainRouter basename="/">
+    <MainRouter basename={`${process.env.PUBLIC_URL}/`}>
       <App />
     </MainRouter>
   </React.StrictMode>
