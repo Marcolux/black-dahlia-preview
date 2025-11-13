@@ -4,6 +4,9 @@ import "./homepage.scss"
 import { animated, config, useSpring } from "@react-spring/web"
 import { useInView } from "react-intersection-observer"
 import RollingTrail from "../../components/RollingTrail/RollingTrail"
+import SpinningElement from "../../components/SpinningElement/SpinningElement"
+import { ReactComponent as VectorHome } from './vector_home_page.svg'
+import MugHoodieIters from "../../components/MugHoodieInters/MugHoodieIters"
 
 const HomePage = () => {
     const [ ref, inView ] = useInView({
@@ -16,6 +19,7 @@ const HomePage = () => {
         to: { x: inView ? -9 : 0 }, // animate a numeric "offset" instead
         config: { tension: 120, friction: 18 }
     })
+    
 
     const rollingIcons: string[] = [
         'dahlia_icon_charcoal.svg',
@@ -26,6 +30,7 @@ const HomePage = () => {
 
     return(
         <div className="page" id="HomePage">
+
             <section id="home_hero" >
                 <img id="img-hero" src={`${process.env.PUBLIC_URL}/images/home-page/black-dahlia-landing_page_mockup.webp`}  alt="black dahlia landing hero" />
                 <button id="landingBtn" className="primaryBtn">BOOK NOW</button>
@@ -42,6 +47,7 @@ const HomePage = () => {
                     <img src={`${process.env.PUBLIC_URL}/images/home-page/chair-home.png`}  alt="black dahlia landing hero" />
                 </animated.div>
             </section>
+
             <section id="offer">
                 <h1>What We Offer</h1>
                 <div id="offer-cards-wrapper" className="flex flex-wrap">
@@ -57,9 +63,11 @@ const HomePage = () => {
                     <Link to={'/services'}>Explore Services <img src={`${process.env.PUBLIC_URL}/images/icons/Arrow-icon.png`}/></Link>
                 </button>
             </section>
+
             <section id="transition-img">
-                <img src={`${process.env.PUBLIC_URL}/images/home-page/black-dahlia-landing_page_mockup_2.webp`} alt="Black Dahlia on street wall" />
+                <img src={`${process.env.PUBLIC_URL}/images/home-page/street_mockup.webp`} alt="Black Dahlia on street wall" />
             </section>
+
             <section id="why-black-dahlia">
                 <h1>why black dahlia</h1>
                 <div id="textBoxWrapper">
@@ -79,13 +87,35 @@ const HomePage = () => {
                             Are you ready to bloom beyond the ordinary?  
                             &nbsp;&nbsp;To break the rules beautifully and make your mark with intention and style?
                         </p>
-
                     </div>
-                    <button className="primaryBtn"> BOOK NOW</button>
-                    <div id="buttonWrapper">
-                    </div>
-
+                    <button className="primaryBtn">BOOK NOW</button>
                 </div>
+            </section>
+
+            <section id="spinningItersection">
+                <SpinningElement 
+                    duration={20000}
+                    pauseOnHover={true}
+                >
+                    <img 
+                        src={`${process.env.PUBLIC_URL}/images/home-page/bloom_against_the_grain.png`}
+                    />
+                </SpinningElement>
+            </section>
+
+            <section id="mugHoodie" className="my-50">
+                    <MugHoodieIters></MugHoodieIters>
+                    <div className="flex col-12" id="middlePicWrapper" >
+                        <img 
+                            src={`${process.env.PUBLIC_URL}/images/home-page/bd_mugs.png`}
+                            // style={{position:'absolute', bottom: '0px', left:"0px"}}
+                        />
+                        <img 
+                            src={`${process.env.PUBLIC_URL}/images/home-page/black_dahlia_mens_hoodie.webp`}
+                            // style={{position:'absolute', bottom: '0px', right: '0px'}}
+                        />
+
+                    </div>
             </section>
         </div>
     )

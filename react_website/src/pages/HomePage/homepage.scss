@@ -106,4 +106,115 @@
             }
         }
     }
+    #spinningItersection {
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        padding: 100px 0px;
+        .RollingDahlia {
+            background-color: var(--black-dahlia-white);
+            border-radius: 50%;
+            padding: 65px;
+            .RollingDahlia__content {
+                img {
+                    width: 345px;
+                    height: 349px;
+                }
+            }
+        } 
+    }
+    #mugHoodie {
+        display: flex;
+        position: relative;
+        height: 930px;
+        padding-top: 50px;
+
+        #mugHoodieIters {
+            overflow: visible;
+            margin-top: 50px;
+            position: absolute;
+
+            #vecWrapper {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .vector {
+                width: 100vw;
+                height: 230px;
+                transform: translateY(0);
+                /* no transitions for height/transform here –
+                    we'll use animations when active */
+                    /* base positions (your old non-scroll-down state) */
+                &#vect2 {
+                    z-index: 0;
+                    transform: translateY(-35%);
+                }
+                &#vect3 {
+                    z-index: 2;
+                    transform: translateY(-70%);
+                }
+                &#vect4 {
+                    z-index: 0;
+                    transform: translateY(-105%);
+                }
+                * {
+                    stroke-width: 20px;
+                    stroke: rgb(0, 0, 0);
+                }
+            }
+
+
+            &.is-active {
+                /* you can also add a subtle vertical bob/scale on the whole group if you like */
+
+                #vect2 {
+                    animation: vect2Move 8s ease-in-out infinite;
+                }
+
+                #vect3 {
+                    animation: vect3Move 8s ease-in-out infinite;
+                }
+
+                #vect4 {
+                    animation: vect4Move 8s ease-in-out infinite;
+                }
+
+                /* all strokes pulse together */
+                .vector * {
+                    animation: strokePulse 8s ease-in-out infinite;
+                }
+            }
+        }
+
+        #middlePicWrapper {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            img {
+                height: 100%;
+                z-index: 4;
+            }
+        }
+    }
+    @keyframes vect2Move {
+        0%, 100% { transform: translateY(-36%); }
+        40% { transform: translateY(-47%); }
+    }
+
+    @keyframes vect3Move {
+        0%, 100% {  transform: translateY(-72%); }
+        40% {  transform: translateY(-94%); }
+    }
+
+    @keyframes vect4Move {
+        0%, 100% { transform: translateY(-110%); }
+        40% { transform: translateY(-141%); }
+    }
+
+    @keyframes strokePulse {
+        0%, 100% { stroke-width: 20px; }
+        40% { stroke-width: 40px; }
+    }
+
 }
