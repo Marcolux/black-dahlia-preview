@@ -11,13 +11,36 @@
 .show {display: flex;}
 
 .primaryBtn {
-	background-color: var(--primary-btn-bg);
-	border: 1px solid #000000;
+	background-color: var(--alternative-black);
+	border: 1px solid var(--black-dahlia-white);
 	border-radius: 63px;
+	color: var(--black-dahlia-white) ;
 	font-family: var(--primary-font);
 	font-size: 16px;
+	letter-spacing: 0.05em;
 	max-height: fit-content;
 	padding: 18px 56px;
+	a {
+		color: var(--black-dahlia-white);
+		text-decoration: none;
+		letter-spacing: 0.05em;
+	}
+}
+.primaryBtn-vr1 {
+	background-color: var(--black-dahlia-white);
+	border: 1px solid var(--alternative-black);
+	border-radius: 63px;
+	color:  var(--alternative-black);
+	font-family: var(--primary-font);
+	font-size: 16px;
+	letter-spacing: 0.05em;
+	max-height: fit-content;
+	padding: 18px 56px;
+	a {
+		color: var(--alternative-black);
+		text-decoration: none;
+		letter-spacing: 0.05em;
+	}
 }
 .secondaryBtn {
 	background-color: var(--primary-color);

@@ -1,53 +1,41 @@
+import RollingTrail from "../../components/home-page-components/RollingTrail/RollingTrail"
+import SpinningElement from "../../components/home-page-components/SpinningElement/SpinningElement"
+import TranslateTrail from "../../components/home-page-components/TranslateTrail/TranslateTrail"
+import MugHoodieIters from "../../components/home-page-components/MugHoodieInters/MugHoodieIters"
 import { Link } from "react-router-dom"
 import "../page.scss" 
 import "./homepage.scss"
-import { animated, config, useSpring } from "@react-spring/web"
-import { useInView } from "react-intersection-observer"
-import RollingTrail from "../../components/RollingTrail/RollingTrail"
-import SpinningElement from "../../components/SpinningElement/SpinningElement"
-import { ReactComponent as VectorHome } from './vector_home_page.svg'
-import MugHoodieIters from "../../components/MugHoodieInters/MugHoodieIters"
 
 const HomePage = () => {
-    const [ ref, inView ] = useInView({
-        threshold: 0.6,  // portion of the element visible to trigger
-        triggerOnce: false
-    })
-
-    const styles = useSpring({
-        from: { x: 0 },
-        to: { x: inView ? -9 : 0 }, // animate a numeric "offset" instead
-        config: { tension: 120, friction: 18 }
-    })
     
-
     const rollingIcons: string[] = [
         'dahlia_icon_charcoal.svg',
         'dahlia_icon_silver.svg',
         'dahlia_icon_biege.svg',
         'dahlia_icon_burgundy.svg',
     ]
+    const translateIcons: string[] = [
+        'bd-landing-img-1.png',
+        'bd-landing-img-2.png',
+        'bd-landing-img-3.png',
+        'bd-landing-img-4.png',
+        'bd-landing-img-5.png'
+    ]
 
     return(
         <div className="page" id="HomePage">
-
-            <section id="home_hero" >
-                <img id="img-hero" src={`${process.env.PUBLIC_URL}/images/home-page/black-dahlia-landing_page_mockup.webp`}  alt="black dahlia landing hero" />
-                <button id="landingBtn" className="primaryBtn">BOOK NOW</button>
-                <animated.div
-                    ref={ref}
-                    style={{
-                        position: 'absolute',
-                        bottom: '0px',
-                        right: '0px',
-                        zIndex: 2,
-                        transform: styles.x.to(v => `translateX(calc(${v}vw))`)
-                    }}
-                >
-                    <img src={`${process.env.PUBLIC_URL}/images/home-page/chair-home.png`}  alt="black dahlia landing hero" />
-                </animated.div>
+            <section className="" id="land-intro">
+                <h1 className="text-center fontSize48 my-0">Design with edge.</h1>
+                <h1 className="text-center fontSize48 my-0">Style with soul.</h1>
+                <p className="text-center fontSize20  my-30">Boutique branding & creative direction for the bold, the soulful, and the ones who dare to stand apart.</p>
+                <div className="col-12 flex flex-alignItems-center flex-justifyContent-center mt-30">
+                    <button id="explorePortfolio" className="primaryBtn mr-30">Explore the Portfolio</button>
+                    <button id="createJourney" className="primaryBtn-vr1 ml-30">Start your creative journey</button>
+                </div>
             </section>
-
+            <section id="land-animation" className="py-50 my-30">
+                <TranslateTrail icons={translateIcons}></TranslateTrail>
+            </section>
             <section id="offer">
                 <h1>What We Offer</h1>
                 <div id="offer-cards-wrapper" className="flex flex-wrap">
@@ -59,8 +47,8 @@ const HomePage = () => {
                     <div className="offer-cards"><p>CUSTOM PLANNER</p></div>
                     <div className="offer-cards"><p>EVENT BRANDING</p></div>
                 </div>
-                <button className="secondaryBtn">
-                    <Link to={'/services'}>Explore Services <img src={`${process.env.PUBLIC_URL}/images/icons/Arrow-icon.png`}/></Link>
+                <button className="primaryBtn">
+                    <Link to={'/services'}>Explore Services <img src={`${process.env.PUBLIC_URL}/images/icons/Arrow-icon.png`} className="ml-20"/></Link>
                 </button>
             </section>
 
@@ -98,24 +86,55 @@ const HomePage = () => {
                     pauseOnHover={true}
                 >
                     <img 
-                        src={`${process.env.PUBLIC_URL}/images/home-page/bloom_against_the_grain.png`}
+                        src={`${process.env.PUBLIC_URL}/images/home-page/bloom_against_the_grain_text.png`}
                     />
                 </SpinningElement>
+                    <img 
+                        src={`${process.env.PUBLIC_URL}/images/home-page/bloom_against_the_grain_vec.png`}
+                        id="staticImg"
+                    />
+
             </section>
 
-            <section id="mugHoodie" className="my-50">
+            <section id="mugHoodie" className="">
                     <MugHoodieIters></MugHoodieIters>
                     <div className="flex col-12" id="middlePicWrapper" >
                         <img 
+                            id="picLeft"
                             src={`${process.env.PUBLIC_URL}/images/home-page/bd_mugs.png`}
-                            // style={{position:'absolute', bottom: '0px', left:"0px"}}
                         />
                         <img 
+                            id="picRight"
                             src={`${process.env.PUBLIC_URL}/images/home-page/black_dahlia_mens_hoodie.webp`}
-                            // style={{position:'absolute', bottom: '0px', right: '0px'}}
                         />
 
                     </div>
+            </section>
+
+            <section className="flex flex-column flex-justifyContent-center flex-alignItems-center" id="plannersInt">
+                <p className="textPlanners" id="top">We LOVE to create Planners!</p>
+                <img src={`${process.env.PUBLIC_URL}/images/home-page/blac_dahlia_planner_mockup.webp`} alt="" />
+                <p className="textPlanners" id="bottom">Reach out to Create your own personalized Planner!</p>
+            </section>
+
+            <section className="flex flex-column" id="organizedInt">
+                <div id="animatedOrg">
+                    <img src={`${process.env.PUBLIC_URL}/images/home-page/black_dahlia_box_set_mockup.webp`} alt="" />
+                    <h1 className="textOrg" id="bottom">Organized Chaos!</h1>
+                </div>
+                <div id="bookNowOrg">
+                    <p>Schedule your complimentary Discover Call TODAY!</p>
+                    <button className="primaryBtn mt-50">BOOK NOW</button>
+                </div>
+                <div className="linearTextAnimat">
+                    <div className="linearTextAnimat__inner">
+                        <span>~ Dark Elegance meets bold design</span>
+                        <span>~ Dark Elegance meets bold design</span>
+                        <span>~ Dark Elegance meets bold design</span>
+                        <span>~ Dark Elegance meets bold design</span>
+                        <span>~ Dark Elegance meets bold design</span>
+                    </div>
+                </div>
             </section>
         </div>
     )

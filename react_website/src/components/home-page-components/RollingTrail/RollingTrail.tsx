@@ -1,7 +1,6 @@
-import { useTrail, animated, config } from '@react-spring/web';
+import { useTrail, animated } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
 import './rolling-trail.scss'
-import { transform } from 'typescript';
 
 type RollingTrailProps = {
   icons: string[]
@@ -15,7 +14,7 @@ const RollingTrail = ({ icons }: RollingTrailProps) => {
         to: { transform: inView ? `translateX(0%) rotate(0deg)` : `translateX(300%) rotate(360deg)`},
         config: {
             tension: 120,
-            duration: 1200,
+            duration: 1000,
             friction: 20
         },
     })

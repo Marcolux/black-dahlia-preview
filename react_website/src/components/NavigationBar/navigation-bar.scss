@@ -41,14 +41,14 @@
             display: flex;
             flex-wrap: wrap;
             column-gap: 1em;
-            justify-content: center;
+            justify-content: space-evenly;
             padding-top: 30px;
             position: absolute;
             top: 110px;
             width: calc(50vw - 115px);
             z-index: 2;
             .navLinks { 
-                font-size: var(--navbar-fontsize-2);
+                font-size: var(--navbar-fontsize);
                 color: var(--white-text);
             }
         }

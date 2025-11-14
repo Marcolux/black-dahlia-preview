@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import './navigation-bar.scss'
-import SpinningElement from "../SpinningElement/SpinningElement";
+import SpinningElement from "../home-page-components/SpinningElement/SpinningElement";
 
 const NavigationBar = () => {
     const location = useLocation()
@@ -16,7 +16,7 @@ const NavigationBar = () => {
                     <div id="dahlia_logo_wrapper">
                         <img id="homepage_dahlia_logo" src={`${process.env.PUBLIC_URL}/images/dahlia_icon_logo.svg`} alt="Black Dahlia Creative logo flower"/>
                     </div>
-                    <button className="primaryBtn"> GET IN TOUCH</button>
+                    {/* <button className="primaryBtn"> GET IN TOUCH</button> */}
                 </div>
                 <div id="homePageLinks" className="flex">
                     {/* <NavLink className="navLinks" to={'/'}><p>Home Page</p></NavLink> */}
