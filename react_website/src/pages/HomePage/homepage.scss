@@ -147,45 +147,36 @@
             }
         } 
         #staticImg {
-            position: absolute;
             bottom: calc(50% - 138px);
+            position: absolute;
         }
     }
     #mugHoodie {
         background-color: var(--secondary-color);
         display: flex;
-        position: relative;
         height: 930px;
         padding-top: 150px;
         padding-bottom: 150px;
+        position: relative;
         overflow: hidden;
-
         #mugHoodieIters {
-            overflow: visible;
             margin-top: 50px;
+            overflow: visible;
             position: absolute;
-
             #vecWrapper {
                 display: flex;
                 flex-direction: column;
             }
-
             .vector {
-                width: 100vw;
                 height: 230px;
                 transform: translateY(0);
-                &#vect2 {
-                    z-index: 0;
-                    transform: translateY(-50%);
-                }
+                width: 100vw;
+                &#vect2 { transform: translateY(-50%);}
                 &#vect3 {
-                    z-index: 2;
                     transform: translateY(-100%);
+                    z-index: 2;
                 }
-                &#vect4 {
-                    z-index: 0;
-                    transform: translateY(-150%);
-                }
+                &#vect4 { transform: translateY(-150%); }
                 * {
                     stroke-width: 0px;
                     stroke: var(--alternative-black);
@@ -203,51 +194,43 @@
         }
 
         #middlePicWrapper {
+            align-items: center;
+            column-gap: 150px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            // height: 100%;
-            column-gap: 150px;
             margin-top: 5dvh;
             img {
                 height: 100%;
                 z-index: 4;
-                &#picRight {
-                    height: 90dvh;
-                }
-                &#picLeft {
-                    height: 600px;
-                }
+                &#picRight { height: 90dvh;}
+                &#picLeft { height: 80dvh;}
             }
         }
     }
+
     @keyframes vect2Move {
         0%, 100% { transform: translateY(-50%); }
         40% { transform: translateY(-57%); }
     }
-
     @keyframes vect3Move {
         0%, 100% {  transform: translateY(-100%); }
         40% {  transform: translateY(-114%); }
     }
-
     @keyframes vect4Move {
         0%, 100% { transform: translateY(-150%); }
         40% { transform: translateY(-171%); }
     }
-
     @keyframes strokePulse {
         0%, 100% { stroke-width: 0px; }
         40% { stroke-width: 20px; }
     }
+
     #plannersInt {
         background-color: var(--primary-color);
         position: relative;
         max-width: 100%;
         overflow-x: hidden;
-        img {
-            min-width: 0px;
-        }
+        img {  min-width: 0px; }
         .textPlanners {
            font-size: 40px; 
            letter-spacing: 0.05em;
@@ -256,9 +239,7 @@
                 top: 100px;
                 left: 180px;
             }
-            &#bottom {
-                bottom: 20px;
-            }
+            &#bottom { bottom: 20px; }
         }
     }
     #organizedInt {
@@ -269,22 +250,35 @@
         #animatedOrg {
             position: relative;
             img {
-                min-width: 0px;
                 max-width: 1000px;
+                min-width: 0px;
             }
-            .textOrg {
+            #rollingDahliaTextWrap{
                 bottom: 0px;
-                color: var(--alternative-black);
-                font-family: Georgia, 'Times New Roman', Times, serif;
-                font-style: italic;
-                font-weight: 400;
-                font-size: 64px;
-                letter-spacing: 0.03em;
-                max-width: 450px;
-                margin: 0px;
+                left: 840px;
                 position: absolute;
-                text-align: center;
-                left: calc(1000px - 170px);
+                .textOrg {
+                    color: var(--alternative-black);
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-style: italic;
+                    font-weight: 400;
+                    font-size: 64px;
+                    letter-spacing: 0.03em;
+                    max-width: 317px;
+                    margin: 0px;
+                    text-align: center;
+                    z-index: 3;
+                }
+                #orgRollDahlia{
+                    bottom: -150px;
+                    left: -80px;
+                    position: absolute;
+                    transform: translateX(500px) translateY(300px) rotate(0deg);
+                    transition: all 2s ease-in-out;
+                    &.is-active {
+                        transform: translateX(0px) translateY(0px) rotate(360deg);
+                    }
+                }
             }
         }
         #bookNowOrg {
@@ -301,22 +295,20 @@
                 letter-spacing: 0.03em;
                 margin: 0px;
             }
-            button {
-                width: 390px;
-            }
+            button {width: 390px; }
         }
         .linearTextAnimat {
             overflow: hidden;
             white-space: nowrap;
             width: 100%;
             .linearTextAnimat__inner {
+                animation: scroll 15s linear infinite;
                 color: var(--alternative-black);
                 font-size: 40px;
                 font-weight: 200;
                 font-style: italic;
                 display: inline-block;
                 white-space: nowrap;
-                animation: scroll 15s linear infinite;
                 span {
                     display: inline-block;
                     padding-right: 10px;

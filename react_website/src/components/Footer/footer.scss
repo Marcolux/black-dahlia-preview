@@ -2,4 +2,9 @@
     background-color: var(--primary-color);
     color: var(--white-text);
     box-sizing: border-box;
+    position: relative;
+    #footerLogo{
+        position: absolute;
+        left: calc(50% - 100px);
+    }
 }

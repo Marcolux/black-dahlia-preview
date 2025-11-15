@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom"
+import { useInView } from "react-intersection-observer"
 import RollingTrail from "../../components/home-page-components/RollingTrail/RollingTrail"
 import SpinningElement from "../../components/home-page-components/SpinningElement/SpinningElement"
 import TranslateTrail from "../../components/home-page-components/TranslateTrail/TranslateTrail"
 import MugHoodieIters from "../../components/home-page-components/MugHoodieInters/MugHoodieIters"
-import { Link } from "react-router-dom"
 import "../page.scss" 
 import "./homepage.scss"
 
@@ -21,6 +22,11 @@ const HomePage = () => {
         'bd-landing-img-4.png',
         'bd-landing-img-5.png'
     ]
+
+    const { ref, inView } = useInView({
+        threshold: 0.1,
+        triggerOnce: false, // keep toggling when leaving/entering view
+    })
 
     return(
         <div className="page" id="HomePage">
@@ -120,7 +126,10 @@ const HomePage = () => {
             <section className="flex flex-column" id="organizedInt">
                 <div id="animatedOrg">
                     <img src={`${process.env.PUBLIC_URL}/images/home-page/black_dahlia_box_set_mockup.webp`} alt="" />
-                    <h1 className="textOrg" id="bottom">Organized Chaos!</h1>
+                    <div className="flex" id="rollingDahliaTextWrap">
+                        <h1 className="textOrg" id="bottom">Organized Chaos!</h1>
+                        <img ref={ref} className={inView ? 'is-active' : ''} id="orgRollDahlia" src={`${process.env.PUBLIC_URL}/images/home-page/dahlia_icon_lightgray.png`} alt="" />
+                    </div>
                 </div>
                 <div id="bookNowOrg">
                     <p>Schedule your complimentary Discover Call TODAY!</p>
