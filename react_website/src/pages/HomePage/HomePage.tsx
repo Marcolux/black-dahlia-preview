@@ -35,8 +35,18 @@ const HomePage = () => {
                 <h1 className="text-center fontSize48 my-0">Style with soul.</h1>
                 <p className="text-center fontSize20  my-30">Boutique branding & creative direction for the bold, the soulful, and the ones who dare to stand apart.</p>
                 <div className="col-12 flex flex-alignItems-center flex-justifyContent-center mt-30">
-                    <button id="explorePortfolio" className="primaryBtn mr-30">Explore the Portfolio</button>
-                    <button id="createJourney" className="primaryBtn-vr1 ml-30">Start your creative journey</button>
+                    <Link 
+                        id="explorePortfolio" 
+                        to={'/portfolio'} 
+                        className="primaryBtn mr-30"
+                    >Explore the Portfolio
+                    </Link>
+                    
+                    <Link to={'/contact'} 
+                        id="createJourney" 
+                        className="primaryBtn-vr1 ml-30"
+                    >Start your creative journey
+                    </Link>
                 </div>
             </section>
             <section id="land-animation" className="py-50 my-30">
@@ -53,9 +63,16 @@ const HomePage = () => {
                     <div className="offer-cards"><p>CUSTOM PLANNER</p></div>
                     <div className="offer-cards"><p>EVENT BRANDING</p></div>
                 </div>
-                <button className="primaryBtn">
-                    <Link to={'/services'}>Explore Services <img src={`${process.env.PUBLIC_URL}/images/icons/Arrow-icon.png`} className="ml-20"/></Link>
-                </button>
+                <Link 
+                    to={'/services'} 
+                    className="primaryBtn" 
+                >Explore Services
+                    <img 
+                        src={`${process.env.PUBLIC_URL}/images/icons/Arrow-icon.png`} 
+                        className="ml-20"
+                    />  
+                </Link>
+                
             </section>
 
             <section id="transition-img">
@@ -82,7 +99,11 @@ const HomePage = () => {
                             &nbsp;&nbsp;To break the rules beautifully and make your mark with intention and style?
                         </p>
                     </div>
-                    <button className="primaryBtn">BOOK NOW</button>
+                    <Link 
+                        to={'/contact'} 
+                        className="primaryBtn"
+                    >BOOK NOW
+                    </Link>
                 </div>
             </section>
 

@@ -1,5 +1,180 @@
 #AboutPage {
-    h1 {
-        color: blueviolet;
+    padding: 0px !important;
+    #introAbout {
+        height: calc(100dvh - 65px);
+        background: 
+            linear-gradient(
+                to bottom,
+                var(--black-dahlia-white) 0%,
+                var(--black-dahlia-white) calc(15% + 40px),
+                var(--primary-color) calc(15% + 40px),
+                var(--primary-color) 100%
+            );
+        #leftIntro {
+    
+            h1 {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 48px;
+                font-style: italic;
+                font-weight: 400;
+                margin: 0px;
+                text-align: center;
+            }
+            #heyImTrish {
+                align-items: end;
+                column-gap: 60px;
+                p {
+                    color: var(--black-dahlia-white);
+                    font-size: 24px;
+                    margin: 0px;
+                    letter-spacing: 0.2em;
+                    line-height: 35px;
+                }
+                img#aboutLndArrow {
+                    height: 38px;
+                    margin-bottom: -20px;
+                    width: 46px;
+                }
+            }
+            #intro-text {
+                background-color: var(--black-dahlia-white) ;
+                color: var(--alternative-black);
+                padding: 65px 85px 65px 55px;
+                border-top-right-radius: 250px;
+                border-bottom-right-radius: 250px;
+                line-height: 44px;
+                font-size: 20px;
+                width: calc(100% - 45px);
+            }
+        }
+        #rightIntro {
+            width: fit-content;
+            #pic {
+                background-color: transparent;
+                border: 6px solid var(--secondary-color);
+                width: fit-content;
+                border-top-left-radius: 160px;
+                border-top-right-radius: 160px;
+                img {
+                    border-top-left-radius: 160px;
+                    border-top-right-radius: 160px;
+                }
+            }
+            #spinningIntroAbt {
+                background-color: var(--black-dahlia-white);
+                justify-content: center;
+                padding: 10px 40px;
+                width: 380px;
+                img {
+                    animation: spinningR 12s linear infinite;
+                    &#spinner-1{
+                        animation-direction: reverse;
+                        animation-delay: 0s; 
+                        animation-duration: 20s;
+                    }
+                    &#spinner-2{
+                        animation-delay: 1s;
+                        animation-duration: 16s;
+                    }
+                    &#spinner-3{
+                        animation-direction: reverse;
+                        animation-delay: 2s;
+                    }
+                    &#spinner-4{
+                        animation-delay: 3s;
+                        animation-duration: 18s;
+                    }
+                }
+                @keyframes spinningR {
+                    0% { transform: rotate(0deg); }
+                    // 30% { transform: rotate(250deg); }
+                    100% { transform: rotate(360deg); }
+                }
+                @keyframes spinningL {
+                    0% { transform: rotate(0deg); }
+                    // 30% { transform: rotate(250deg); }
+                    100% { transform: rotate(-360deg); }
+                }
+            }
+        }
+    }
+    #favorite_things {
+        background-color: var(--alternative-black);
+        height: 100dvh;
+        padding: 85px 0px;
+        justify-content: space-between;
+        h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 68px;
+            font-style: italic;
+            font-weight: 400;
+            margin: 0px;
+            text-align: center;
+            color: var(--black-dahlia-white);
+        }
+        #cardWrapper {
+            column-gap: 30px;
+            .singleCard {
+                align-items: center;
+                background-color: var(--black-dahlia-white);
+                border-radius: 80px;
+                box-shadow: -8px 10px 10px rgba(0, 0, 0, 0.393),      /* soft outer shadow */
+                            -10px 13px 0px rgba(255, 255, 255, 0.934); /* colored glow */
+                display: flex;
+                justify-content: center;
+                padding: 40px;
+                ul {
+                    gap: 18px;
+                    li{
+                        list-style: none;
+                        display: flex;
+                        align-items: center;
+                        column-gap: 10px;
+                        font-size: 18px;
+                        line-height: 40px;
+                        letter-spacing: 0.04em;
+                    }
+                }
+            }
+            #Blink_vector {
+                height: 60px;
+                width: 80px;
+                &.is-active {
+                    * {
+                        // stroke: var(--primary-color);
+                        stroke: rgb(255, 255, 255);
+                        stroke-width: 2px;
+                        fill: var(--primary-color);
+                        // box-shadow: 16px 16px 16px yellow;
+                        animation: blinking 5s infinite linear;
+                        // animation-name: bounce;
+                        box-shadow: 10px 10px 10px 10px red;
+                    }
+
+                }
+                @keyframes blinking {
+                    0% { 
+                        stroke: #ffffff;
+                        stroke-width: 0px;
+                        // filter: url(#whiteGlow);
+                    }
+                    20% { 
+                        stroke: #ffff00b7;
+                        stroke-width: 2px;
+                        filter: url(#yellowGlow);
+                        height: 110%;
+                    }
+                    30% { 
+                        stroke: #ffffff;
+                        stroke-width: 2px;
+                        filter: url(#whiteGlow);
+                    }
+                    100% { 
+                        stroke: #ffff00b7;
+                        stroke-width: 1px;
+                    }
+                }
+            }
+        }
     }
 }

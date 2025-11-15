@@ -24,7 +24,7 @@
             max-width: 930px;
             text-align: center;
         }
-        button {
+        a {
             width: 323px;
             &#createJourney {
                 padding-left: 54px;
@@ -121,7 +121,7 @@
                 p { font-size: 24px; }
             }
             #text { font-size: 24px; }
-            button {
+            a {
                 bottom: 60px;
                 position: absolute;
                 right: 15%;
@@ -295,7 +295,7 @@
                 letter-spacing: 0.03em;
                 margin: 0px;
             }
-            button {width: 390px; }
+            a { width: 390px; }
         }
         .linearTextAnimat {
             overflow: hidden;

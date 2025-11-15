@@ -20,11 +20,9 @@
 	letter-spacing: 0.05em;
 	max-height: fit-content;
 	padding: 18px 56px;
-	a {
-		color: var(--black-dahlia-white);
-		text-decoration: none;
-		letter-spacing: 0.05em;
-	}
+	text-align: center;
+	text-decoration: none;
+	width: fit-content;
 }
 .primaryBtn-vr1 {
 	background-color: var(--black-dahlia-white);
@@ -36,11 +34,9 @@
 	letter-spacing: 0.05em;
 	max-height: fit-content;
 	padding: 18px 56px;
-	a {
-		color: var(--alternative-black);
-		text-decoration: none;
-		letter-spacing: 0.05em;
-	}
+	text-align: center;
+	text-decoration: none;
+	width: fit-content;
 }
 .secondaryBtn {
 	background-color: var(--primary-color);
@@ -51,11 +47,9 @@
 	font-size: 24px;
 	max-height: fit-content;
 	padding: 20px 100px;
-	a {
-		color: #fff !important;
-		font-size: 24px;
-		text-decoration: none;
-	}
+	text-align: center;
+	text-decoration: none;
+	width: fit-content;
 }
 
 /* SCROLLBAR SETTINGS*/
