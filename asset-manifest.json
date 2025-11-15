@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/black-dahlia-preview/static/css/main.05ee43ad.css",
-    "main.js": "/black-dahlia-preview/static/js/main.d723b34b.js",
+    "main.css": "/black-dahlia-preview/static/css/main.d696d749.css",
+    "main.js": "/black-dahlia-preview/static/js/main.e78371b6.js",
     "static/js/453.a85ed1fb.chunk.js": "/black-dahlia-preview/static/js/453.a85ed1fb.chunk.js",
     "static/media/Inter-Regular.ttf": "/black-dahlia-preview/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
     "static/media/PlayfairDisplay-VariableFont_wght.ttf": "/black-dahlia-preview/static/media/PlayfairDisplay-VariableFont_wght.bf46a6bcddc9999a295e.ttf",
@@ -14,14 +14,16 @@
     "static/media/Bison-Bold.ttf": "/black-dahlia-preview/static/media/Bison-Bold.0ec7f8e68fac9f1c4eef.ttf",
     "static/media/Ledger-Regular.ttf": "/black-dahlia-preview/static/media/Ledger-Regular.af758062fdcbe3027bfd.ttf",
     "static/media/BebasNeue-Regular.ttf": "/black-dahlia-preview/static/media/BebasNeue-Regular.12e3683f9192436a7be8.ttf",
+    "static/media/blinkingVector.svg": "/black-dahlia-preview/static/media/blinkingVector.9daa95ed45ea3b87e3a0224af957852f.svg",
+    "static/media/Vector.svg": "/black-dahlia-preview/static/media/Vector.fb6e4bb86e0660cf9bcaddfe23ca9353.svg",
     "index.html": "/black-dahlia-preview/index.html",
     "static/media/vector_home_page.svg": "/black-dahlia-preview/static/media/vector_home_page.a714093eb2ccafe398b8d277425f1358.svg",
-    "main.05ee43ad.css.map": "/black-dahlia-preview/static/css/main.05ee43ad.css.map",
-    "main.d723b34b.js.map": "/black-dahlia-preview/static/js/main.d723b34b.js.map",
+    "main.d696d749.css.map": "/black-dahlia-preview/static/css/main.d696d749.css.map",
+    "main.e78371b6.js.map": "/black-dahlia-preview/static/js/main.e78371b6.js.map",
     "453.a85ed1fb.chunk.js.map": "/black-dahlia-preview/static/js/453.a85ed1fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.05ee43ad.css",
-    "static/js/main.d723b34b.js"
+    "static/css/main.d696d749.css",
+    "static/js/main.e78371b6.js"
   ]
 }
