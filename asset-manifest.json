@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/black-dahlia-preview/static/css/main.d696d749.css",
-    "main.js": "/black-dahlia-preview/static/js/main.e78371b6.js",
+    "main.css": "/black-dahlia-preview/static/css/main.865ea2ab.css",
+    "main.js": "/black-dahlia-preview/static/js/main.660e197b.js",
     "static/js/453.a85ed1fb.chunk.js": "/black-dahlia-preview/static/js/453.a85ed1fb.chunk.js",
+    "static/media/aboutPageBg_middle.png": "/black-dahlia-preview/static/media/aboutPageBg_middle.481cdce80d73fb4787a2.png",
     "static/media/Inter-Regular.ttf": "/black-dahlia-preview/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
     "static/media/PlayfairDisplay-VariableFont_wght.ttf": "/black-dahlia-preview/static/media/PlayfairDisplay-VariableFont_wght.bf46a6bcddc9999a295e.ttf",
     "static/media/Nunito-VariableFont_wght.ttf": "/black-dahlia-preview/static/media/Nunito-VariableFont_wght.f55558447983dc135e34.ttf",
@@ -18,12 +19,12 @@
     "static/media/Vector.svg": "/black-dahlia-preview/static/media/Vector.fb6e4bb86e0660cf9bcaddfe23ca9353.svg",
     "index.html": "/black-dahlia-preview/index.html",
     "static/media/vector_home_page.svg": "/black-dahlia-preview/static/media/vector_home_page.a714093eb2ccafe398b8d277425f1358.svg",
-    "main.d696d749.css.map": "/black-dahlia-preview/static/css/main.d696d749.css.map",
-    "main.e78371b6.js.map": "/black-dahlia-preview/static/js/main.e78371b6.js.map",
+    "main.865ea2ab.css.map": "/black-dahlia-preview/static/css/main.865ea2ab.css.map",
+    "main.660e197b.js.map": "/black-dahlia-preview/static/js/main.660e197b.js.map",
     "453.a85ed1fb.chunk.js.map": "/black-dahlia-preview/static/js/453.a85ed1fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d696d749.css",
-    "static/js/main.e78371b6.js"
+    "static/css/main.865ea2ab.css",
+    "static/js/main.660e197b.js"
   ]
 }
