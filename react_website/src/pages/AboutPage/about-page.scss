@@ -177,4 +177,122 @@
             }
         }
     }
+    #journey_sec {
+        display: flex;
+        flex-direction: column;
+        padding: 100px;
+        position: relative;
+        #journeyTitle {
+            margin-top: 0px;
+            margin-bottom: 75px;
+        }
+        &::before {
+            background-image: url('../../../public/images/about-page/aboutPageBg_middle.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            content: '';
+            inset: 0;
+            opacity: 0.1;
+            position: absolute;
+            z-index: 0;
+        }
+        #journey_wrapper {
+            min-height: 100%;
+            #article_wrapper {
+                // padding-left: 90px;
+                .journey_articles {
+                    .journey_titles {
+                        padding:  8px 56px;
+                        border-radius: 20px;
+                        border: 1px solid var(--alternative-black);
+                        background-color: var(--black-dahlia-white);
+                        font-size: 24px;
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        font-weight: 300;
+                        line-height: 40px;
+                        letter-spacing: 0.04em;
+                        width: fit-content;
+                    }
+                    .journey_texts {
+                        font-family: 'Nunito';
+                        font-size: 15px;
+                        font-weight: 300;
+                        line-height: 48px;
+                        letter-spacing: 0.1em;
+                        padding-left: 50px;
+                    }
+                }
+            }
+            #timeline_wrapper{
+                display: flex;
+                flex-direction: column;
+                flex: auto;
+                height: 100%;
+                position: relative;
+                .moon_phase {
+                    align-items: top;
+                    display: flex;
+                    height: 25%;
+                    justify-content: center;
+                    position: sticky;
+                    top: 0px;
+                    img {
+                        height: 50px;
+                        transform: translateY(100px);
+                    }
+                }
+            }
+        }
+        #journeyBottomSec {
+            p {
+                background-color: #D9D9D9;
+                font-size: 24px;
+                letter-spacing: 0.1em;
+                margin-bottom: 0px;
+                padding: 25px;
+                width: fit-content;
+            }
+            .primaryBtn {
+                align-self: end;
+                width: 320px;
+            }
+        }
+    }
+    #whatWaitFor {
+        background-color: var(--alternative-black);
+        color: var(--black-dahlia-white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #initialIntro {
+            margin: 160px 0px;
+            row-gap: 50px;
+            h4 {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 40px;
+                font-weight: 300;
+                letter-spacing: 0.04em;
+                margin: 0px;
+            }
+        }
+        #textBottom {
+            background-color: #D9D9D9;
+            border-radius: 30px;
+            color: var(--alternative-black);
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            margin: 120px 0px;
+            padding: 30px 80px;
+        }
+        #spiningDahliaAboutPg {
+            animation: spin360 15s linear infinite;
+            margin-bottom: 90px;
+        }
+        @keyframes spin360 {
+            0% { transform: rotate(0deg); }
+            40% { transform: rotate(180deg); }
+            100% {transform:  rotate(360deg);}
+        }
+    }
 }

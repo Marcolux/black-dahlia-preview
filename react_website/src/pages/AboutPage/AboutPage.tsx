@@ -4,6 +4,8 @@ import { ReactComponent as BlinkingVectorHome } from './blinkingVector.svg'
 import "../page.scss"
 import "./about-page.scss"
 import { useInView } from "react-intersection-observer"
+import { useEffect, useRef, useState } from "react"
+import MoonPhase from "../../components/about-page-components/MoonPhases"
 
 const AboutPage = () => {
     const { ref, inView } = useInView({
@@ -50,9 +52,11 @@ const AboutPage = () => {
             </section>
             <section id="favorite_things" className="flex flex-column flex-alignItems-center">
                 <h1 className="flex flex-justifyContent-center col-12 text-center">A Few of my Favorite things...</h1>
-                <div className="flex flex-justifyContent-center col-10" id="cardWrapper">
-                    
-                    <BlinkingVectorHome ref={ref} id="Blink_vector" className={ inView? 'is-active' : ''} />
+                <div className="flex flex-justifyContent-center col-11" id="cardWrapper">
+                    <div className="flex flex-column" style={{height: '100%', justifyContent: 'space-between'}}>
+                        <BlinkingVectorHome ref={ref} id="Blink_vector" className={ inView? 'is-active' : ''} />
+                        <BlinkingVectorHome ref={ref} id="Blink_vector" className={ inView? 'is-active' : ''} />
+                    </div>
                     <div className="singleCard col-4">
                         <ul className="pl-0">
                             <li>
@@ -185,7 +189,97 @@ const AboutPage = () => {
                             </li>
                         </ul>
                     </div>
+                    <div className="flex flex-column" style={{height: '100%', justifyContent: 'space-between'}}>
+                        <BlinkingVectorHome ref={ref} id="Blink_vector" className={ inView? 'is-active' : ''} />
+                        <BlinkingVectorHome ref={ref} id="Blink_vector" className={ inView? 'is-active' : ''} />
+                    </div>
                 </div>
+            </section>
+            <section id="journey_sec">
+
+                <h1 className="col-12 text-center"  id="journeyTitle">A JOURNEY FROM REINVENTION TO CREATION</h1>
+                <div className="flex col-12" id="journey_wrapper">
+
+                    <div id="article_wrapper" className="flex flex-column flex-alignItems-center col-10">
+
+                        <article className="journey_articles col-12">
+                            <h4 className="journey_titles">THE CREATIVE HEART</h4>
+                            <p className="journey_texts">
+                                I wasn’t always a designer, but I was always a creator!  
+                                I was the kind of person who saw something beautiful and thought, 
+                                “I could make that.” Over time, that instinct grew into a passion, 
+                                and that passion eventually became Black Dahlia Creative.
+                                Over the years, I’ve explored countless creative outlets: 
+                                designing jewelry, crafting, photography, spinning fire, doing hair,  
+                                even hot gluing twigs to a jar just to make a pretty pen holder. Creativity has always found its way into everything I do.
+                            </p>
+                        </article>
+                        <article className="journey_articles col-12">
+                            <h4 className="journey_titles">THE TURNING POINT</h4>
+                            <p className="journey_texts">For most of my adult life, I bounced between the beauty and food industries. They paid the bills, but they never filled my cup. Before entering the design world, I worked as a Production Supervisor for a specialty food manufacturer. 
+                                The people were wonderful, but I felt unfulfilled. 
+                                My boss at the time hired a design company to rebrand his growing business, and when I saw the concept boards and brand books, something instantly clicked.
+                                I remember thinking, “Huh… I could do this. Actually, I want to do this.”
+                                And from that moment, the trajectory of my life began to change. 
+                                I couldn’t stop thinking about it. 
+                                With every rebranding presentation that came through the office, 
+                                I found myself dreaming of a career where I could use my creativity and finally feel full again.
+                            </p>
+                        </article>
+                        <article className="journey_articles col-12">
+                            <h4 className="journey_titles">THE LEAP OF FAITH</h4>
+                            <p className="journey_texts">
+                                At 40, I took a leap of faith and walked away from a safe, familiar career to pursue graphic design.  
+                                This was proof that it’s never too late to begin again. It was one of the scariest decisions of my life. That same year my daughter was starting high school, and my son was beginning third grade. While they were learning new lessons in their classrooms, I was stepping into a classroom of my own. . In my living room. On my computer. With a Design instructor and 16 other brand new design students.  
+                                I was trading comfort for creativity and fear for purpose.
+                                What began as a personal journey to fill my own cup became something greater.  
+                                It also became a mission to show my children that nothing is impossible when you lead with heart, courage, and vision.
+                            </p>
+                        </article>
+                        <article className="journey_articles col-12">
+                            <h4 className="journey_titles">THE BLOOM OF BLACK DAHLIA</h4>
+                            <p className="journey_texts">
+                                Black Dahlia Creative was born from that belief: that the seed of change can be planted at any moment and, with care and vision, it will take root and bloom.
+                                What began as a leap of faith has grown into a studio dedicated to helping others transform their ideas into something bold and flourishing. My cup is no longer empty.  It’s overflowing. Every new client reignites that spark inside me, the same one that once whispered, “You were meant for this.”
+                                It’s never too late to start over, to build your own empire, or to create something beautiful in the process. You can dream and think, “What if I had done that?”  Or you can take the leap and do it.
+                                If my story resonated with you, let’s begin creating your new journey together.The life you want begins the moment you stop waiting for the perfect time. You can keep dreaming of change… or plant the seed and watch it grow.  Let’s plant the seed together!
+                            </p>
+                        </article>
+                        <div className="flex flex-column col-12" id="journeyBottomSec">
+                            <p>Schedule your complimentary Discovery Call today.</p>
+                            <Link to={'/contact'} className="primaryBtn fontSize20 mt-25">BOOK NOW</Link>
+                        </div>
+                    </div>
+
+                    <div id="timeline_wrapper">
+                        <div className="moon_phase" id="phase_1">
+                            <img src={`${process.env.PUBLIC_URL}/images/about-page/phase_1.png`} alt="Black Dahlia moon phases: phase 1" />
+                        </div>
+                        <div className="moon_phase" id="phase_2">
+                            <img src={`${process.env.PUBLIC_URL}/images/about-page/phase_2.png`} alt="Black Dahlia moon phases: phase 2" />
+                        </div>
+                        <div className="moon_phase" id="phase_3">
+                            <img src={`${process.env.PUBLIC_URL}/images/about-page/phase_3.png`} alt="Black Dahlia moon phases: phase 3" />
+                        </div>
+                        <div className="moon_phase" id="phase_4">
+                            <img src={`${process.env.PUBLIC_URL}/images/about-page/phase_4.png`} alt="Black Dahlia moon phases: phase 4" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="whatWaitFor">
+                <div className="flex flex-column flex-alignItems-center" id="initialIntro">
+                    <h4 className="col-12 text-center">WHAT ARE YOU WAITING FOR?</h4>
+                    <h4 className="col-12 text-center">TAKE YOUR LEAP TODAY!</h4>
+                    <h4 className="col-12 text-center">LET BLACK DAHLIA CREATIVE BRING YOUR VISION TO LIFE!</h4>
+                    <h4 className="col-12 text-center">YOUR COMPLIMENTARY DISCOVERY CALL AWAITS YOU!</h4>
+                </div>
+                <Link to={'/contact'} className="primaryBtn-vr1 fontSize20">Start your creative journey TODAY</Link>
+                <p className="col-9 text-center" id="textBottom">
+                    You can keep wishing for a different story,
+                    or start writing the next chapter now.
+                </p>
+                <img id="spiningDahliaAboutPg" src={`${process.env.PUBLIC_URL}/images/about-page/dahlia_icon_biege 6.png`} alt="" />
             </section>
         </div>
     )
