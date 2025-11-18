@@ -1,5 +1,28 @@
 #ServicesPage {
-    h1 {
-        color: rgb(223, 37, 201);
+    background-color: var(--alternative-black);
+    #servicesTitle {
+        color:  #AF9E90;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 96px;
+        font-style: italic;
+        font-weight: 300;
+    }
+    #servicesWrapper {
+        .servicesCard {
+            padding: 50px 35px;
+            background-color: #A2A1A1;
+            border-radius: 60px;
+            .serviceTitle {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 32px;
+                font-weight: 300;
+                letter-spacing: 0.1;
+                margin-bottom: 25px;
+                margin-top: 0px;
+                text-align: center;
+                width: 100%;
+
+            }
+        }
     }
 }

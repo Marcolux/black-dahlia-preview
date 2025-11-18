@@ -14,6 +14,7 @@ import HomePage from './pages/HomePage/HomePage';
 import MembershipPage from './pages/MembershipPage/MembershipPage';
 import PortfolioPage from './pages/PortfolioPage/PortfolioPage';
 import ServicesPage from './pages/ServicesPage/ServicesPage';
+import WebDesignDevPage from './pages/WebDesignDev/WebDesignDev';
 
 //********** Styles ************/ 
 import './style/App.scss';
@@ -50,6 +51,7 @@ function App() {
         <Route path="/services" element={<ServicesPage/>} />
         <Route path="/membership" element={<MembershipPage/>} />
         <Route path="/services/explore-tiers" element={<ExploreTiersPage/>} />
+        <Route path="/services/web-design-development" element={<WebDesignDevPage/>} />
       </Routes>
 
       <Footer/>
