@@ -4,8 +4,6 @@ import { ReactComponent as BlinkingVectorHome } from './blinkingVector.svg'
 import "../page.scss"
 import "./about-page.scss"
 import { useInView } from "react-intersection-observer"
-import { useEffect, useRef, useState } from "react"
-import MoonPhase from "../../components/about-page-components/MoonPhases"
 
 const AboutPage = () => {
     const { ref, inView } = useInView({
