@@ -18,3 +18,8 @@ body {
   background-color: --page-primary-backgroung;
 }
 
+@media screen and (max-width: 900px) {
+  
+  #coming_soon { font-size: 30px !important;}
+  #under_construction { font-size: 25px !important;}
+}
