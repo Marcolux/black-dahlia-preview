@@ -14,7 +14,7 @@ const AboutPage = () => {
     return(
         <div className="page" id="AboutPage">
             <section className="flex col-12" id="introAbout">
-                <div className="flex flex-column col-7" id="leftIntro">
+                <div className="flex flex-column col-8" id="leftIntro">
                     <div className="flex flex-column py-20">
                         <h1>WHO IS</h1>
                         <h1>BLACK DAHLIA?</h1>
@@ -26,7 +26,7 @@ const AboutPage = () => {
                         </div>
                         <img id="aboutLndArrow" src={`${process.env.PUBLIC_URL}/images/about-page/ArrowVector.png`} alt="Black Dahlia arrow vector"/>
                     </div>
-                    <p id="intro-text">
+                    <p id="intro-text" className="mb-50">
                         I was born and raised in Chicago, but have some pretty deep southern Italian roots!  
                         I often travel back and forth in between Chicago and Italy.  
                         Half my heart is here and half is there!  
@@ -34,7 +34,7 @@ const AboutPage = () => {
                     </p>
                 </div>
 
-                <div className="flex flex-column flex-alignItems-center col-5" id="rightIntro">
+                <div className="flex flex-column flex-alignItems-center" id="rightIntro">
                     <div className="flex m-25 p-25" id="pic">
                         <img  src={`${process.env.PUBLIC_URL}/images/about-page/BlackDahliaTrishPic.png`} alt="Black Dahlia Trish"/>
                     </div>
@@ -44,16 +44,16 @@ const AboutPage = () => {
                         <img id="spinner-3" src={`${process.env.PUBLIC_URL}/images/icons/dahlia_icon_biege.svg`} alt="Black Dahlia beige"/>
                         <img id="spinner-4" src={`${process.env.PUBLIC_URL}/images/icons/dahlia_icon_burgundy.svg`} alt="Black Dahlia burgundy"/>
                     </div>
-                    <Link to={'/contact'} className="primaryBtn-vr1 fontSize20 col-11 mt-45">BOOK NOW</Link>
+                    <Link to={'/contact'} className="primaryBtn-vr1 fontSize20 col-7 mt-45">BOOK NOW</Link>
                 </div>
 
             </section>
             <section id="favorite_things" className="flex flex-column flex-alignItems-center">
                 <h1 className="flex flex-justifyContent-center col-12 text-center">A Few of my Favorite things...</h1>
-                <div className="flex flex-justifyContent-center col-11" id="cardWrapper">
+                <div className="flex flex-justifyContent-center col-12 py-50" id="cardWrapper">
                     <div className="flex flex-column" style={{height: '100%', justifyContent: 'space-between'}}>
-                        <BlinkingVectorHome ref={ref} id="Blink_vector" className={ inView? 'is-active' : ''} />
-                        <BlinkingVectorHome ref={ref} id="Blink_vector" className={ inView? 'is-active' : ''} />
+                        <BlinkingVectorHome ref={ref} id="Blink_vector_1" className={ inView? 'is-active blink_vector' : 'blink_vector'} />
+                        <BlinkingVectorHome ref={ref} id="Blink_vector_2" className={ inView? 'is-active blink_vector' : 'blink_vector'} />
                     </div>
                     <div className="singleCard col-4">
                         <ul className="pl-0">
@@ -188,8 +188,8 @@ const AboutPage = () => {
                         </ul>
                     </div>
                     <div className="flex flex-column" style={{height: '100%', justifyContent: 'space-between'}}>
-                        <BlinkingVectorHome ref={ref} id="Blink_vector" className={ inView? 'is-active' : ''} />
-                        <BlinkingVectorHome ref={ref} id="Blink_vector" className={ inView? 'is-active' : ''} />
+                        <BlinkingVectorHome ref={ref} id="Blink_vector_3" className={ inView? 'is-active blink_vector' : 'blink_vector'} />
+                        <BlinkingVectorHome ref={ref} id="Blink_vector_4" className={ inView? 'is-active blink_vector' : 'blink_vector'} />
                     </div>
                 </div>
             </section>

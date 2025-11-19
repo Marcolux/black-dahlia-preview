@@ -44,8 +44,8 @@ const ServicesPage = () => {
                                 <li>Final logo files for print + digital use</li>
                             </ul>
                         </p>
-                        <p>Investment: $500</p>
                     </div>
+                    <p className="col-12"><strong>Investment:</strong> $500</p>
                 </article>
 
                 <article className="servicesCard">
@@ -63,7 +63,7 @@ const ServicesPage = () => {
                                 <li>KDP-ready or print-ready export</li>
                             </ul>
                         </p>
-                        <p>Investment: Starting at $600</p>
+                        <p><strong>Investment:</strong> Starts at $600</p>
                     </div>
                 </article>
 
@@ -79,9 +79,9 @@ const ServicesPage = () => {
                                 <li>Optional post launch maintenance</li>
                             </ul>
                         </p>
-                        <p>Investment: Starts at $3,000</p>
+                        <p><strong>Investment:</strong> Starts at $3,000</p>
                     </div>
-                    <Link className="navLinks primaryBtn-vr1" to={'/services/web-design-development'}>Explore More
+                    <Link className="navLinks primaryBtn-vr1 col-12" to={'/services/web-design-development'}>Explore More
                         <img      
                             src={`${process.env.PUBLIC_URL}/images/icons/Arrow-bk.png`} 
                             className="ml-20"
@@ -105,13 +105,13 @@ const ServicesPage = () => {
                             </ul>
                         </p>
                     </div>
-                    <p>Investment: Depends on the scope of project</p>
-                    <Link className="navLinks primaryBtn-vr1" to={'/contact'}>Inquire to begin
+                    <p><strong>Investment:</strong> Depends on the project</p>
+                    {/* <Link className="navLinks primaryBtn-vr1 col-12" to={'/contact'}>Inquire to begin
                         <img      
                             src={`${process.env.PUBLIC_URL}/images/icons/Arrow-bk.png`} 
                             className="ml-20"
                         />
-                    </Link>
+                    </Link> */}
                 </article>
 
                 <article className="servicesCard">
@@ -127,7 +127,7 @@ const ServicesPage = () => {
                                 <li>Optional seasonal or service update add on</li>
                             </ul>
                         </p>
-                        <p>Investment: $200 per page</p>
+                        <p><strong>Investment:</strong> $200 per page</p>
                     </div>
                 </article>
 
@@ -140,7 +140,7 @@ const ServicesPage = () => {
                             From intimate gatherings to grand celebrations, 
                             we create cohesive event identities that weave design, 
                             emotion, and storytelling into every detail.
-                            <br/>What’s Included:
+                            <br/> <br/>What’s Included:
                             <ul>
                                 <li>Event Identity Design...custom logo or monogram, bespoke typography, and curated color palette</li>
                                 <li>Print & Digital Collateral...invitations, signage, menus, programs, social assets, and digital templates</li>
@@ -151,10 +151,10 @@ const ServicesPage = () => {
                                 </li>
                             </ul>
                         </p>
-                        <p className="mt-10 mb-0">Investment: Starting at $2,000  (Final pricing varies based on scope, deliverables, and creative direction.)</p>
-                        <p className="text-italic text-bold mt-10 mb-0">Note: Printing and production costs are not included in the base design fee. Full service print management is available upon request for a seamless, start to finish experience.</p>
                         <p className="mt-10 mb-0">Ideal For:</p>
-                        <p className="mt-10 mb-0">Weddings • Brand Launches • Corporate Galas • Private Events • Experiential Pop-Ups</p>
+                        <p className="mt-20">Weddings • Brand Launches • Corporate Galas • Private Events • Experiential Pop-Ups</p>
+                        <br/><p className="m-0"><strong>Investment:</strong> Starts at $2,000  (Final pricing varies based on scope, deliverables, and creative direction.)</p>
+                        <br/><br/><p className="text-italic text-bold mt-10 mb-0">Note: Printing and production costs are not included in the base design fee. Full service print management is available upon request for a seamless, start to finish experience.</p>
                     </div>
                 </article>
             </div>
