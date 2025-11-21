@@ -53,7 +53,8 @@ type DropdownProps = {
     value: string | null        // currently selected value
     onChange: (value: string) => void
     placeholder?: string
-    className?: string          // for outer wrapper
+    classNameWrapper?: string          // for outer wrapper
+    classNameButton?: string          // for outer wrapper
     name?: string
     id?: string
 }
@@ -64,7 +65,8 @@ const Dropdown: React.FC<DropdownProps> = ({
     value,
     onChange,
     placeholder = "Select an option",
-    className,
+    classNameWrapper,
+    classNameButton,
     name,
     id
 }) => {
@@ -161,7 +163,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 
     return (
         <div
-            className={`dropdown ${className || ""}`}
+            className={`dropdown ${classNameWrapper || ""}`}
             ref={wrapperRef}
         >
             {label && (
@@ -172,7 +174,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 
             <button
                 type="button"
-                className="dropdown__button"
+                className={`dropdown__button ${classNameButton || ""}`}
                 ref={buttonRef}
                 aria-haspopup="listbox"
                 aria-expanded={isOpen}

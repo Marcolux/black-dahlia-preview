@@ -158,63 +158,46 @@ const ContactPage = () => {
                         onChange={(e) => setBusinessName(e.target.value)}
                     />
                 </div>
-                <div className="flex flex-alignItems-center oneRow">
-                    {/* Email Subject */}
-                    <div className="field flex flex-column col-12">
-                        <label htmlFor="project_type" className="mb-5">PROJECT TYPE:</label>
-                        <select
-                            className="inputText"
+                <div className="flex flex-alignItems-center oneRow col-12">
+                    {/* PROJECT TYPE:*/}
+                        <Dropdown
+                            classNameButton="inputText"
+                            classNameWrapper="col-6"
                             id="project_type"
+                            label="PROJECT TYPE:"
                             name="project_type"
-                            required
+                            onChange={(value) => setSubject(value)}
+                            placeholder="Select a Project"
                             value={subject}
-                            onChange={(e) => setSubject(e.target.value)}
-                        >
-                            <option value="" disabled hidden> Select a Project </option>
-                            <option value="Logo" >Logo</option>
-                            <option value="Web Design">Web Design</option>
-                            <option value="Web Development"> Web Development </option>
-                            <option value="Planner"> Planner </option>
-                            <option value="Event Branding"> Event Branding </option>
-                            <option value="Book Creation"> Book Creation </option>
-                            <option value="Menu Design"> Menu Design </option>
-                            <option value="Other"> Other </option>
-                        </select>
-                    </div>
-                    {/* BUDGET RANGE */}
+                            options={[
+                                { value: "Logo", label: "Logo" },
+                                { value: "Web Design", label: "Web Design" },
+                                { value: "Web Development", label: "Web Development" },
+                                { value: "Planner", label: "Planner" },
+                                { value: "Event Branding", label: "Event Branding" },
+                                { value: "Book Creation", label: "Book Creation" },
+                                { value: "Menu Design", label: "Menu Design" },
+                                { value: "Other", label: "Other" },
+                            ]}
+                        />
 
-                    
+                    {/* BUDGET RANGE */}
                     <Dropdown
-                        className="inputText"
+                        classNameButton="inputText"
+                        classNameWrapper="col-6"
                         id="project_budget"
-                        label="Project type"
+                        label="BUDGET RANGE:"
                         name="project_budget"
-                        onChange={(value) => setSubject(value)}
+                        onChange={(value) => setBudget(value)}
                         options={[
                             { value: "$1,000-$2000", label: "$1,000-$2000" },
                             { value: "$3,000-$4000", label: "$3,000-$4000" },
                             { value: "$5,000 + above", label: "$5,000 + above" },
                             { value: "Prefer to not answer at this time", label: "Prefer to not answer at this time" }
                         ]}
-                        value={subject}
+                        value={budget}
+                        placeholder="Select a Budget Range"
                     />
-                    <div className="field flex flex-column col-12">
-                        <label htmlFor="project_budget" className="mb-5">BUDGET RANGE:</label>
-                        <select
-                            
-                            id="project_budget"
-                            name="project_budget"
-                            required
-                            value={budget}
-                            onChange={(e) => setBudget(e.target.value)}
-                        >
-                            <option value="" disabled hidden> Select a Budget </option>
-                            <option value="$1,000-$2000" >$1,000-$2000</option>
-                            <option value="$3,000-$4000">$3,000-$4000</option>
-                            <option value="$5,000 + above"> $5,000 + above </option>
-                            <option value="Prefer to not answer at this time"> Prefer to not answer at this time </option>
-                        </select>
-                    </div>
                 </div>
 
 

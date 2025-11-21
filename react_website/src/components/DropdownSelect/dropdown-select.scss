@@ -46,10 +46,10 @@
             color: #000;
             cursor: pointer;
             padding: 4px;
+            &.dropdown__option--active { background: #f0f0f0; }
+            &.dropdown__option--selected { font-weight: 600; }
         }
         
-        .dropdown__option--active { background: #f0f0f0; }
-        .dropdown__option--selected { font-weight: 600; }
     }
 }
 
