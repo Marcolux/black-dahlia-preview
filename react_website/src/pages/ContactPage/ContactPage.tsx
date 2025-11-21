@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react"
+import Dropdown from "../../components/DropdownSelect/DropdownSelect"
 import "../page.scss"
 import "./contact-page.scss"
 import emailjs from "@emailjs/browser"
@@ -60,7 +61,7 @@ const ContactPage = () => {
                 message: message
             }
             
-            const result = await emailjs.send(
+            await emailjs.send(
                 "service_4a753w5",
                 "template_7wusit9",
                 templateParams
@@ -181,10 +182,26 @@ const ContactPage = () => {
                         </select>
                     </div>
                     {/* BUDGET RANGE */}
+
+                    
+                    <Dropdown
+                        className="inputText"
+                        id="project_budget"
+                        label="Project type"
+                        name="project_budget"
+                        onChange={(value) => setSubject(value)}
+                        options={[
+                            { value: "$1,000-$2000", label: "$1,000-$2000" },
+                            { value: "$3,000-$4000", label: "$3,000-$4000" },
+                            { value: "$5,000 + above", label: "$5,000 + above" },
+                            { value: "Prefer to not answer at this time", label: "Prefer to not answer at this time" }
+                        ]}
+                        value={subject}
+                    />
                     <div className="field flex flex-column col-12">
                         <label htmlFor="project_budget" className="mb-5">BUDGET RANGE:</label>
                         <select
-                            className="inputText"
+                            
                             id="project_budget"
                             name="project_budget"
                             required
@@ -242,6 +259,7 @@ const ContactPage = () => {
                 <div className="col-12 flex flex-justifyContent-center">
                     <p>Please allow 1-2 business days for a response</p>
                 </div>
+
             </form>
         </div>
     )

@@ -12,12 +12,10 @@ const TranslateTrail = ({ icons }: TranslateTrailProps) => {
     const trail = useTrail(icons.length, {
         to: { transform: inView ? `translateX(0%) rotateY(0deg)` : `translateX(100%) rotateY(360deg)`},
         config: {
-  tension: 120,
-  friction: 18
+            tension: 120,
+            friction: 18
         }
-
     })
-
 
     return (
         <div ref={ref} 
