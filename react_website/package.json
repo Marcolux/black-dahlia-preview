@@ -1,16 +1,21 @@
 {
   "name": "black-dahlia",
-  "homepage": "https://marcolux.github.io/black-dahlia-preview/",
+  "homepage": "https://blackdahliacreative.com/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "spa-fallback": "node -e \"require('fs').copyFileSync('build/index.html','build/404.html')\"",
-    "predeploy": "npm run build && npm run spa-fallback",
-    "deploy": "gh-pages -d build -b live"
+    "predeploy:preview": "npm run build && npm run spa-fallback",
+    "deploy:preview": "gh-pages -d build -b live",
+    "predeploy:official": "npm run build && npm run spa-fallback && node -e \"require('fs').writeFileSync('build/CNAME','blackdahliacreative.com')\"",
+    "deploy:official": "gh-pages -d build -b live -r https://github.com/Marcolux/black-dahlia-live.git",
+    "predeploy": "npm run predeploy:preview",
+    "deploy": "npm run deploy:preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@react-spring/web": "^9.7.5",

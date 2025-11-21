@@ -31,8 +31,8 @@ const HomePage = () => {
     return(
         <div className="page" id="HomePage">
             <section className="" id="land-intro">
-                <h1 className="text-center fontSize48 my-0">Design with edge.</h1>
-                <h1 className="text-center fontSize48 my-0">Style with soul.</h1>
+                <h1 className="page_sub-headers-vr">Design with edge.</h1>
+                <h1 className="page_sub-headers-vr">Style with soul.</h1>
                 <p className="text-center fontSize20  my-30">Boutique branding & creative direction for the bold, the soulful, and the ones who dare to stand apart.</p>
                 <div className="col-12 flex flex-alignItems-center flex-justifyContent-center mt-30">
                     <Link 
@@ -53,7 +53,7 @@ const HomePage = () => {
                 <TranslateTrail icons={translateIcons}></TranslateTrail>
             </section>
             <section id="offer">
-                <h1>What We Offer</h1>
+                <h1 className="page_sub-headers">What We Offer</h1>
                 <div id="offer-cards-wrapper" className="flex flex-wrap">
                     <div className="offer-cards"><p>LOGO DESIGN</p></div>
                     <div className="offer-cards"><p>BRAND IDENTITY</p></div>
@@ -80,10 +80,10 @@ const HomePage = () => {
             </section>
 
             <section id="why-black-dahlia">
-                <h1>why black dahlia</h1>
+                <h1 className="page_sub-headers">why black dahlia</h1>
                 <div id="textBoxWrapper">
                     <div id="intro" className="col-12 flex" >
-                        <p>Because we don’t just Design, we disrupt!</p>
+                        <p className="text-bold">Because we don’t just Design, we disrupt!</p>
                         <RollingTrail icons={rollingIcons}></RollingTrail>
                     </div>
                     <div id="text">

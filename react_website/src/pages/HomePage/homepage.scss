@@ -9,23 +9,15 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        h1 {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-style: italic;
-            font-weight: 400;
-            line-height: 64px;
-            letter-spacing: 0.03em;
-            &:nth-child(1) { margin-top: 100px !important; }
-        }
+        h1:nth-child(1) { margin-top: 100px !important; }
+        
         p {
             font-weight: 100;
-            letter-spacing: 0.06em;
-            line-height: 30px;
             max-width: 930px;
             text-align: center;
         }
         a {
-            width: 323px;
+            width: 400px;
             &#createJourney {
                 padding-left: 54px;
                 padding-right: 54px;
@@ -47,15 +39,7 @@
         justify-content: space-between;
         overflow: visible;
         padding: 85px 0px;
-        h1 {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: 64px;
-            font-style: italic;
-            font-weight: 400;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-            margin: 0px;
-        }
+
         #offer-cards-wrapper {
             gap: 85px;
             justify-content: center;
@@ -64,7 +48,7 @@
                 aspect-ratio: 1/1;
                 align-items: center;
                 background-color: var(--black-dahlia-white);
-                border-radius: 40px;
+                border-radius: var(--border-radius-cards);
                 color: #000;
                 display: flex;
                 font-weight: 300;
@@ -91,38 +75,28 @@
         padding: 85px 100px;
         position: relative;
         width: 100%;
-        h1 {
+        .page_sub-headers {
             color: var(--alternative-black);
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: 64px;
-            font-style: italic;
-            font-weight: 400;
-            letter-spacing: 0.03em;
             text-align: center;
-            text-transform: uppercase;
         }
         #textBoxWrapper {
             background-color: #E1D8CE;
-            border-radius: 50px;
+            border-radius: var(--border-radius-cards);
             color: var(--alternative-black);
             display: flex;
             flex-direction: column;
             flex: auto;
-            font-weight: 300;
-            letter-spacing: 0.20em;
             margin-top: 80px;
             overflow-x: hidden;
             overflow-y: visible;
             padding: 35px 26px 45px;
             width: 100%;
-            word-spacing: 0.25em;
             #intro {
                 column-gap: 80px;
-                p { font-size: 24px; }
+                text-transform: uppercase;
             }
-            #text { font-size: 24px; }
             a {
-                bottom: 60px;
+                bottom: 45px;
                 position: absolute;
                 right: 15%;
                 width: 315px;
@@ -232,8 +206,8 @@
         overflow-x: hidden;
         img {  min-width: 0px; }
         .textPlanners {
-           font-size: 40px; 
-           letter-spacing: 0.05em;
+           font: var(--page-secHeaders-font-vr); 
+           font-style: normal;
            position: absolute;
             &#top {
                 top: 100px;
@@ -259,11 +233,7 @@
                 position: absolute;
                 .textOrg {
                     color: var(--alternative-black);
-                    font-family: Georgia, 'Times New Roman', Times, serif;
-                    font-style: italic;
-                    font-weight: 400;
-                    font-size: 64px;
-                    letter-spacing: 0.03em;
+                    font: var(--page-subHeaders-font);
                     max-width: 317px;
                     margin: 0px;
                     text-align: center;
@@ -289,12 +259,7 @@
             padding-top: 120px;
             padding-bottom: 70px;
             width: fit-content;
-            p {
-                font-size: 30px;
-                font-family: Georgia, 'Times New Roman', Times, serif;
-                letter-spacing: 0.03em;
-                margin: 0px;
-            }
+            p {font: var(--page-paragraphTitle-font);}
             a { width: 390px; }
         }
         .linearTextAnimat {
@@ -304,9 +269,7 @@
             .linearTextAnimat__inner {
                 animation: scroll 15s linear infinite;
                 color: var(--alternative-black);
-                font-size: 40px;
-                font-weight: 200;
-                font-style: italic;
+                font: var(--page-secHeaders-font-vr);
                 display: inline-block;
                 white-space: nowrap;
                 span {

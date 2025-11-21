@@ -5,52 +5,24 @@
     padding: 90px 50px;
     .singleTier {
         border: 1px solid #FFFFFE;
-        border-radius: 60px;
+        border-radius: var(--border-radius-cards);
         box-shadow: 10px 10px 15px #FFFFFE22;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 65px 35px;
-        .tierWrapper {
-            height: 40px;
-            .tierText {
-                color: #C7A770;
-                font-size: 16pt;
-                font-weight: 300;
-                letter-spacing: 0.1em;
-                margin: 0px;
-            }
-            .mostChosen {
-                background-color: #C7A770;
-                border-radius: 28px;
-                color: var(--alternative-black);
-                padding: 8px 10px;
-                text-align: center;
-                width: 120px;
-                margin: 0px;
-            }
-        }
         .tierDescription {
-            .tierTitle {
-                font-family: Georgia, 'Times New Roman', Times, serif;
-                font-size: 36pt;
-                font-weight: 300;
-                letter-spacing: 0.1em;
+            .page_paragraphTitle {
                 width: 100%;
+                font-style: normal;
                 text-align: center;
+
             }
-            .tierDescText {
-                font-size: 14pt;
-                font-weight: 300;
-                letter-spacing: 0.1em;
-                line-height: 25px;
+            .page_paragraphText {
+                color: #B7B4AD;
+                ul { padding-left: 30px; }
             }
         }
-        .primaryBtn-vr1 {
-            font-size: 20pt;
-            letter-spacing: 0.2em;
-            font-weight: 600;
-            align-self: center;
-        }
+        .primaryBtn-vr1 { font-weight: 600; }
     }
 }

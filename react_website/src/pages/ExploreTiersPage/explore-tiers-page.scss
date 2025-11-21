@@ -3,64 +3,49 @@
     color: var(--black-dahlia-white);
     align-items: center;
     padding: 90px 50px;
-    h1 {
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 48pt;
-        font-weight: 300;
-        letter-spacing: 0.1em;
+    .page_sub-headers {
+        font-style: normal;
         width: 100%;
         text-align: center;
         color: var(--black-dahlia-white);
     }
-    .tiersIntro {
+    .page_paragraphTitle-vr {
         background-color: #A2A1A116;
         padding: 20px;
         border-left: 1px solid #fff;
-        font-size: 20pt;
-        letter-spacing: 0.1em;
     }
     #cardsTierWrapper {
         display: flex;
         justify-content: center;
-        gap: 60px;
+        gap: 30px;
         padding-bottom: 80px;
         padding-top: 80px;
         width: 100%;
         .singleTier {
             border: 1px solid #FFFFFE;
-            border-radius: 60px;
+            border-radius: var(--border-radius-cards);
             box-shadow: 10px 10px 15px #FFFFFE22;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 50px 35px 20px;
-            width: 30%;
+            padding: 50px 25px 20px;
+            width: 32%;
             .tierWrapper {
                 height: 40px;
-                .tierText {
-                    color: #C7A770;
-                    font-size: 16pt;
-                    font-weight: 300;
-                    letter-spacing: 0.1em;
-                    margin: 0px;
-                }
+                .page_paragraphText.tier { color: #C7A770; }
                 .mostChosen {
                     background-color: #C7A770;
-                    border-radius: 28px;
+                    border-radius: var(--border-radius-cards);
                     color: var(--alternative-black);
-                    padding: 8px 10px;
+                    padding: 1px 0px !important;
                     text-align: center;
-                    width: 120px;
+                    width: 170px;
                     margin: 0px;
                 }
             }
             .tierDescription {
-                .tierTitle {
-                    font-family: Georgia, 'Times New Roman', Times, serif;
-                    font-size: 32pt;
-                    font-weight: 300;
+                .page_paragraphTitle {
                     height: 72px;
-                    letter-spacing: 0.1em;
                     width: 100%;
                     text-align: center;
                     span {
@@ -69,18 +54,12 @@
                         justify-content: end;
                     }
                 }
-                .tierDescText {
-                    font-size: 14pt;
-                    font-weight: 300;
-                    letter-spacing: 0.1em;
-                    line-height: 25px;
+                .page_paragraphText {
+                    color: #B7B4AD;
+                    ul { padding-left: 30px; }
                 }
             }
-            .primaryBtn-vr1 {
-                font-size: 20pt;
-                letter-spacing: 0.2em;
-                font-weight: 600;
-            }
+            .primaryBtn-vr1 { font-weight: 600; }
         }
     }
 }

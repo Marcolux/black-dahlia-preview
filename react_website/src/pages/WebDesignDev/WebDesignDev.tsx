@@ -8,8 +8,8 @@ const WebDesignDevPage = () => {
         <main className="page" id="WebDesignDevPage">
             <article className="singleTier col-12">
                 <div className="tierDescription">
-                    <h4 className="tierTitle mt-0">Web Design & Development</h4>
-                    <p className="tierDescText">
+                    <h4 className="page_paragraphTitle mb-30">Web Design & Development</h4>
+                    <p className="page_paragraphText">
                         Elevate your online presence with a website designed for both beauty and performance. Each site is crafted to reflect your brand’s unique identity while delivering a seamless, user focused experience that captivates and converts.
                         <br/><br/>Package Includes:
                         <ul>

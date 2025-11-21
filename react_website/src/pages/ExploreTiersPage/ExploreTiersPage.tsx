@@ -6,23 +6,23 @@ const ExploreTiersPage = () => {
 
     return(
         <div className="page" id="ExploreTiersPage">
-            <h1 className="mt-0">BRAND IDENTITY SERVICES</h1>
-            <p className="tiersIntro col-10">
+            <h1 className="mt-0 mb-30 page_sub-headers">BRAND IDENTITY SERVICES</h1>
+            <p className="col-10 page_paragraphTitle-vr">
                 At Black Dahlia Creative, 
                 we believe a brand is more than a logo.  
                 It’s an experience. Each package is crafted to help you define your voice, refine your visuals, 
                 and build a cohesive presence that’s unmistakably yours.
             </p>
-            <p className="tiersIntro col-10">From concept to legacy, your brand deserves to be as extraordinary as your vision.</p>
+            <p className="col-10 page_paragraphTitle-vr mt-35">From concept to legacy, your brand deserves to be as extraordinary as your vision.</p>
             <div className="flex" id="cardsTierWrapper">
                 <article className="singleTier">
                     <div>
                         <div className="flex flex-justifyContent-spaceBetween flex-alignItems-center tierWrapper">
-                            <p className="tierText">Tier I</p>
+                            <p className="page_paragraphText tier">Tier I</p>
                         </div>
-                        <div className="tierDescription">
-                            <h4 className="tierTitle">The Rebel Edit</h4>
-                            <p className="tierDescText">
+                        <div className="tierDescription mt-15">
+                            <h4 className="page_paragraphTitle">The Rebel Edit</h4>
+                            <p className="page_paragraphText mt-30">
                                 For brands ready to make their mark.  Clean, distinctive, and crafted with intention.
                                 <ul>
                                     <li>Primary logo + secondary mark</li>
@@ -42,12 +42,12 @@ const ExploreTiersPage = () => {
                 <article className="singleTier">
                     <div>
                         <div className="flex flex-justifyContent-spaceBetween flex-alignItems-center tierWrapper">
-                            <p className="tierText">Tier II</p>
+                            <p className="page_paragraphText tier">Tier II</p>
                             <p className="mostChosen">Most Chosen</p>
                         </div>
-                        <div className="tierDescription">
-                            <h4 className="tierTitle">The Signature <span className="col-12 text-end">Collection</span></h4>
-                            <p className="tierDescText">
+                        <div className="tierDescription mt-15">
+                            <h4 className="page_paragraphTitle">The Signature <span className="col-12 text-end">Collection</span></h4>
+                            <p className="page_paragraphText mt-30">
                                 Timeless and refined.  A cohesive identity that captures your essence across touch points.
                                 <ul>
                                     <li>Full logo suite (primary, secondary, sub mark)</li>
@@ -69,11 +69,11 @@ const ExploreTiersPage = () => {
                 <article className="singleTier">
                     <div>
                         <div className="flex flex-justifyContent-spaceBetween flex-alignItems-center tierWrapper">
-                            <p className="tierText">Tier III</p>
+                            <p className="page_paragraphText tier">Tier III</p>
                         </div>
-                        <div className="tierDescription">
-                            <h4 className="tierTitle">The Empire Reign</h4>
-                            <p className="tierDescText">
+                        <div className="tierDescription mt-15">
+                            <h4 className="page_paragraphTitle">The Empire Reign</h4>
+                            <p className="page_paragraphText mt-30">
                                 A complete identity & strategy experience designed for lasting presence and impact.
                                 <ul>
                                     <li>Complete identity system (logos, color, type, patterns, imagery)</li>

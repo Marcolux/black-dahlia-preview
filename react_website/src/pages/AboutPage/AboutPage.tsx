@@ -16,8 +16,8 @@ const AboutPage = () => {
             <section className="flex col-12" id="introAbout">
                 <div className="flex flex-column col-8" id="leftIntro">
                     <div className="flex flex-column py-20">
-                        <h1>WHO IS</h1>
-                        <h1>BLACK DAHLIA?</h1>
+                        <h1 className="page_sub-headers text-center">WHO IS</h1>
+                        <h1 className="page_sub-headers text-center">BLACK DAHLIA?</h1>
                     </div>
                     <div className="flex py-50 col-12 flex-justifyContent-end" id="heyImTrish">
                         <div className="flex flex-column">
@@ -26,7 +26,7 @@ const AboutPage = () => {
                         </div>
                         <img id="aboutLndArrow" src={`${process.env.PUBLIC_URL}/images/about-page/ArrowVector.png`} alt="Black Dahlia arrow vector"/>
                     </div>
-                    <p id="intro-text" className="mb-50">
+                    <p id="intro-text" className="mb-50 fontSize22">
                         I was born and raised in Chicago, but have some pretty deep southern Italian roots!  
                         I often travel back and forth in between Chicago and Italy.  
                         Half my heart is here and half is there!  
@@ -49,143 +49,55 @@ const AboutPage = () => {
 
             </section>
             <section id="favorite_things" className="flex flex-column flex-alignItems-center">
-                <h1 className="flex flex-justifyContent-center col-12 text-center">A Few of my Favorite things...</h1>
-                <div className="flex flex-justifyContent-center col-12 py-50" id="cardWrapper">
+                <h1 className="page_sec-headers-vr col-12 text-center">A Few of my Favorite things...</h1>
+                <div className="flex flex-justifyContent-center py-50" id="cardWrapper">
                     <div className="flex flex-column" style={{height: '100%', justifyContent: 'space-between'}}>
                         <BlinkingVectorHome ref={ref} id="Blink_vector_1" className={ inView? 'is-active blink_vector' : 'blink_vector'} />
                         <BlinkingVectorHome ref={ref} id="Blink_vector_2" className={ inView? 'is-active blink_vector' : 'blink_vector'} />
                     </div>
-                    <div className="singleCard col-4">
-                        <ul className="pl-0">
-                            <li>
-                                <VectorHome id="vect1" className="vector" />
-                                Nature
-                            </li>
-                            <li>
-                                <VectorHome id="vect2" className="vector" />
-                                Travel
-                            </li>
-                            <li>
-                                <VectorHome id="vect3" className="vector" />
-                                My Family
-                            </li>
-                            <li>
-                                <VectorHome id="vect4" className="vector" />
-                                Chai Lattes
-                            </li>
-                            <li>
-                                <VectorHome id="vect5" className="vector" />
-                                Bonfires
-                            </li>
-                            <li>
-                                <VectorHome id="vect6" className="vector" />
-                                Mountains
-                            </li>
-                            <li>
-                                <VectorHome id="vect7" className="vector" />
-                                Elephants
-                            </li>
-                            <li>
-                                <VectorHome id="vect8" className="vector" />
-                                Black nails
-                            </li>
-                            <li>
-                                <VectorHome id="vect9" className="vector" />
-                                Nachos
-                            </li>
-                            <li>
-                                <VectorHome id="vect10" className="vector" />
-                                Journals
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="singleCard col-4">
-                        <ul className="pl-0">
-                            <li>
-                                <VectorHome id="vect21" className="vector" />
-                                Crescent Moons
-                            </li>
-                            <li>
-                                <VectorHome id="vect22" className="vector" />
-                                A Starry night
-                            </li>
-                            <li>
-                                <VectorHome id="vect23" className="vector" />
-                                Pens & Markers
-                            </li>
-                            <li>
-                                <VectorHome id="vect24" className="vector" />
-                                Houseplants
-                            </li>
-                            <li>
-                                <VectorHome id="vect25" className="vector" />
-                                Stickers
-                            </li>
-                            <li>
-                                <VectorHome id="vect26" className="vector" />
-                                Books on a Bookshelf
-                            </li>
-                            <li>
-                                <VectorHome id="vect27" className="vector" />
-                                Sunglasses on the top of my head
-                            </li>
-                            <li>
-                                <VectorHome id="vect28" className="vector" />
-                                Gnomes
-                            </li>
-                            <li>
-                                <VectorHome id="vect29" className="vector" />
-                                The sound of Rain
-                            </li>
-                            <li>
-                                <VectorHome id="vect30" className="vector" />
-                                A Good Cozy Sweater
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="singleCard col-4">
-                        <ul className="pl-0">
-                            <li>
-                                <VectorHome id="vect11" className="vector" />
-                                Planners
-                            </li>
-                            <li>
-                                <VectorHome id="vect12" className="vector" />
-                                Laughing until my Cheeks Hurt
-                            </li>
-                            <li>
-                                <VectorHome id="vect13" className="vector" />
-                                Music
-                            </li>
-                            <li>
-                                <VectorHome id="vect14" className="vector" />
-                                Hugs
-                            </li>
-                            <li>
-                                <VectorHome id="vect15" className="vector" />
-                                The crispness of Fall
-                            </li>
-                            <li>
-                                <VectorHome id="vect16" className="vector" />
-                                Lots of Pillows
-                            </li>
-                            <li>
-                                <VectorHome id="vect17" className="vector" />
-                                The color Black
-                            </li>
-                            <li>
-                                <VectorHome id="vect18" className="vector" />
-                                Pizza
-                            </li>
-                            <li>
-                                <VectorHome id="vect19" className="vector" />
-                                Italy
-                            </li>
-                            <li>
-                                <VectorHome id="vect20" className="vector" />
-                                The smell before it rains
-                            </li>
-                        </ul>
+                    <div className="flex flex-wrap" id="c_wrap">
+                        <div className="singleCard col-4">
+                            <ul className="pl-0">
+                                <li><VectorHome id="vect1" className="vector" />Nature</li>
+                                <li><VectorHome id="vect2" className="vector" />Travel</li>
+                                <li><VectorHome id="vect3" className="vector" />My Family</li>
+                                <li><VectorHome id="vect4" className="vector" />Chai Lattes</li>
+                                <li><VectorHome id="vect5" className="vector" />Bonfires</li>
+                                <li><VectorHome id="vect6" className="vector" />Mountains</li>
+                                <li><VectorHome id="vect7" className="vector" />Elephants</li>
+                                <li><VectorHome id="vect8" className="vector" />Black nails</li>
+                                <li><VectorHome id="vect9" className="vector" />Nachos</li>
+                                <li><VectorHome id="vect10" className="vector" />Journals</li>
+                            </ul>
+                        </div>
+                        <div className="singleCard col-4">
+                            <ul className="pl-0">
+                                <li><VectorHome id="vect21" className="vector" />Crescent Moons</li>
+                                <li><VectorHome id="vect22" className="vector" />A Starry night</li>
+                                <li><VectorHome id="vect23" className="vector" />Pens & Markers</li>
+                                <li><VectorHome id="vect24" className="vector" />Houseplants</li>
+                                <li><VectorHome id="vect25" className="vector" />Stickers</li>
+                                <li><VectorHome id="vect26" className="vector" />Books on a Bookshelf</li>
+                                <li><VectorHome id="vect27" className="vector" />Sunglasses on the top of my head</li>
+                                <li><VectorHome id="vect28" className="vector" />Gnomes</li>
+                                <li><VectorHome id="vect29" className="vector" />The sound of Rain</li>
+                                <li><VectorHome id="vect30" className="vector" />A Good Cozy Sweater</li>
+                            </ul>
+                        </div>
+                        <div className="singleCard col-4">
+                            <ul className="pl-0">
+                                <li><VectorHome id="vect11" className="vector" />Planners</li>
+                                <li><VectorHome id="vect12" className="vector" />Laughing until my Cheeks Hurt</li>
+                                <li><VectorHome id="vect13" className="vector" />Music</li>
+                                <li><VectorHome id="vect14" className="vector" />Hugs</li>
+                                <li><VectorHome id="vect15" className="vector" />The crispness of Fall</li>
+                                <li><VectorHome id="vect16" className="vector" />Lots of Pillows</li>
+                                <li><VectorHome id="vect17" className="vector" />The color Black</li>
+                                <li><VectorHome id="vect18" className="vector" />Pizza</li>
+                                <li><VectorHome id="vect19" className="vector" />Italy</li>
+                                <li><VectorHome id="vect20" className="vector" />The smell before it rains</li>
+                            </ul>
+                        </div>
                     </div>
                     <div className="flex flex-column" style={{height: '100%', justifyContent: 'space-between'}}>
                         <BlinkingVectorHome ref={ref} id="Blink_vector_3" className={ inView? 'is-active blink_vector' : 'blink_vector'} />
@@ -195,7 +107,7 @@ const AboutPage = () => {
             </section>
             <section id="journey_sec">
 
-                <h1 className="col-12 text-center"  id="journeyTitle">A JOURNEY FROM REINVENTION TO CREATION</h1>
+                <h1 className="page_sec-headers col-12 text-center"  id="journeyTitle">A JOURNEY FROM REINVENTION TO CREATION</h1>
                 <div className="flex col-12" id="journey_wrapper">
 
                     <div id="article_wrapper" className="flex flex-column flex-alignItems-center col-10">
@@ -243,10 +155,6 @@ const AboutPage = () => {
                                 If my story resonated with you, let’s begin creating your new journey together.The life you want begins the moment you stop waiting for the perfect time. You can keep dreaming of change… or plant the seed and watch it grow.  Let’s plant the seed together!
                             </p>
                         </article>
-                        <div className="flex flex-column col-12" id="journeyBottomSec">
-                            <p>Schedule your complimentary Discovery Call today.</p>
-                            <Link to={'/contact'} className="primaryBtn fontSize20 mt-25">BOOK NOW</Link>
-                        </div>
                     </div>
 
                     <div id="timeline_wrapper">
@@ -263,6 +171,10 @@ const AboutPage = () => {
                             <img src={`${process.env.PUBLIC_URL}/images/about-page/phase_4.png`} alt="Black Dahlia moon phases: phase 4" />
                         </div>
                     </div>
+                </div>
+                <div className="flex flex-column col-12" id="journeyBottomSec">
+                    <p>Schedule your complimentary Discovery Call today.</p>
+                    <Link to={'/contact'} className="primaryBtn fontSize20 mt-25">BOOK NOW</Link>
                 </div>
             </section>
             <section id="whatWaitFor">

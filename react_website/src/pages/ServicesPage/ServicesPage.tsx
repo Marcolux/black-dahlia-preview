@@ -6,13 +6,13 @@ const ServicesPage = () => {
 
     return(
         <div className="page" id="ServicesPage">
-            <h1 id="servicesTitle">SERVICES ...</h1>
-            <div className="flex flex-wrap col-12" id="servicesWrapper">
+            <h1 className="page_sub-headers my-30">SERVICES ...</h1>
+            <div className="flex flex-wrap col-12 mt-50" id="servicesWrapper">
 
                 <article className="servicesCard">
                     <div className="flex flex-column">
-                        <h4 className="serviceTitle">LOGO DESIGN</h4>
-                        <p className="serviceDescription">
+                        <h4 className="page_paragraphTitle">LOGO DESIGN</h4>
+                        <p className="page_paragraphText">
                             Define your look, voice, and presence.This is your brand’s foundation...from concept to visual identity.
                             <br/>The three brand identity tiers are:
                             <ul>
@@ -32,8 +32,8 @@ const ServicesPage = () => {
                 
                 <article className="servicesCard">
                     <div className="flex flex-column">
-                        <h4 className="serviceTitle">BRAND IDENTITY</h4>
-                        <p className="serviceDescription">
+                        <h4 className="page_paragraphTitle">BRAND IDENTITY</h4>
+                        <p className="page_paragraphText">
                             Define your brand’s essence with a visual mark that captures who you are. 
                             Each logo begins with thoughtful research, concept exploration, and intentional design.
                             <br/>Includes:
@@ -50,8 +50,8 @@ const ServicesPage = () => {
 
                 <article className="servicesCard">
                     <div className="flex flex-column">
-                        <h4 className="serviceTitle">BOOK PUBLICATION</h4>
-                        <p className="serviceDescription">
+                        <h4 className="page_paragraphTitle">BOOK PUBLICATION</h4>
+                        <p className="page_paragraphText">
                             Bring your vision to life.  
                             From idea to publish ready design. 
                             Whether it’s a children’s book, journal, or planner, we craft beautifully 
@@ -69,8 +69,8 @@ const ServicesPage = () => {
 
                 <article className="servicesCard">
                     <div className="flex flex-column">
-                        <h4 className="serviceTitle">Web Design</h4>
-                        <p className="serviceDescription">
+                        <h4 className="page_paragraphTitle">Web Design</h4>
+                        <p className="page_paragraphText">
                             Beautiful, user focused websites designed  to captivate and convert.
                             <br/>Package Includes:
                             <ul>
@@ -91,8 +91,8 @@ const ServicesPage = () => {
 
                 <article className="servicesCard">
                     <div className="flex flex-column">
-                        <h4 className="serviceTitle">Custom Planners</h4>
-                        <p className="serviceDescription">
+                        <h4 className="page_paragraphTitle">Custom Planners</h4>
+                        <p className="page_paragraphText">
                             Beautifully designed planners, 
                             journals, and stationery created to inspire
                             organization and self expression.
@@ -116,8 +116,8 @@ const ServicesPage = () => {
 
                 <article className="servicesCard">
                     <div className="flex flex-column">
-                        <h4 className="serviceTitle">Menu Design</h4>
-                        <p className="serviceDescription">
+                        <h4 className="page_paragraphTitle">Menu Design</h4>
+                        <p className="page_paragraphText">
                             Thoughtfully designed service menus that reflect your brand’s essence.  
                             Polished, cohesive, and unmistakably yours. 
                             <ul>
@@ -133,8 +133,8 @@ const ServicesPage = () => {
 
                 <article className="servicesCard">
                     <div className="flex flex-column">
-                        <h4 className="serviceTitle">Event Branding</h4>
-                        <p className="serviceDescription">
+                        <h4 className="page_paragraphTitle">Event Branding</h4>
+                        <p className="page_paragraphText">
                             Bring your vision to life with a branded experience 
                             that feels intentional, elevated, and completely unforgettable. 
                             From intimate gatherings to grand celebrations, 
@@ -151,10 +151,10 @@ const ServicesPage = () => {
                                 </li>
                             </ul>
                         </p>
-                        <p className="mt-10 mb-0">Ideal For:</p>
-                        <p className="mt-20">Weddings • Brand Launches • Corporate Galas • Private Events • Experiential Pop-Ups</p>
-                        <br/><p className="m-0"><strong>Investment:</strong> Starts at $2,000  (Final pricing varies based on scope, deliverables, and creative direction.)</p>
-                        <br/><br/><p className="text-italic text-bold mt-10 mb-0">Note: Printing and production costs are not included in the base design fee. Full service print management is available upon request for a seamless, start to finish experience.</p>
+                        <p className="mt-10 mb-0 page_paragraphText">Ideal For:</p>
+                        <p className="mt-10 mb-0 page_paragraphText">Weddings • Brand Launches • Corporate Galas • Private Events • Experiential Pop-Ups</p>
+                        <p className="mt-20 page_paragraphText"><strong>Investment:</strong> Starts at $2,000  (Final pricing varies based on scope, deliverables, and creative direction.)</p>
+                        <br/><p className="text-italic text-bold mt-10 mb-0 page_paragraphText">Note: Printing and production costs are not included in the base design fee. Full service print management is available upon request for a seamless, start to finish experience.</p>
                     </div>
                 </article>
             </div>

@@ -4,9 +4,50 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+    font: var(--page-paragraphText-font);
+    letter-spacing: 0.1em;
+    line-height: 30pt;
     .tempFolder{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .page_headers {
+        font: var(--page-headers-font);
+        margin: 0px;
+    }
+    .page_sub-headers {
+        font: var(--page-subHeaders-font);
+        letter-spacing: 0.03em;
+        margin: 0px;
+        text-transform: uppercase;
+    }
+    .page_sub-headers-vr {
+        font: var(--page-subHeaders-font-vr);
+        letter-spacing: 0.03em;
+        margin: 0px;
+    }
+    .page_sec-headers {
+        font: var(--page-secHeaders-font);
+        letter-spacing: 0.03em;
+        margin: 0px;
+        text-transform: uppercase;
+    }
+    .page_sec-headers-vr {
+        font: var(--page-secHeaders-font-vr);
+        letter-spacing: 0.03em;
+        margin: 0px;
+    }
+    .page_paragraphTitle {
+        font: var(--page-paragraphTitle-font);
+        margin: 0px;
+    }
+    .page_paragraphTitle-vr {
+        font: var(--page-paragraphTitle-font-vr);
+        margin: 0px;
+    }
+    .page_paragraphText {
+        font: var(--page-paragraphText-font);
+        margin: 0px;
     }
 }

@@ -11,7 +11,7 @@ const RollingTrail = ({ icons }: RollingTrailProps) => {
 
     const trail = useTrail(icons.length, {
         from: {transform: `translateX(300%) rotate(360deg)`},
-        to: { transform: inView ? `translateX(0%) rotate(0deg)` : `translateX(300%) rotate(360deg)`},
+        to: { transform: inView ? `translateX(0%) rotate(0deg)` : `translateX(600%) rotate(360deg)`},
         config: {
             tension: 120,
             duration: 1000,
