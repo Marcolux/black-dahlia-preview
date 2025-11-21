@@ -47,7 +47,9 @@
 	width: fit-content;
 }
 
+
 /* SCROLLBAR SETTINGS*/
+
 ::-webkit-scrollbar {
 	width: 8px !important;
 }
@@ -62,6 +64,4 @@
 
 /* FOOTER */
 
-footer {
-	background-color: var(--primary-color);
-}
+footer { background-color: var(--primary-color); }

@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from "react"
 import "../page.scss"
 import "./contact-page.scss"
-import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser"
+
 emailjs.init("H3N6QwFNl137XPhBb")
 
 const ContactPage = () => {
@@ -58,16 +59,12 @@ const ContactPage = () => {
                 project_budget: budget,
                 message: message
             }
-
-            console.log("Sending EmailJS params:", templateParams)
             
             const result = await emailjs.send(
                 "service_4a753w5",
                 "template_7wusit9",
                 templateParams
             )
-
-            console.log("SUCCESS!", result.status, result.text)
 
             setSent(true)
 
@@ -104,7 +101,7 @@ const ContactPage = () => {
                 noValidate
             >
                 <div className="flex flex-alignItems-center oneRow">
-                    {/* First Name */}
+                    {/* Name */}
                     <div className="field flex flex-column col-12">
                         <label htmlFor="form_name" className="mb-5">
                             NAME:
