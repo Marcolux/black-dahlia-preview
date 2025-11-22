@@ -39,14 +39,14 @@ const PortfolioPage = () => {
                     frontContent={
                         <img
                             src={`${process.env.PUBLIC_URL}/images/portfolio/nicchie_menu2_front.png`}
-                            alt={`Flip card front 1`}
+                            alt={`Flip card front 2`}
                         />
 
                     }
                     backContent={
                         <img
                             src={`${process.env.PUBLIC_URL}/images/portfolio/nicchie_menu2_back.png`}
-                            alt={`Flip card front 1`}
+                            alt={`Flip card front 2`}
                         />
                     }
                     frontTrigger={
@@ -63,13 +63,13 @@ const PortfolioPage = () => {
                     frontContent={
                         <img
                             src={`${process.env.PUBLIC_URL}/images/portfolio/nicchie_inside_restaurant_front.png`}
-                            alt={`Flip card front 1`}
+                            alt={`Flip card front 3`}
                         />
                     }
                     backContent={
                         <img
                             src={`${process.env.PUBLIC_URL}/images/portfolio/nicchie_inside_restaurant_back.png`}
-                            alt={`Flip card front 1`}
+                            alt={`Flip card front 3`}
                         />
                     }
                     frontTrigger={
@@ -86,13 +86,13 @@ const PortfolioPage = () => {
                     frontContent={
                         <img
                             src={`${process.env.PUBLIC_URL}/images/portfolio/le_nicchie_front.png`}
-                            alt={`Flip card front 1`}
+                            alt={`Flip card front 4`}
                         />
                     }
                     backContent={
                         <img
                             src={`${process.env.PUBLIC_URL}/images/portfolio/le_nicchie_back.png`}
-                            alt={`Flip card front 1`}
+                            alt={`Flip card front 4`}
                         />
                     }
                     frontTrigger={
