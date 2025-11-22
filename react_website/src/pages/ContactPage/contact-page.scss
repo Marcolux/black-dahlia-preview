@@ -9,10 +9,11 @@
     #contactForm {
         background-color: #A2A1A116;
         border-radius: var(--border-radius-cards);
-        gap: 45px;
+        gap: 25px;
         max-width: 900px;
         padding: 32px 55px;
         width: 100%;
+        .field {height: 125px;}
         .oneRow {gap: 45px;}
         .inputText {
             background-color: #171718;
@@ -27,8 +28,9 @@
             }
             option { background-color: #171718; }
         }
-        
+        .errorTextDiv {line-height: 20px !important;}
         .dropdown {
+            width: 100% !important;
             .dropdown__label, .dropdown__button-text {
                 font: var(--page-paragraphText-font);
             }

@@ -9,9 +9,28 @@ const ServicesPage = () => {
             <h1 className="page_sub-headers my-30">SERVICES ...</h1>
             <div className="flex flex-wrap col-12 mt-50" id="servicesWrapper">
 
+                
                 <article className="servicesCard">
                     <div className="flex flex-column">
                         <h4 className="page_paragraphTitle">LOGO DESIGN</h4>
+                        <p className="page_paragraphText">
+                            Define your brand’s essence with a visual mark that captures who you are. 
+                            Each logo begins with thoughtful research, concept exploration, and intentional design.
+                            <br/>Includes:
+                            <ul>
+                                <li>1 primary logo design</li>
+                                <li>2–3 initial concepts</li>
+                                <li>Up to 3 revisions</li>
+                                <li>Final logo files for print + digital use</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <p className="col-12"><strong>Investment:</strong> $500</p>
+                </article>
+                
+                <article className="servicesCard">
+                    <div className="flex flex-column">
+                        <h4 className="page_paragraphTitle">BRAND IDENTITY</h4>
                         <p className="page_paragraphText">
                             Define your look, voice, and presence.This is your brand’s foundation...from concept to visual identity.
                             <br/>The three brand identity tiers are:
@@ -28,24 +47,6 @@ const ServicesPage = () => {
                             className="ml-20"
                         />  
                     </Link>
-                </article>
-                
-                <article className="servicesCard">
-                    <div className="flex flex-column">
-                        <h4 className="page_paragraphTitle">BRAND IDENTITY</h4>
-                        <p className="page_paragraphText">
-                            Define your brand’s essence with a visual mark that captures who you are. 
-                            Each logo begins with thoughtful research, concept exploration, and intentional design.
-                            <br/>Includes:
-                            <ul>
-                                <li>1 primary logo design</li>
-                                <li>2–3 initial concepts</li>
-                                <li>Up to 3 revisions</li>
-                                <li>Final logo files for print + digital use</li>
-                            </ul>
-                        </p>
-                    </div>
-                    <p className="col-12"><strong>Investment:</strong> $500</p>
                 </article>
 
                 <article className="servicesCard">

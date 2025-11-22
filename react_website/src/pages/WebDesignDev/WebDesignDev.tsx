@@ -22,7 +22,7 @@ const WebDesignDevPage = () => {
                         </ul>
                         <br/>Investment Options:
                         <ul>
-                            <li>Design Only: Starts at $3,000 (Figma mockup and handoff ready design)</li>
+                            <li>Design Only: Starts at $2,000 (Figma mockup and handoff ready design)</li>
                             <li>Design + Development: Starts at $4,000 (fully coded, responsive website across all platforms)</li>
                         </ul>
                         <br/>Optional Add Ons:

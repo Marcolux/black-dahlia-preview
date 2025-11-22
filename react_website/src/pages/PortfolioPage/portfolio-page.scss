@@ -1,5 +1,72 @@
 #PortfolioPage {
+    background-color: var(--alternative-black);
+    padding: 0px;
     h1 {
         color: rgb(194, 194, 44);
     }
+    .flipping-card_wrapper {
+        padding: 50px;
+        gap: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        min-width: 100%;
+        background-color: var(--black-dahlia-white);
+        .pricing-card-wrapper {
+            display: flex;
+            min-height: 440px;
+            min-width: calc(50% - 12px);
+            max-width: calc(50% - 12px);
+            width: calc(50% - 12px);
+            .flipcard__face {
+                img {
+                    display: flex;
+                    flex: 1;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                .flipcard__content  {
+                    height: 100%;
+                    &.flipcard__content--back { 
+                        margin-top: 0px; 
+                    }
+                }
+                .flipcard__trigger {
+                    position: absolute;
+                    bottom: 0px;
+                    right: 0px;
+                    p {
+                        font-family: "Bellota";
+                        font-size: 40px;
+                        margin-right: 60px;
+                        opacity: .2;
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                    &.flipcard__trigger--back {
+                        align-items: end;
+                        bottom: 40px !important;
+                        display: flex;
+                        height: calc(100% - 40px);
+                        right: 40px;
+                        top: 0px;
+                        width: 150px;
+                        svg path {
+                            stroke: #E1D8CE;
+                            stroke-width:  1px;
+                            fill: #E1D8CE !important;
+                        }
+                        &:hover {
+                            svg path{
+                                // fill: #E1D8CE !important;
+                                fill-opacity: 1 !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }

@@ -38,6 +38,7 @@ import React, {
     useEffect,
     KeyboardEvent,
     MouseEvent,
+    ReactNode,   
 } from "react"
 
 import './dropdown-select.scss'
@@ -53,10 +54,11 @@ type DropdownProps = {
     value: string | null        // currently selected value
     onChange: (value: string) => void
     placeholder?: string
-    classNameWrapper?: string          // for outer wrapper
-    classNameButton?: string          // for outer wrapper
+    classNameWrapper?: string 
+    classNameButton?: string
     name?: string
     id?: string
+    customIcon?: ReactNode
 }
 
 const Dropdown: React.FC<DropdownProps> = ({
@@ -68,7 +70,8 @@ const Dropdown: React.FC<DropdownProps> = ({
     classNameWrapper,
     classNameButton,
     name,
-    id
+    id,
+    customIcon,
 }) => {
     const [isOpen, setIsOpen] = useState(false)
     const [activeIndex, setActiveIndex] = useState<number | null>(null)
@@ -187,41 +190,41 @@ const Dropdown: React.FC<DropdownProps> = ({
                 <span className="dropdown__button-text">
                     {selectedOption ? selectedOption.label : placeholder}
                 </span>
-                <span className="dropdown__icon">▾</span>
+                <span className="dropdown__icon">
+                    {customIcon ? customIcon : "▾"}
+                </span>
             </button>
+            <ul
+                id={listboxId}
+                className={`dropdown__list ${isOpen ? "dropdown__list--open" : ""}`}
+                role="listbox"
+                aria-labelledby={labelId}
+                ref={listRef}
+                tabIndex={-1}
+                onKeyDown={handleListKeyDown}
+            >
+                {options.map((opt, index) => {
+                    const isActive = index === activeIndex
+                    const isSelected = opt.value === value
 
-            {isOpen && (
-                <ul
-                    id={listboxId}
-                    className="dropdown__list"
-                    role="listbox"
-                    aria-labelledby={labelId}
-                    ref={listRef}
-                    tabIndex={-1}
-                    onKeyDown={handleListKeyDown}
-                >
-                    {options.map((opt, index) => {
-                        const isActive = index === activeIndex
-                        const isSelected = opt.value === value
-
-                        return (
-                            <li
-                                key={opt.value}
-                                role="option"
-                                aria-selected={isSelected}
-                                className={`dropdown__option 
-                                    ${ isActive ? "dropdown__option--active" : ""} 
-                                    ${isSelected ? "dropdown__option--selected" : ""}
-                                `}
-                                onMouseDown={(e) => e.preventDefault()} // avoid losing focus before click
-                                onClick={() => handleOptionClick(index)}
-                            >
-                                {opt.label}
-                            </li>
-                        )
-                    })}
-                </ul>
-            )}
+                    return (
+                        <li
+                            key={opt.value}
+                            role="option"
+                            aria-selected={isSelected}
+                            className={`dropdown__option 
+                                ${ isActive ? "dropdown__option--active" : ""} 
+                                ${isSelected ? "dropdown__option--selected" : ""}
+                            `}
+                            onMouseDown={(e) => e.preventDefault()} // avoid losing focus before click
+                            onClick={() => handleOptionClick(index)}
+                        >
+                            {opt.label}
+                        </li>
+                    )
+                })}
+            </ul>
+            
         </div>
     )
 }
