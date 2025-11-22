@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/black-dahlia-preview/static/css/main.b6ae0840.css",
-    "main.js": "/black-dahlia-preview/static/js/main.c828d5f5.js",
+    "main.css": "/black-dahlia-preview/static/css/main.c1148b56.css",
+    "main.js": "/black-dahlia-preview/static/js/main.867f9974.js",
     "static/js/453.a85ed1fb.chunk.js": "/black-dahlia-preview/static/js/453.a85ed1fb.chunk.js",
     "static/media/aboutPageBg_middle.png": "/black-dahlia-preview/static/media/aboutPageBg_middle.481cdce80d73fb4787a2.png",
     "static/media/Inter-Regular.ttf": "/black-dahlia-preview/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
@@ -18,13 +18,14 @@
     "static/media/blinkingVector.svg": "/black-dahlia-preview/static/media/blinkingVector.ea3e35c8beb9bd2877cfba49bace22ad.svg",
     "static/media/Vector.svg": "/black-dahlia-preview/static/media/Vector.41c5b1c0d90c552854f88b46e4eda640.svg",
     "index.html": "/black-dahlia-preview/index.html",
+    "static/media/Arrow 23.svg": "/black-dahlia-preview/static/media/Arrow 23.2c6dc888eb421d777b731960e7a40f2b.svg",
     "static/media/vector_home_page.svg": "/black-dahlia-preview/static/media/vector_home_page.c3d2a58a069ba6b2fcb523a5bf419083.svg",
-    "main.b6ae0840.css.map": "/black-dahlia-preview/static/css/main.b6ae0840.css.map",
-    "main.c828d5f5.js.map": "/black-dahlia-preview/static/js/main.c828d5f5.js.map",
+    "main.c1148b56.css.map": "/black-dahlia-preview/static/css/main.c1148b56.css.map",
+    "main.867f9974.js.map": "/black-dahlia-preview/static/js/main.867f9974.js.map",
     "453.a85ed1fb.chunk.js.map": "/black-dahlia-preview/static/js/453.a85ed1fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6ae0840.css",
-    "static/js/main.c828d5f5.js"
+    "static/css/main.c1148b56.css",
+    "static/js/main.867f9974.js"
   ]
 }
