@@ -39,10 +39,10 @@ const AboutPage = () => {
                         <img  src={`${process.env.PUBLIC_URL}/images/about-page/BlackDahliaTrishPic.webp`} alt="Black Dahlia Trish"/>
                     </div>
                     <div id="spinningIntroAbt" className="col-12 flex">
-                        <img id="spinner-1" src={`${process.env.PUBLIC_URL}/images/icons/dahlia_icon_charcoal.svg`} alt="Black Dahlia charcoal"/>
-                        <img id="spinner-2" src={`${process.env.PUBLIC_URL}/images/icons/dahlia_icon_silver.svg`} alt="Black Dahlia silver"/>
-                        <img id="spinner-3" src={`${process.env.PUBLIC_URL}/images/icons/dahlia_icon_biege.svg`} alt="Black Dahlia beige"/>
-                        <img id="spinner-4" src={`${process.env.PUBLIC_URL}/images/icons/dahlia_icon_burgundy.svg`} alt="Black Dahlia burgundy"/>
+                        <img id="spinner-1" src={`${process.env.PUBLIC_URL}/images/icons/dahlia_icon_charcoal.webp`} alt="Black Dahlia charcoal"/>
+                        <img id="spinner-2" src={`${process.env.PUBLIC_URL}/images/icons/dahlia_icon_silver.webp`} alt="Black Dahlia silver"/>
+                        <img id="spinner-3" src={`${process.env.PUBLIC_URL}/images/icons/dahlia_icon_biege.webp`} alt="Black Dahlia beige"/>
+                        <img id="spinner-4" src={`${process.env.PUBLIC_URL}/images/icons/dahlia_icon_burgundy.webp`} alt="Black Dahlia burgundy"/>
                     </div>
                     <Link to={'/contact'} className="primaryBtn-vr1 fontSize20 col-7 mt-45">BOOK NOW</Link>
                 </div>

@@ -14,7 +14,7 @@ const NavigationBar = () => {
                 <div id="upper_home_bar">
                     <img id="homepage_logo" src={`${process.env.PUBLIC_URL}/images/black_dahlia_logo_v1.jpg`} alt="Black Dahlia Creative logo text"/>
                     <div id="dahlia_logo_wrapper">
-                        <img id="homepage_dahlia_logo" src={`${process.env.PUBLIC_URL}/images/dahlia_icon_logo.svg`} alt="Black Dahlia Creative logo flower"/>
+                        <img id="homepage_dahlia_logo" src={`${process.env.PUBLIC_URL}/images/dahlia_icon_logo.webp`} alt="Black Dahlia Creative logo flower"/>
                     </div>
                     {/* <button className="primaryBtn"> GET IN TOUCH</button> */}
                 </div>

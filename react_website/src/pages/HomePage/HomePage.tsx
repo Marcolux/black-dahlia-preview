@@ -10,10 +10,10 @@ import "./homepage.scss"
 const HomePage = () => {
     
     const rollingIcons: string[] = [
-        'dahlia_icon_charcoal.svg',
-        'dahlia_icon_silver.svg',
-        'dahlia_icon_biege.svg',
-        'dahlia_icon_burgundy.svg',
+        'dahlia_icon_charcoal.webp',
+        'dahlia_icon_silver.webp',
+        'dahlia_icon_biege.webp',
+        'dahlia_icon_burgundy.webp',
     ]
     const translateIcons: string[] = [
         'bd-landing-img-1.webp',
@@ -77,7 +77,12 @@ const HomePage = () => {
             </section>
 
             <section id="transition-img">
-                <img src={`${process.env.PUBLIC_URL}/images/home-page/street_mockup.webp`} alt="Black Dahlia on street wall" />
+                <img 
+                    src={`${process.env.PUBLIC_URL}/images/home-page/street_mockup.webp`} 
+                    alt="Black Dahlia on street wall" 
+                    loading="lazy" 
+                    decoding="async"
+                />
             </section>
 
             <section id="why-black-dahlia">
@@ -116,12 +121,16 @@ const HomePage = () => {
                     <img 
                         src={`${process.env.PUBLIC_URL}/images/home-page/bloom_against_the_grain_text.webp`}
                         alt="Spinning bloom against the grain text"
+                        loading="lazy" 
+                        decoding="async"
                     />
                 </SpinningElement>
                     <img 
                         src={`${process.env.PUBLIC_URL}/images/home-page/bloom_against_the_grain_vec.webp`}
                         id="staticImg"
                         alt="Static bloom against the grain"
+                        loading="lazy" 
+                        decoding="async"
                     />
 
             </section>
@@ -133,11 +142,15 @@ const HomePage = () => {
                             id="picLeft"
                             src={`${process.env.PUBLIC_URL}/images/home-page/bd_mugs.webp`}
                             alt="Mugs Middle Page"
+                            loading="lazy" 
+                            decoding="async"
                         />
                         <img 
                             id="picRight"
                             src={`${process.env.PUBLIC_URL}/images/home-page/black_dahlia_mens_hoodie.webp`}
-                             alt="Hoodie Middle Page"
+                            alt="Hoodie Middle Page"
+                            loading="lazy" 
+                            decoding="async"
                         />
 
                     </div>
@@ -145,16 +158,34 @@ const HomePage = () => {
 
             <section className="flex flex-column flex-justifyContent-center flex-alignItems-center" id="plannersInt">
                 <p className="textPlanners" id="top">We LOVE to create Planners!</p>
-                <img src={`${process.env.PUBLIC_URL}/images/home-page/blac_dahlia_planner_mockup.webp`} alt="Planner Mockup" />
+                <img 
+                    src={`${process.env.PUBLIC_URL}/images/home-page/blac_dahlia_planner_mockup.webp`} 
+                    alt="Planner Mockup" 
+                    loading="lazy" 
+                    decoding="async"
+                />
                 <p className="textPlanners" id="bottom">Reach out to Create your own personalized Planner!</p>
             </section>
 
             <section className="flex flex-column" id="organizedInt">
                 <div id="animatedOrg">
-                    <img src={`${process.env.PUBLIC_URL}/images/home-page/black_dahlia_box_set_mockup.webp`} alt="Planners Set" />
+                    <img 
+                        src={`${process.env.PUBLIC_URL}/images/home-page/black_dahlia_box_set_mockup.webp`} 
+                        alt="Planners Set" 
+                        loading="lazy" 
+                        decoding="async"
+                    />
                     <div className="flex" id="rollingDahliaTextWrap">
                         <h1 className="textOrg" id="bottom">Organized Chaos!</h1>
-                        <img ref={ref} className={inView ? 'is-active' : ''} id="orgRollDahlia" src={`${process.env.PUBLIC_URL}/images/home-page/dahlia_icon_lightgray.webp`} alt="Organized Chaos Spinning Dahlia" />
+                        <img 
+                            ref={ref} 
+                            className={inView ? 'is-active' : ''} 
+                            id="orgRollDahlia" 
+                            src={`${process.env.PUBLIC_URL}/images/home-page/dahlia_icon_lightgray.webp`} 
+                            alt="Organized Chaos Spinning Dahlia"
+                            loading="lazy" 
+                            decoding="async" 
+                        />
                     </div>
                 </div>
                 <div id="bookNowOrg">
