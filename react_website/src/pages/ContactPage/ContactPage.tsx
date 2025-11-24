@@ -294,8 +294,8 @@ const ContactPage = () => {
                 <div className="col-12 flex flex-justifyContent-center">
                     <p>Please allow 1-2 business days for a response</p>
                 </div>
-
             </form>
+            <img className="col-2 mt-40" src={`${process.env.PUBLIC_URL}/images/about-page/dahlia_icon_biege 6.png`} alt="Spining Black Dahlia on Contact Page" />
         </div>
     )
 }

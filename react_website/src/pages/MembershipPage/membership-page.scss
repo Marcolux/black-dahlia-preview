@@ -1,5 +1,13 @@
 #MembershipPage {
-    h1 {
-        color: rgb(125, 43, 43);
+    background-color: var(--alternative-black);
+    .page_sub-headers-vr {
+        color: var(--black-dahlia-white);
+        font-style: normal;
+        margin: auto;
+    }
+    #spiningDahliaMemberPg {
+        display: flex;
+        flex: auto;
+        animation: spin360 15s linear infinite;
     }
 }
