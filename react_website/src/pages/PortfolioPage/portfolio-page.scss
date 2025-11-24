@@ -1,48 +1,65 @@
 #PortfolioPage {
+    align-items: center;
     background-color: var(--alternative-black);
+    display: flex;
+    flex-direction: column;
     padding: 0px;
-    h1 {
-        color: rgb(194, 194, 44);
+    .page_sub-headers {
+        color: var(--black-dahlia-white);
+        margin: 100px 0px;
+        text-align: center;
+        width: 100%;
+    }
+    .page_sec-headers {
+        background-color: var(--black-dahlia-white);
+        font-style: normal;
+        margin-bottom: 56px;
+        margin-top: 0px;
+        padding: 18px 56px;
+        width: fit-content;
+    }
+    .page_paragraphText {
+        color: var(--black-dahlia-white);
+        font-size: clamp(16px, 3vw - 1rem, 40px);
+        font-weight: 100;
+        margin-bottom: 90px;
     }
     .flipping-card_wrapper {
-        padding: 50px;
-        gap: 24px;
+        background-color: var(--black-dahlia-white);
         display: flex;
         flex-wrap: wrap;
+        gap: 24px;
         min-width: 100%;
-        background-color: var(--black-dahlia-white);
+        padding: 50px;
         .pricing-card-wrapper {
             display: flex;
-            min-height: 440px;
+            height: 440px;
             min-width: calc(50% - 12px);
             max-width: calc(50% - 12px);
             width: calc(50% - 12px);
             .flipcard__face {
+                border-radius: 0px;
                 img {
                     display: flex;
                     flex: 1;
                     height: 100%;
-                    width: 100%;
                     object-fit: cover;
+                    width: 100%;
                 }
                 .flipcard__content  {
                     height: 100%;
-                    &.flipcard__content--back { 
-                        margin-top: 0px; 
-                    }
+                    &.flipcard__content--back { margin-top: 0px; }
                 }
                 .flipcard__trigger {
-                    position: absolute;
                     bottom: 0px;
+                    position: absolute;
                     right: 0px;
                     p {
                         font-family: "Bellota";
                         font-size: 40px;
                         margin-right: 60px;
                         opacity: .2;
-                        &:hover {
-                            opacity: 1;
-                        }
+                        &:hover { opacity: 1; }
                     }
                     &.flipcard__trigger--back {
                         align-items: end;
@@ -53,9 +70,9 @@
                         top: 0px;
                         width: 150px;
                         svg path {
+                            fill: #E1D8CE !important;
                             stroke: #E1D8CE;
                             stroke-width:  1px;
-                            fill: #E1D8CE !important;
                         }
                         &:hover {
                             svg path{
@@ -66,7 +83,41 @@
                     }
                 }
             }
+            &#rr_mag_card1 {
+                .flipcard__face--front{
+                    background-color: #B7A08D;
+                    img { object-fit: contain; }
+                }
+            }
+            &#planner_card1 {
+                .flipcard__face--back{
+                    background-color: #CDD3D7;
+                    img { object-fit: contain; }
+                }
+            }
+            &#planner_card2 {
+                .flipcard__face--back{
+                    background-color: #835C32;
+                    img { object-fit: contain; }
+                }
+            }
+            &#planner_card3 {
+                .flipcard__face--front{
+                    background-color: #CDD3D7;
+                    img { object-fit: contain; }
+                }
+            }
         }
     }
-    
+    #bottom_portfolio {
+        .page_paragraphTitle {
+            color: var(--black-dahlia-white);
+            font-family: Nunito;
+            font-weight: 400;
+            margin: 0px;
+            text-align: center;
+        }
+        #scheduleText {color: var(--black-dahlia-white);}
+        .primaryBtn-vr1 { width: 570px; }
+    }
 }
