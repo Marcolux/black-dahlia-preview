@@ -128,13 +128,13 @@ const PortfolioPage = () => {
                         frontContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/bauhaus_poster_front.png`}
-                                alt={`Bauhaus Poster card front image`}
+                                alt={`Bauhaus Poster card front`}
                             />
                         }
                         backContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/bauhaus_poster_back.png`}
-                                alt={`Bauhaus Poster card back image`}
+                                alt={`Bauhaus Poster card back`}
                             />
                         }
                         frontTrigger={ <p>Explore more</p> }
@@ -161,13 +161,13 @@ const PortfolioPage = () => {
                         frontContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/magazine_front_1.png`}
-                                alt={`Traveler's magazine card 1 front image`}
+                                alt={`Traveler's magazine card 1 front`}
                             />
                         }
                         backContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/magazine_back_1.png`}
-                                alt={`Traveler's magazine card 1 back image`}
+                                alt={`Traveler's magazine card 1 back`}
                             />
                         }
                         frontTrigger={ <p>Explore more</p> }
@@ -177,7 +177,7 @@ const PortfolioPage = () => {
                     />
                     <img
                         src={`${process.env.PUBLIC_URL}/images/portfolio/magazine_front_only.png`}
-                        alt={`Traveler's magazine card 1 back image`}
+                        alt={`Traveler's magazine card 2`}
                         className="pricing-card-wrapper"
                     />
                 </div>
@@ -199,13 +199,13 @@ const PortfolioPage = () => {
                         frontContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/root_ridge_card1_front.png`}
-                                alt={`Root & Ride Magazine front image`}
+                                alt={`Root & Ride Magazine card 1 front`}
                             />
                         }
                         backContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/root_ridge_card1_back.png`}
-                                alt={`Root & Ride Magazine back image`}
+                                alt={`Root & Ride Magazine card 1 back`}
                             />
                         }
                         frontTrigger={ <p>Explore more</p> }
@@ -219,13 +219,13 @@ const PortfolioPage = () => {
                         frontContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/root_ridge_card2_front.png`}
-                                alt={`Root & Ride Magazine front image`}
+                                alt={`Root & Ride Magazine card 2 front`}
                             />
                         }
                         backContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/root_ridge_card2_back.png`}
-                                alt={`Root & Ride Magazine back image`}
+                                alt={`Root & Ride Magazine card 2 back`}
                             />
                         }
                         frontTrigger={ <p>Explore more</p> }
@@ -262,13 +262,13 @@ const PortfolioPage = () => {
                         frontContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/planner1_front.png`}
-                                alt={`Planners Card 1 front image`}
+                                alt={`Planners Card 1 front`}
                             />
                         }
                         backContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/planner1_back.png`}
-                                alt={`Planners Card 1 back image`}
+                                alt={`Planners Card 1 back`}
                             />
                         }
                         frontTrigger={ <p>Explore more</p> }
@@ -282,13 +282,13 @@ const PortfolioPage = () => {
                         frontContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/planner2_front.png`}
-                                alt={`Planners Card 2 front image`}
+                                alt={`Planners Card 2 front`}
                             />
                         }
                         backContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/planner2_back.png`}
-                                alt={`Planners Card 2 back image`}
+                                alt={`Planners Card 2 back`}
                             />
                         }
                         frontTrigger={ <p>Explore more</p> }
@@ -302,13 +302,13 @@ const PortfolioPage = () => {
                         frontContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/planner3_front.png`}
-                                alt={`Planners Card 3 front image`}
+                                alt={`Planners Card 3 front`}
                             />
                         }
                         backContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/planner3_back.png`}
-                                alt={`Planners Card 3 back image`}
+                                alt={`Planners Card 3 back`}
                             />
                         }
                         frontTrigger={ <p>Explore more</p> }
@@ -322,13 +322,13 @@ const PortfolioPage = () => {
                         frontContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/planner4_front.png`}
-                                alt={`Planners Card 4 front image`}
+                                alt={`Planners Card 4 front`}
                             />
                         }
                         backContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/planner4_back.png`}
-                                alt={`Planners Card 4 back image`}
+                                alt={`Planners Card 4 back`}
                             />
                         }
                         frontTrigger={ <p>Explore more</p> }
@@ -355,13 +355,13 @@ const PortfolioPage = () => {
                         frontContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/italian_book_front.png`}
-                                alt={`Italian's children book front image`}
+                                alt={`Italian's children book front`}
                             />
                         }
                         backContent={
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/italian_book_back.png`}
-                                alt={`Italian's children book back image`}
+                                alt={`Italian's children book back`}
                             />
                         }
                         frontTrigger={ <p>Explore more</p> }

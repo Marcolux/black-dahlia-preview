@@ -13,13 +13,13 @@ const Footer = () => {
                 <img 
                     src={`${process.env.PUBLIC_URL}/images/icons/skill-icons_instagram.jpg`}  
                     style={{borderRadius: '8px', height: '30px'}}
-                    alt=""
+                    alt="Instagram Icon"
                 />
                 <img 
                     className='ml-15' 
                     src={`${process.env.PUBLIC_URL}/images/icons/logos_facebook.jpg`} 
                     style={{borderRadius: '50%', height: '30px'}}
-                    alt="" 
+                    alt="Facebook Icon" 
                 />
            </div>
         </div>

@@ -189,7 +189,7 @@ const AboutPage = () => {
                     You can keep wishing for a different story,
                     or start writing the next chapter now.
                 </p>
-                <img id="spiningDahliaAboutPg" src={`${process.env.PUBLIC_URL}/images/about-page/dahlia_icon_biege 6.png`} alt="" />
+                <img id="spiningDahliaAboutPg" src={`${process.env.PUBLIC_URL}/images/about-page/dahlia_icon_biege 6.png`} alt="Spining Dahlia About Page" />
             </section>
         </div>
     )

@@ -70,6 +70,7 @@ const HomePage = () => {
                     <img 
                         src={`${process.env.PUBLIC_URL}/images/icons/Arrow-icon.png`} 
                         className="ml-20"
+                        alt="Explore Services arrow"
                     />  
                 </Link>
                 
@@ -114,11 +115,13 @@ const HomePage = () => {
                 >
                     <img 
                         src={`${process.env.PUBLIC_URL}/images/home-page/bloom_against_the_grain_text.png`}
+                        alt="Spinning bloom against the grain text"
                     />
                 </SpinningElement>
                     <img 
                         src={`${process.env.PUBLIC_URL}/images/home-page/bloom_against_the_grain_vec.png`}
                         id="staticImg"
+                        alt="Static bloom against the grain"
                     />
 
             </section>
@@ -129,10 +132,12 @@ const HomePage = () => {
                         <img 
                             id="picLeft"
                             src={`${process.env.PUBLIC_URL}/images/home-page/bd_mugs.png`}
+                            alt="Mugs Middle Page"
                         />
                         <img 
                             id="picRight"
                             src={`${process.env.PUBLIC_URL}/images/home-page/black_dahlia_mens_hoodie.webp`}
+                             alt="Hoodie Middle Page"
                         />
 
                     </div>
@@ -140,16 +145,16 @@ const HomePage = () => {
 
             <section className="flex flex-column flex-justifyContent-center flex-alignItems-center" id="plannersInt">
                 <p className="textPlanners" id="top">We LOVE to create Planners!</p>
-                <img src={`${process.env.PUBLIC_URL}/images/home-page/blac_dahlia_planner_mockup.webp`} alt="" />
+                <img src={`${process.env.PUBLIC_URL}/images/home-page/blac_dahlia_planner_mockup.webp`} alt="Planner Mockup" />
                 <p className="textPlanners" id="bottom">Reach out to Create your own personalized Planner!</p>
             </section>
 
             <section className="flex flex-column" id="organizedInt">
                 <div id="animatedOrg">
-                    <img src={`${process.env.PUBLIC_URL}/images/home-page/black_dahlia_box_set_mockup.webp`} alt="" />
+                    <img src={`${process.env.PUBLIC_URL}/images/home-page/black_dahlia_box_set_mockup.webp`} alt="Planners Set" />
                     <div className="flex" id="rollingDahliaTextWrap">
                         <h1 className="textOrg" id="bottom">Organized Chaos!</h1>
-                        <img ref={ref} className={inView ? 'is-active' : ''} id="orgRollDahlia" src={`${process.env.PUBLIC_URL}/images/home-page/dahlia_icon_lightgray.png`} alt="" />
+                        <img ref={ref} className={inView ? 'is-active' : ''} id="orgRollDahlia" src={`${process.env.PUBLIC_URL}/images/home-page/dahlia_icon_lightgray.png`} alt="Organized Chaos Spinning Dahlia" />
                     </div>
                 </div>
                 <div id="bookNowOrg">
