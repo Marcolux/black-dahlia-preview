@@ -295,7 +295,7 @@ const ContactPage = () => {
                     <p>Please allow 1-2 business days for a response</p>
                 </div>
             </form>
-            <img className="col-2 mt-40" src={`${process.env.PUBLIC_URL}/images/about-page/dahlia_icon_biege 6.png`} alt="Spining Black Dahlia on Contact Page" />
+            <img className="col-2 mt-40" src={`${process.env.PUBLIC_URL}/images/about-page/dahlia_icon_biege 6.webp`} alt="Spining Black Dahlia on Contact Page" />
         </div>
     )
 }

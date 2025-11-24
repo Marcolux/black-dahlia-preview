@@ -24,7 +24,7 @@ const AboutPage = () => {
                             <p className="text-center">Hey!</p>
                             <p className="text-center">I'm Trish!</p>
                         </div>
-                        <img id="aboutLndArrow" src={`${process.env.PUBLIC_URL}/images/about-page/ArrowVector.png`} alt="Black Dahlia arrow vector"/>
+                        <img id="aboutLndArrow" src={`${process.env.PUBLIC_URL}/images/about-page/ArrowVector.webp`} alt="Black Dahlia arrow vector"/>
                     </div>
                     <p id="intro-text" className="mb-50 fontSize22">
                         I was born and raised in Chicago, but have some pretty deep southern Italian roots!  
@@ -36,7 +36,7 @@ const AboutPage = () => {
 
                 <div className="flex flex-column flex-alignItems-center" id="rightIntro">
                     <div className="flex m-25 p-25" id="pic">
-                        <img  src={`${process.env.PUBLIC_URL}/images/about-page/BlackDahliaTrishPic.png`} alt="Black Dahlia Trish"/>
+                        <img  src={`${process.env.PUBLIC_URL}/images/about-page/BlackDahliaTrishPic.webp`} alt="Black Dahlia Trish"/>
                     </div>
                     <div id="spinningIntroAbt" className="col-12 flex">
                         <img id="spinner-1" src={`${process.env.PUBLIC_URL}/images/icons/dahlia_icon_charcoal.svg`} alt="Black Dahlia charcoal"/>
@@ -159,16 +159,16 @@ const AboutPage = () => {
 
                     <div id="timeline_wrapper">
                         <div className="moon_phase" id="phase_1">
-                            <img src={`${process.env.PUBLIC_URL}/images/about-page/phase_1.png`} alt="Black Dahlia moon phases: phase 1" />
+                            <img src={`${process.env.PUBLIC_URL}/images/about-page/phase_1.webp`} alt="Black Dahlia moon phases: phase 1" />
                         </div>
                         <div className="moon_phase" id="phase_2">
-                            <img src={`${process.env.PUBLIC_URL}/images/about-page/phase_2.png`} alt="Black Dahlia moon phases: phase 2" />
+                            <img src={`${process.env.PUBLIC_URL}/images/about-page/phase_2.webp`} alt="Black Dahlia moon phases: phase 2" />
                         </div>
                         <div className="moon_phase" id="phase_3">
-                            <img src={`${process.env.PUBLIC_URL}/images/about-page/phase_3.png`} alt="Black Dahlia moon phases: phase 3" />
+                            <img src={`${process.env.PUBLIC_URL}/images/about-page/phase_3.webp`} alt="Black Dahlia moon phases: phase 3" />
                         </div>
                         <div className="moon_phase" id="phase_4">
-                            <img src={`${process.env.PUBLIC_URL}/images/about-page/phase_4.png`} alt="Black Dahlia moon phases: phase 4" />
+                            <img src={`${process.env.PUBLIC_URL}/images/about-page/phase_4.webp`} alt="Black Dahlia moon phases: phase 4" />
                         </div>
                     </div>
                 </div>
@@ -189,7 +189,7 @@ const AboutPage = () => {
                     You can keep wishing for a different story,
                     or start writing the next chapter now.
                 </p>
-                <img id="spiningDahliaAboutPg" src={`${process.env.PUBLIC_URL}/images/about-page/dahlia_icon_biege 6.png`} alt="Spining Dahlia About Page" />
+                <img id="spiningDahliaAboutPg" src={`${process.env.PUBLIC_URL}/images/about-page/dahlia_icon_biege 6.webp`} alt="Spining Dahlia About Page" />
             </section>
         </div>
     )

@@ -16,11 +16,11 @@ const HomePage = () => {
         'dahlia_icon_burgundy.svg',
     ]
     const translateIcons: string[] = [
-        'bd-landing-img-1.png',
-        'bd-landing-img-2.png',
-        'bd-landing-img-3.png',
-        'bd-landing-img-4.png',
-        'bd-landing-img-5.png'
+        'bd-landing-img-1.webp',
+        'bd-landing-img-2.webp',
+        'bd-landing-img-3.webp',
+        'bd-landing-img-4.webp',
+        'bd-landing-img-5.webp'
     ]
 
     const { ref, inView } = useInView({
@@ -114,12 +114,12 @@ const HomePage = () => {
                     pauseOnHover={true}
                 >
                     <img 
-                        src={`${process.env.PUBLIC_URL}/images/home-page/bloom_against_the_grain_text.png`}
+                        src={`${process.env.PUBLIC_URL}/images/home-page/bloom_against_the_grain_text.webp`}
                         alt="Spinning bloom against the grain text"
                     />
                 </SpinningElement>
                     <img 
-                        src={`${process.env.PUBLIC_URL}/images/home-page/bloom_against_the_grain_vec.png`}
+                        src={`${process.env.PUBLIC_URL}/images/home-page/bloom_against_the_grain_vec.webp`}
                         id="staticImg"
                         alt="Static bloom against the grain"
                     />
@@ -131,7 +131,7 @@ const HomePage = () => {
                     <div className="flex col-12" id="middlePicWrapper" >
                         <img 
                             id="picLeft"
-                            src={`${process.env.PUBLIC_URL}/images/home-page/bd_mugs.png`}
+                            src={`${process.env.PUBLIC_URL}/images/home-page/bd_mugs.webp`}
                             alt="Mugs Middle Page"
                         />
                         <img 
@@ -154,7 +154,7 @@ const HomePage = () => {
                     <img src={`${process.env.PUBLIC_URL}/images/home-page/black_dahlia_box_set_mockup.webp`} alt="Planners Set" />
                     <div className="flex" id="rollingDahliaTextWrap">
                         <h1 className="textOrg" id="bottom">Organized Chaos!</h1>
-                        <img ref={ref} className={inView ? 'is-active' : ''} id="orgRollDahlia" src={`${process.env.PUBLIC_URL}/images/home-page/dahlia_icon_lightgray.png`} alt="Organized Chaos Spinning Dahlia" />
+                        <img ref={ref} className={inView ? 'is-active' : ''} id="orgRollDahlia" src={`${process.env.PUBLIC_URL}/images/home-page/dahlia_icon_lightgray.webp`} alt="Organized Chaos Spinning Dahlia" />
                     </div>
                 </div>
                 <div id="bookNowOrg">

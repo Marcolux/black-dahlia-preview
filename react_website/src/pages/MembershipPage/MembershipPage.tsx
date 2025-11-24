@@ -8,7 +8,7 @@ const MembershipPage = () => {
             
             <div className="col-12 flex flex-column flex-alignItems-center">
                 <h1 className="page_sub-headers-vr">COMING</h1>
-                <img id="spiningDahliaMemberPg" src={`${process.env.PUBLIC_URL}/images/about-page/dahlia_icon_biege 6.png`} alt="Spining Dahlia Membership Page" />
+                <img id="spiningDahliaMemberPg" src={`${process.env.PUBLIC_URL}/images/about-page/dahlia_icon_biege 6.webp`} alt="Spining Dahlia Membership Page" />
                 <h1 className="page_sub-headers-vr">SOON!</h1>
             </div>
         </div>
