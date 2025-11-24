@@ -1,6 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
 import './navigation-bar.scss'
-import SpinningElement from "../home-page-components/SpinningElement/SpinningElement";
 
 const NavigationBar = () => {
     const location = useLocation()
