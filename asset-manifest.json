@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/black-dahlia-preview/static/css/main.f9c0d274.css",
-    "main.js": "/black-dahlia-preview/static/js/main.2f358a2d.js",
+    "main.css": "/black-dahlia-preview/static/css/main.b1b488ba.css",
+    "main.js": "/black-dahlia-preview/static/js/main.5ece45b9.js",
     "static/js/453.a85ed1fb.chunk.js": "/black-dahlia-preview/static/js/453.a85ed1fb.chunk.js",
-    "static/media/aboutPageBg_middle.png": "/black-dahlia-preview/static/media/aboutPageBg_middle.481cdce80d73fb4787a2.png",
     "static/media/Inter-Regular.ttf": "/black-dahlia-preview/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
     "static/media/PlayfairDisplay-VariableFont_wght.ttf": "/black-dahlia-preview/static/media/PlayfairDisplay-VariableFont_wght.bf46a6bcddc9999a295e.ttf",
     "static/media/Nunito-VariableFont_wght.ttf": "/black-dahlia-preview/static/media/Nunito-VariableFont_wght.f55558447983dc135e34.ttf",
+    "static/media/aboutPageBg_middle.webp": "/black-dahlia-preview/static/media/aboutPageBg_middle.cbdbef1610d780a83d0b.webp",
     "static/media/Bellota-Regular.ttf": "/black-dahlia-preview/static/media/Bellota-Regular.a9ebc936b99dd54a4df9.ttf",
     "static/media/BellotaText-Regular.ttf": "/black-dahlia-preview/static/media/BellotaText-Regular.f71f4a56a427635b1872.ttf",
     "static/media/september-script.regular.ttf": "/black-dahlia-preview/static/media/september-script.regular.357314c66c7fd92cf74c.ttf",
@@ -20,12 +20,12 @@
     "index.html": "/black-dahlia-preview/index.html",
     "static/media/Arrow 23.svg": "/black-dahlia-preview/static/media/Arrow 23.2c6dc888eb421d777b731960e7a40f2b.svg",
     "static/media/vector_home_page.svg": "/black-dahlia-preview/static/media/vector_home_page.c3d2a58a069ba6b2fcb523a5bf419083.svg",
-    "main.f9c0d274.css.map": "/black-dahlia-preview/static/css/main.f9c0d274.css.map",
-    "main.2f358a2d.js.map": "/black-dahlia-preview/static/js/main.2f358a2d.js.map",
+    "main.b1b488ba.css.map": "/black-dahlia-preview/static/css/main.b1b488ba.css.map",
+    "main.5ece45b9.js.map": "/black-dahlia-preview/static/js/main.5ece45b9.js.map",
     "453.a85ed1fb.chunk.js.map": "/black-dahlia-preview/static/js/453.a85ed1fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9c0d274.css",
-    "static/js/main.2f358a2d.js"
+    "static/css/main.b1b488ba.css",
+    "static/js/main.5ece45b9.js"
   ]
 }
