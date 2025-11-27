@@ -30,9 +30,11 @@
                 padding: 20px;
                 position: absolute;
                 top: 0;
+                z-index: 10;
                 #homepage_dahlia_logo {
                     aspect-ratio: 1/1;
                     max-height: 210px;
+                    z-index: 11;
                 }
             }
         }
@@ -66,10 +68,55 @@
         }
     }
     .navLinks {
-        text-decoration: none;
-        font-size: var(--navbar-fontsize);
+        // border-radius: 8px;
+        // box-shadow: 0px 0px 0px var(--secondary-color);
+        background-color: transparent;
         color: var(--white-text);
+        
+        font-size: var(--navbar-fontsize);
+        padding: 5px 10px;
+        position: relative;
+        text-decoration: none;
         text-transform: uppercase;
+        transition: all .4s ease;
+        z-index: 11;
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            z-index: -1;
+            transform: scale(0.1);
+            opacity: 0;
+            position: absolute;
+            background-color: var(--secondary-color);
+        }
+        &:before {
+            top: 0; left: 0;
+            transform-origin: left top;
+        }
+        
+        &:after {
+            bottom: 0; right: 0;
+            transform-origin: right bottom;
+        }
         p {margin: 0px;}
+        &.active { 
+            background-color: var(--secondary-color);
+            box-shadow:  6px 6px 6px #0000006f;
+        }
+        &:hover, &.active {
+            color: var(--alternative-black);
+            border-radius: 10px;
+            &:before,
+            &:after {
+                transform: scale(1);
+                opacity: 1;
+                transition: all 0.2s linear 0s;
+            }
+        }
     }
+
   }

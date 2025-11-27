@@ -3,6 +3,7 @@ import "./portfolio-page.scss"
 import FlippingCard from "../../components/FlippingCard/flippingCard"
 import { ReactComponent as VectorHome } from "./Arrow 23.svg"
 import { Link } from "react-router-dom"
+import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
 
 const PortfolioPage = () => {
 
@@ -438,7 +439,17 @@ const PortfolioPage = () => {
                     Let’s create something beautiful! . Reach out Now!
                 </p>
                 <p id="scheduleText" className="mt-50 mb-10">Schedule your complimentary Discover Call TODAY!</p>
-                <Link to={"/contact"} className="primaryBtn-vr1 mt-40">BOOK NOW</Link>
+                    <ButtonScribble 
+                        className="primaryBtn-vr1 mt-50" 
+                        to={'/portfolio'} 
+                        scribbleShift="50px"
+                        buttonBg="var(--black-dahlia-white)"
+                        backColor="var(--secondary-color)"
+                        lineColor="var(--secondary-color)"
+                    >
+                        BOOK NOW
+                    </ButtonScribble>
+                
             </article>
 
         </div>

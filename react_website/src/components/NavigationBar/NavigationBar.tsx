@@ -5,7 +5,7 @@ const NavigationBar = () => {
     const location = useLocation()
     const isHome = location.pathname === '/'
     return (
-        <>  
+        <div>  
         {
             isHome 
             ?
@@ -39,7 +39,7 @@ const NavigationBar = () => {
                  </div>
             </div>
         }
-        </>
+        </div>
     )
 }
 

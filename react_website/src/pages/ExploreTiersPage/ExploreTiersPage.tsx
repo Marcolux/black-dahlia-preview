@@ -24,14 +24,14 @@ const ExploreTiersPage = () => {
                             <h4 className="page_paragraphTitle">The Rebel Edit</h4>
                             <p className="page_paragraphText mt-30">
                                 For brands ready to make their mark.  Clean, distinctive, and crafted with intention.
-                                <ul>
-                                    <li>Primary logo + secondary mark</li>
-                                    <li>Curated color palette & typography suite</li>
-                                    <li>Mini brand moodboard</li>
-                                    <li>One concept refinement round</li>
-                                    <li>Basic logo & color usage guide</li>
-                                </ul>
                             </p>
+                            <ul className="page_paragraphText mt-10">
+                                <li>Primary logo + secondary mark</li>
+                                <li>Curated color palette & typography suite</li>
+                                <li>Mini brand moodboard</li>
+                                <li>One concept refinement round</li>
+                                <li>Basic logo & color usage guide</li>
+                            </ul>
                         </div>
                     </div>
                     <div className="flex col-12 flex-justifyContent-center">
@@ -49,15 +49,15 @@ const ExploreTiersPage = () => {
                             <h4 className="page_paragraphTitle">The Signature <span className="col-12 text-end">Collection</span></h4>
                             <p className="page_paragraphText mt-30">
                                 Timeless and refined.  A cohesive identity that captures your essence across touch points.
-                                <ul>
-                                    <li>Full logo suite (primary, secondary, sub mark)</li>
-                                    <li>Brand color system + textures or patterns</li>
-                                    <li>Extended mood board & creative direction</li>
-                                    <li>Typography hierarchy & brand guide</li>
-                                    <li>Tagline and tone of voice refinement</li>
-                                    <li>Social profile design (icons, banners)</li>
-                                </ul>
                             </p>
+                            <ul className="page_paragraphText mt-10">
+                                <li>Full logo suite (primary, secondary, sub mark)</li>
+                                <li>Brand color system + textures or patterns</li>
+                                <li>Extended mood board & creative direction</li>
+                                <li>Typography hierarchy & brand guide</li>
+                                <li>Tagline and tone of voice refinement</li>
+                                <li>Social profile design (icons, banners)</li>
+                            </ul>
                         </div>
                     </div>
 
@@ -75,14 +75,14 @@ const ExploreTiersPage = () => {
                             <h4 className="page_paragraphTitle">The Empire Reign</h4>
                             <p className="page_paragraphText mt-30">
                                 A complete identity & strategy experience designed for lasting presence and impact.
-                                <ul>
-                                    <li>Complete identity system (logos, color, type, patterns, imagery)</li>
-                                    <li>Comprehensive brand book (voice, vision, guidelines)</li>
-                                    <li>Collateral design (cards, stationery, packaging)</li>
-                                    <li>Social & marketing template suite</li>
-                                    <li>Brand launch consultation & creative direction</li>
-                                </ul>
                             </p>
+                            <ul className="page_paragraphText mt-10">
+                                <li>Complete identity system (logos, color, type, patterns, imagery)</li>
+                                <li>Comprehensive brand book (voice, vision, guidelines)</li>
+                                <li>Collateral design (cards, stationery, packaging)</li>
+                                <li>Social & marketing template suite</li>
+                                <li>Brand launch consultation & creative direction</li>
+                            </ul>
                         </div>
                     </div>
 

@@ -10,29 +10,17 @@
 .hide {display: none !important;}
 .show {display: flex;}
 
+
+
 .primaryBtn {
-	background-color: var(--alternative-black);
-	border: 1px solid var(--black-dahlia-white);
-	border-radius: 63px;
-	color: var(--black-dahlia-white) ;
 	font: var(--page-paragraphText-font);
-	max-height: fit-content;
-	padding: 18px 56px;
-	text-align: center;
-	text-decoration: none;
-	width: fit-content;
+	border-radius: 80px !important;
 }
 .primaryBtn-vr1 {
-	background-color: var(--black-dahlia-white);
-	border: 1px solid var(--alternative-black);
-	border-radius: 63px;
 	color:  var(--alternative-black);
+	background-color: var(--black-dahlia-white);
 	font: var(--page-paragraphText-font);
-	max-height: fit-content;
-	padding: 18px 56px;
-	text-align: center;
-	text-decoration: none;
-	width: fit-content;
+	border-radius: 80px !important;
 }
 .secondaryBtn {
 	background-color: var(--primary-color);

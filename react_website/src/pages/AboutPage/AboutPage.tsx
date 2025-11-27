@@ -4,6 +4,7 @@ import { ReactComponent as BlinkingVectorHome } from './blinkingVector.svg'
 import "../page.scss"
 import "./about-page.scss"
 import { useInView } from "react-intersection-observer"
+import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
 
 const AboutPage = () => {
     const { ref, inView } = useInView({
@@ -44,7 +45,16 @@ const AboutPage = () => {
                         <img id="spinner-3" src={`${process.env.PUBLIC_URL}/images/icons/dahlia_icon_biege.webp`} alt="Black Dahlia beige"/>
                         <img id="spinner-4" src={`${process.env.PUBLIC_URL}/images/icons/dahlia_icon_burgundy.webp`} alt="Black Dahlia burgundy"/>
                     </div>
-                    <Link to={'/contact'} className="primaryBtn-vr1 fontSize20 col-7 mt-45">BOOK NOW</Link>
+                    <ButtonScribble 
+                        className="primaryBtn-vr1 fontSize20 col-7 mt-45" 
+                        to={'/contact'} 
+                        scribbleShift="50px"
+                        buttonBg="var(--black-dahlia-white)"
+                        backColor="var(--secondary-color)"
+                        lineColor="var(--secondary-color)"
+                    >
+                       BOOK NOW
+                    </ButtonScribble>
                 </div>
 
             </section>
@@ -174,7 +184,16 @@ const AboutPage = () => {
                 </div>
                 <div className="flex flex-column col-12" id="journeyBottomSec">
                     <p>Schedule your complimentary Discovery Call today.</p>
-                    <Link to={'/contact'} className="primaryBtn fontSize20 mt-25">BOOK NOW</Link>
+                    <ButtonScribble 
+                        className="primaryBtn fontSize20 mt-25" 
+                        to={'/contact'}
+                        scribbleShift="50px"
+                        buttonBg="var(--alternative-black)"
+                        backColor="var(--secondary-color)"
+                        lineColor="var(--black-dahlia-white)"
+                    >
+                        BOOK NOW
+                    </ButtonScribble>
                 </div>
             </section>
             <section id="whatWaitFor">
@@ -184,7 +203,9 @@ const AboutPage = () => {
                     <h4 className="col-12 text-center">LET BLACK DAHLIA CREATIVE BRING YOUR VISION TO LIFE!</h4>
                     <h4 className="col-12 text-center">YOUR COMPLIMENTARY DISCOVERY CALL AWAITS YOU!</h4>
                 </div>
-                <Link to={'/contact'} className="primaryBtn-vr1 fontSize20">Start your creative journey TODAY</Link>
+                    <ButtonScribble className="primaryBtn-vr1 fontSize20 col-4" to={'/contact'} scribbleShift="50px">
+                        Start your creative journey TODAY
+                    </ButtonScribble>
                 <p className="col-9 text-center" id="textBottom">
                     You can keep wishing for a different story,
                     or start writing the next chapter now.

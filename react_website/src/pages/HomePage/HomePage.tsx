@@ -4,6 +4,7 @@ import RollingTrail from "../../components/home-page-components/RollingTrail/Rol
 import SpinningElement from "../../components/home-page-components/SpinningElement/SpinningElement"
 import TranslateTrail from "../../components/home-page-components/TranslateTrail/TranslateTrail"
 import MugHoodieIters from "../../components/home-page-components/MugHoodieInters/MugHoodieIters"
+import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
 import "../page.scss" 
 import "./homepage.scss"
 
@@ -34,19 +35,22 @@ const HomePage = () => {
                 <h1 className="page_sub-headers-vr">Design with edge.</h1>
                 <h1 className="page_sub-headers-vr">Style with soul.</h1>
                 <p className="text-center fontSize20  my-30">Boutique branding & creative direction for the bold, the soulful, and the ones who dare to stand apart.</p>
-                <div className="col-12 flex flex-alignItems-center flex-justifyContent-center mt-30">
-                    <Link 
-                        id="explorePortfolio" 
+                <div className="col-12 flex flex-alignItems-center flex-justifyContent-center mt-30 buttonsHero">
+
+                    <ButtonScribble className="primaryBtn" to={'/portfolio'} scribbleShift="50px">
+                        Explore the Portfolio
+                    </ButtonScribble>
+
+                    <ButtonScribble 
+                        className="primaryBtn-vr1 ml-20" 
                         to={'/portfolio'} 
-                        className="primaryBtn mr-30"
-                    >Explore the Portfolio
-                    </Link>
-                    
-                    <Link to={'/contact'} 
-                        id="createJourney" 
-                        className="primaryBtn-vr1 ml-30"
-                    >Start your creative journey
-                    </Link>
+                        scribbleShift="50px"
+                        buttonBg="var(--black-dahlia-white)"
+                        backColor="var(--secondary-color)"
+                        lineColor="var(--secondary-color)"
+                    >
+                        Start your creative journey
+                    </ButtonScribble>
                 </div>
             </section>
             <section id="land-animation" className="py-50 my-30">
@@ -63,16 +67,22 @@ const HomePage = () => {
                     <div className="offer-cards"><p>CUSTOM PLANNER</p></div>
                     <div className="offer-cards"><p>EVENT BRANDING</p></div>
                 </div>
-                <Link 
-                    to={'/services'} 
+
+                <ButtonScribble 
                     className="primaryBtn" 
-                >Explore Services
+                    to={'/services'}
+                    scribbleShift="50px"
+                    buttonBg="var(--alternative-black)"
+                    backColor="var(--accent-color)"
+                    lineColor="var(--black-dahlia-white)"
+                >
+                    Explore Services
                     <img 
                         src={`${process.env.PUBLIC_URL}/images/icons/Arrow-icon.png`} 
                         className="ml-20"
                         alt="Explore Services arrow"
                     />  
-                </Link>
+                </ButtonScribble>
                 
             </section>
 
@@ -105,11 +115,17 @@ const HomePage = () => {
                             &nbsp;&nbsp;To break the rules beautifully and make your mark with intention and style?
                         </p>
                     </div>
-                    <Link 
-                        to={'/contact'} 
-                        className="primaryBtn"
-                    >BOOK NOW
-                    </Link>
+                    
+                    <ButtonScribble 
+                        className="primaryBtn" 
+                        to={'/services'}
+                        scribbleShift="50px"
+                        buttonBg="var(--alternative-black)"
+                        backColor="var(--accent-color)"
+                        lineColor="var(--black-dahlia-white)"
+                    >
+                        BOOK NOW
+                    </ButtonScribble>
                 </div>
             </section>
 
@@ -190,7 +206,16 @@ const HomePage = () => {
                 </div>
                 <div id="bookNowOrg">
                     <p>Schedule your complimentary Discover Call TODAY!</p>
-                    <button className="primaryBtn mt-50">BOOK NOW</button>
+                    <ButtonScribble 
+                        className="primaryBtn" 
+                        to={'/services'}
+                        scribbleShift="50px"
+                        buttonBg="var(--alternative-black)"
+                        backColor="var(--accent-color)"
+                        lineColor="var(--black-dahlia-white)"
+                    >
+                        BOOK NOW
+                    </ButtonScribble>
                 </div>
                 <div className="linearTextAnimat">
                     <div className="linearTextAnimat__inner">

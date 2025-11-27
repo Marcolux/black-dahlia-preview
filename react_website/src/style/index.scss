@@ -1,21 +1,20 @@
 @import "./settings/settings.scss";
-* {
-  box-sizing: border-box;
-}
-html,body{
-  height:100%;
-  width:100%;
-  
-  margin: 0;
-  font-family: var(--primary-font);
+
+* { box-sizing: border-box; }
+html, body, #root {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-#root{
+  display: flex;
+  flex-direction: column;
+  font-family: var(--primary-font);
   height: 100%;
-  position: relative;
+  margin: 0;
+  padding: 0;
+  width:100%;
 }
-
+body {  background-color: var(--page-primary-background); }
+#root { position: relative; }
+html { background-color: var(--primary-color);}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

@@ -16,11 +16,10 @@
             max-width: 930px;
             text-align: center;
         }
-        a {
-            width: 400px;
-            &#createJourney {
-                padding-left: 54px;
-                padding-right: 54px;
+        .buttonsHero {
+            --button-shift: 50px;
+            .buttonScr {
+                width: 400px;
             }
         }
     }
@@ -40,6 +39,9 @@
         overflow: visible;
         padding: 85px 0px;
 
+        .primaryBtn {
+            width: 350px;
+        }
         #offer-cards-wrapper {
             gap: 85px;
             justify-content: center;
@@ -96,7 +98,7 @@
                 text-transform: uppercase;
             }
             a {
-                bottom: 45px;
+                bottom: 55px;
                 position: absolute;
                 right: 15%;
                 width: 315px;

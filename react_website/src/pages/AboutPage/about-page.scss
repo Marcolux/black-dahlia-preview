@@ -160,6 +160,7 @@
         }
     }
     #journey_sec {
+        background-color: #ffffff;
         display: flex;
         flex-direction: column;
         padding: 100px;
@@ -197,7 +198,6 @@
                 display: flex;
                 flex-direction: column;
                 flex: auto;
-                height: 100%;
                 position: relative;
                 .moon_phase {
                     align-items: top;
