@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import './navigation-bar-small-screen.scss'
 import { useState } from "react";
 import { useTransition, animated } from "@react-spring/web";
@@ -14,10 +14,12 @@ const NavigationBarSmallScreen = () => {
         leave: { opacity: 0, height: '100dvh', width: '0vw' },
         config: { duration: 200 },
     })
-
+    
+    const {pathname} = useLocation()
+    const isDark = pathname !== '/about'
 
     return (
-        <>
+        <div id="smallScreenWrapper" className={ isDark ? 'dkBg': 'lightBg'}>
             <div className='hambContainer' onClick={toggleLogic}>
                 <div className={isExpanded  ? 'hamburger-menu openHam':'hamburger-menu'}>
                     <div className="bar" id="bar1"></div>
@@ -25,10 +27,9 @@ const NavigationBarSmallScreen = () => {
                     <div className="bar" id="bar3"></div>
                 </div>
             </div>
-            
             {transitions((style, condition) =>
                 condition ? (
-                    <animated.div style={style} id="smallScreenMenu">
+                    <animated.div style={style} id="smallScreenMenu" >
                         <div className='navBarSm'>
                             <NavLink className="navLinksSmScreen" to={'/'} onClick={toggleLogic}><p>Home Page</p></NavLink>
                             <NavLink className="navLinksSmScreen" to={'/about'} onClick={toggleLogic}><p>About</p></NavLink>
@@ -41,7 +42,7 @@ const NavigationBarSmallScreen = () => {
                 ) : null
             )}
             
-        </>
+        </div>
     )
 }
 

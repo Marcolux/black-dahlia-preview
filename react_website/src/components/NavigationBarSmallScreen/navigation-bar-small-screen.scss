@@ -1,4 +1,30 @@
-
+#smallScreenWrapper {
+    &.lightBg {
+        .hambContainer {
+            .bar {
+                background-color: var(--alternative-black) !important;
+            }
+            .openHam{
+                .bar {
+                    &#bar1 {
+                        background-color: var(--black-dahlia-white) !important;
+                    }
+                    &#bar3 {
+                        background-color: var(--black-dahlia-white) !important;
+                    }
+                }
+            }
+        }
+        #smallScreenMenu {
+            background-color: var(--alternative-black);
+            .navLinksSmScreen {
+                color: var(--black-dahlia-white);
+                p {
+                    color: var(--black-dahlia-white);
+                }
+            }
+        }
+    }
     .hambContainer {
         padding: 10px;
         border-radius: 0px;
@@ -51,35 +77,34 @@
     }
     
     #smallScreenMenu {
-        // align-items: center;
-        box-sizing: border-box;
+        align-items: center;
         background-color: var(--black-dahlia-white);
-        width: 0%;
-        // height: 100vh;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        left: 0;
         position: fixed;
         top: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-self: center;
+        width: 0%;
         z-index: 1;
+
         .navBarSm {
+            align-items: center;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-self: center;
             .navLinksSmScreen {
-                align-self: center;
                 color: var(--alternative-black);
                 font-family: var(--navbar-fontFamily);
                 font-size: var(--navbar-fontsize);
                 font-weight: var(--navbar-fontWeight);
                 text-decoration: none;
+                width: 100%;
                 p {
+                    font-size: 18px;
+                    font-weight: 300;
                     margin: 10px 0px;
-                    text-align: center;
                 }
             }
         }
     }
+}
