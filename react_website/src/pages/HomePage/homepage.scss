@@ -287,3 +287,31 @@
         }
     }
 }
+@media screen and (max-width: 900px) {
+    #HomePage {
+        
+        #land-intro {
+            height: calc(100dvh);
+            align-items: start;
+            justify-content: center;
+
+            padding: 20px;
+            .page_sub-headers-vr {
+                text-align: left !important;
+                width: 100%;
+            }
+            h1:nth-child(1) { margin-top: 100px !important; }
+            
+            p { 
+                font-size: 18px !important;
+                text-align: left !important; 
+            }
+            .buttonsHero {
+                --button-shift: 50px;
+                row-gap: 20px;
+                .buttonScr { width: 100%; }
+                .primaryBtn-vr1 {margin-left: 0px !important;}
+            }
+        }  
+    }
+}

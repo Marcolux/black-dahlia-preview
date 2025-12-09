@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import './navigation-bar-small-screen.scss'
 import { useState } from "react";
 import { useTransition, animated } from "@react-spring/web";
@@ -9,11 +9,12 @@ const NavigationBarSmallScreen = () => {
         setIsExpanded(prevState => !prevState)
     }
     const transitions = useTransition(isExpanded, {
-        from: { opacity: 0, height: '0%', width: '0%' },
-        enter: { opacity: 1, height: '100%', width: '100%' },
-        leave: { opacity: 0, height: '0%', width: '0%' },
+        from: { opacity: 0, height: '100dvh', width: '0vw' },
+        enter: { opacity: 1, height: '100dvh', width: '50vw' },
+        leave: { opacity: 0, height: '100dvh', width: '0vw' },
         config: { duration: 200 },
     })
+
 
     return (
         <>
@@ -25,13 +26,16 @@ const NavigationBarSmallScreen = () => {
                 </div>
             </div>
             
-            {transitions((style, item) =>
-                item ? (
+            {transitions((style, condition) =>
+                condition ? (
                     <animated.div style={style} id="smallScreenMenu">
                         <div className='navBarSm'>
-                            <Link className="navLinks" onClick={toggleLogic} to={'/'}><p>Home Page</p></Link>
-                            <Link className="navLinks" onClick={toggleLogic} to={'/Carousels'}><p>Carousels</p></Link>
-                            <Link className="navLinks" onClick={toggleLogic} to={'/page_2'}><p>Page 2</p></Link>
+                            <NavLink className="navLinksSmScreen" to={'/'} onClick={toggleLogic}><p>Home Page</p></NavLink>
+                            <NavLink className="navLinksSmScreen" to={'/about'} onClick={toggleLogic}><p>About</p></NavLink>
+                            <NavLink className="navLinksSmScreen" to={'/services'} onClick={toggleLogic}><p>Services</p></NavLink>
+                            <NavLink className="navLinksSmScreen" to={'/portfolio'} onClick={toggleLogic}><p>Portfolio</p></NavLink>
+                            <NavLink className="navLinksSmScreen" to={'/contact'} onClick={toggleLogic}><p>Contact</p></NavLink>
+                            <NavLink className="navLinksSmScreen" to={'/membership'} onClick={toggleLogic}><p>Membership</p></NavLink>
                         </div>
                     </animated.div>
                 ) : null

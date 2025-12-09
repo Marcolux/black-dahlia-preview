@@ -10,6 +10,7 @@ const PageTransition: React.FC<{ children: React.ReactNode }> = ({ children }) =
   //   {children}
   // </motion.div>
   <motion.div
+    className="page_transition_wrap"
     initial={{ transform: 'rotateY(30deg)' }}
     animate={{ transform: 'rotateY(0deg)' }}
     exit={{ transform: 'rotateY(0deg)' }}

@@ -26,7 +26,7 @@ function App() {
   const location = useLocation()
 
   const handleResize = () => {
-    window.innerWidth < 768
+    window.innerWidth < 800
       ? setSmallScreenView('SmallScreen')
       : setSmallScreenView('Regular')
   }
@@ -38,7 +38,7 @@ function App() {
   }, [])
 
   return (
-    <div className="App flex flex-column col-12">
+    <div className="App col-12">
       {smallScreenView === 'Regular'
         ? <NavigationBar />
         : <NavigationBarSmallScreen />

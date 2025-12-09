@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import { useInView } from "react-intersection-observer"
 import RollingTrail from "../../components/home-page-components/RollingTrail/RollingTrail"
 import SpinningElement from "../../components/home-page-components/SpinningElement/SpinningElement"
@@ -31,11 +30,11 @@ const HomePage = () => {
 
     return(
         <div className="page" id="HomePage">
-            <section className="" id="land-intro">
+            <section id="land-intro">
                 <h1 className="page_sub-headers-vr">Design with edge.</h1>
                 <h1 className="page_sub-headers-vr">Style with soul.</h1>
-                <p className="text-center fontSize20  my-30">Boutique branding & creative direction for the bold, the soulful, and the ones who dare to stand apart.</p>
-                <div className="col-12 flex flex-alignItems-center flex-justifyContent-center mt-30 buttonsHero">
+                <p className="text-center page_paragraphText  my-30">Boutique branding & creative direction for the bold, the soulful, and the ones who dare to stand apart.</p>
+                <div className="col-12 flex flex-column-md-down flex-alignItems-center flex-justifyContent-center mt-30 buttonsHero">
 
                     <ButtonScribble className="primaryBtn" to={'/portfolio'} scribbleShift="50px">
                         Explore the Portfolio
@@ -73,7 +72,7 @@ const HomePage = () => {
                     to={'/services'}
                     scribbleShift="50px"
                     buttonBg="var(--alternative-black)"
-                    backColor="var(--accent-color)"
+                    backColor="var(--primary-color)"
                     lineColor="var(--black-dahlia-white)"
                 >
                     Explore Services
@@ -121,7 +120,7 @@ const HomePage = () => {
                         to={'/services'}
                         scribbleShift="50px"
                         buttonBg="var(--alternative-black)"
-                        backColor="var(--accent-color)"
+                        backColor="var(--primary-color)"
                         lineColor="var(--black-dahlia-white)"
                     >
                         BOOK NOW
@@ -151,7 +150,7 @@ const HomePage = () => {
 
             </section>
 
-            <section id="mugHoodie" className="">
+            <section id="mugHoodie">
                     <MugHoodieIters></MugHoodieIters>
                     <div className="flex col-12" id="middlePicWrapper" >
                         <img 
@@ -211,7 +210,7 @@ const HomePage = () => {
                         to={'/services'}
                         scribbleShift="50px"
                         buttonBg="var(--alternative-black)"
-                        backColor="var(--accent-color)"
+                        backColor="var(--primary-color)"
                         lineColor="var(--black-dahlia-white)"
                     >
                         BOOK NOW
