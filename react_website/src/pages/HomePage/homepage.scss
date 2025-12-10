@@ -289,7 +289,7 @@
 }
 @media screen and (max-width: 900px) {
     #HomePage {
-        
+        overflow-x: hidden;
         #land-intro {
             height: calc(100dvh);
             align-items: start;
