@@ -2,7 +2,7 @@ import './footer.scss'
 
 const Footer = () => {
     return (
-        <div className='footer flex flex-justifyContent-spaceBetween px-40 pt-40 pb-25'>
+        <div className='footer flex flex-justifyContent-spaceBetween'>
            <p>©Black Dahlia Creative LLC.  All Rights Reserved</p>
            <img id='footerLogo'
                 src={`${process.env.PUBLIC_URL}/images/white_logo 1.png`} 
