@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom"
 import { ReactComponent as VectorHome } from './Vector.svg'
 import { ReactComponent as BlinkingVectorHome } from './blinkingVector.svg'
-import "../page.scss"
-import "./about-page.scss"
 import { useInView } from "react-intersection-observer"
 import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
+import "../page.scss"
+import "./about-page.scss"
 
 const AboutPage = () => {
     const { ref, inView } = useInView({

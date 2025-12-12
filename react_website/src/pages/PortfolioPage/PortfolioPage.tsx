@@ -1,9 +1,8 @@
+import { ReactComponent as VectorHome } from "./Arrow 23.svg"
+import FlippingCard from "../../components/FlippingCard/flippingCard"
+import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
 import "../page.scss"
 import "./portfolio-page.scss"
-import FlippingCard from "../../components/FlippingCard/flippingCard"
-import { ReactComponent as VectorHome } from "./Arrow 23.svg"
-import { Link } from "react-router-dom"
-import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
 
 const PortfolioPage = () => {
 

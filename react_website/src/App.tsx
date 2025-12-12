@@ -39,10 +39,13 @@ function App() {
 
   return (
     <div className="App col-12">
-      {smallScreenView === 'Regular'
-        ? <NavigationBar />
-        : <NavigationBarSmallScreen />
-      }
+      <div id='navWrapper' >
+
+        {smallScreenView === 'Regular'
+          ? <NavigationBar />
+          : <NavigationBarSmallScreen />
+        }
+      </div>
 
       <AnimatePresence mode="wait">
         <ScrollToTop />

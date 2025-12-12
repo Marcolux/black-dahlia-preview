@@ -1,76 +1,48 @@
 #smallScreenWrapper {
     &.lightBg {
-        .hambContainer {
-            .bar {
-                background-color: var(--alternative-black) !important;
-            }
-            .openHam{
-                .bar {
-                    &#bar1 {
-                        background-color: var(--black-dahlia-white) !important;
-                    }
-                    &#bar3 {
-                        background-color: var(--black-dahlia-white) !important;
-                    }
-                }
-            }
-        }
-        #smallScreenMenu {
-            background-color: var(--alternative-black);
-            .navLinksSmScreen {
-                color: var(--black-dahlia-white);
-                p {
-                    color: var(--black-dahlia-white);
-                }
-            }
-        }
+        .bar {  background-color: var(--alternative-black) !important; }
+    }
+    .openHam{
+        .bar { background-color: var(--black-dahlia-white) !important; }
     }
     .hambContainer {
-        padding: 10px;
         border-radius: 0px;
         display: flex;
         justify-content: end;
+        padding: 10px;
         position: fixed;
+        right: 0px;
         top: 0px;
-        left: 0px;
         z-index: 3;
-        
+        &.open {
+            justify-content: center;
+            max-width: 30px;
+            padding: 0px;
+            top: 20px;
+        }
         .hamburger-menu {
             cursor: pointer;
-            width: 30px;
-            height: 30px;
             display: flex;
-            flex-direction: column;
+            gap: 5px;
             justify-content: space-around;
-            padding: 1px 0px;
+            padding: 10px;
             
             .bar {
+                background-color: var(--black-dahlia-white) !important;
+                border-radius: 50%;
                 height: 4px;
-                border-radius: 10px;
-                width: 95%;
-                background-color: var(--black-dahlia-white);
-                border-radius: 10px;
+                width: 4px;
                 transition: all 0.4s ease;
             }
             &.openHam{
+                max-width: 65px;
+                width: fit-content;
                 .bar {
-                    &#bar1 {
-                        background-color: var(--alternative-black);
-                        transform: rotate(45deg) translate(0px, 10px);
-                        width: 120%;
-                    }
-                    &#bar2 {
-                        transform: translate(-100px, 25px);
-                        width: 400%;
-                        height: 2px;
-                        margin-right: 30px;
-                        display: none;
-                    }
-                    &#bar3 {
-                        background-color: var(--alternative-black);
-                        transform: rotate(-45deg) translate(0px, -10px);
-                        width: 120%;
-                    }
+                    height: 2px;
+                    width: 20px;
+                    &#bar1 { transform: rotate(45deg); }
+                    &#bar2 { display: none;}
+                    &#bar3 { transform: rotate(-45deg) translate(-18px, -18px); }
                 }
             }
         }
@@ -78,31 +50,34 @@
     
     #smallScreenMenu {
         align-items: center;
-        background-color: var(--black-dahlia-white);
+        background-color: var(--alternative-black);
         box-sizing: border-box;
+        color: var(--black-dahlia-white);
         display: flex;
         justify-content: center;
-        left: 0;
+        right: 0;
         position: fixed;
         top: 0;
         width: 0%;
         z-index: 1;
-
         .navBarSm {
             align-items: center;
             display: flex;
             flex-direction: column;
+            .imgNavMenu { height: 25px;  }
             .navLinksSmScreen {
-                color: var(--alternative-black);
                 font-family: var(--navbar-fontFamily);
                 font-size: var(--navbar-fontsize);
                 font-weight: var(--navbar-fontWeight);
                 text-decoration: none;
                 width: 100%;
                 p {
+                    color: var(--black-dahlia-white);
                     font-size: 18px;
                     font-weight: 300;
                     margin: 10px 0px;
+                    text-align: center;
+                    width: 100%;
                 }
             }
         }
