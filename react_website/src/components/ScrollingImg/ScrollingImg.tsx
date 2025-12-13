@@ -4,14 +4,10 @@ import "./scrolling-img.scss"
 export default function ScrollingImg({ image_url }: { image_url: string }) {
     const { scrollYProgress } = useScroll()
 
-    const scale = scrollYProgress.to([0.02, 0.12], [1, 1.2], "clamp")
-    const opacity = scrollYProgress.to([0.02, 0.12], [0.5, 1], "clamp")
-    const r = scrollYProgress.to([0.02, 0.12], [50, 0], "clamp")
-    const y  = scrollYProgress.to([0.02, 0.12], [90, 100], "clamp") 
-
-
-    
-
+    const opacity = scrollYProgress.to([0.02, 0.1], [0.5, 1], "clamp")
+    const bordR = scrollYProgress.to([0.02, 0.1], [50, 0], "clamp")
+    const widthW  = scrollYProgress.to([0.02, 0.1], [70, 100], "clamp") 
+    const objRatio  = scrollYProgress.to([0.02, 0.1], [0, 5], "clamp") 
 
   return (
     <div className="img_wrapper col-12" style={{ overflow: "hidden" }}>
@@ -20,12 +16,11 @@ export default function ScrollingImg({ image_url }: { image_url: string }) {
             style={{
                 margin: "0 auto",
                 willChange: "transform, width, border-radius, opacity",
-                opacity,
-                borderTopLeftRadius: r.to(v => `${v}%`),
-                borderTopRightRadius: r.to(v => `${v}%`),
-                width: y.to(v => `${v}%`),
-                height: '150%',
-                transform: scale.to(s => `scale(${s})`),
+                opacity: opacity.to(op => `${op}`),
+                borderRadius: bordR.to(v => `${v}%`),
+                width: widthW.to(v => `${v}%`),
+                height: 'auto',
+                aspectRatio: objRatio.to(o => `${1 + o / 10} / 1`),
                 objectFit: 'cover'
             }}
             alt={`Dahlia Small Screen Logo`}

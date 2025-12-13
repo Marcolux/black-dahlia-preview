@@ -2,14 +2,12 @@ import { useState, useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import RollingTrail from "../../components/home-page-components/RollingTrail/RollingTrail"
 import SpinningElement from "../../components/home-page-components/SpinningElement/SpinningElement"
-import TranslateTrail from "../../components/home-page-components/TranslateTrail/TranslateTrail"
 import MugHoodieIters from "../../components/home-page-components/MugHoodieInters/MugHoodieIters"
 
 import ScrollingImg from "../../components/ScrollingImg/ScrollingImg"
 import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
 import "../page.scss" 
 import "./homepage.scss"
-import { useScroll } from "framer-motion"
 
 const HomePage = () => {
     const [smallScreenView, setSmallScreenView] = useState('Regular')
