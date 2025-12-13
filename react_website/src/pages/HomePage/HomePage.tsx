@@ -1,13 +1,18 @@
+import { useState, useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import RollingTrail from "../../components/home-page-components/RollingTrail/RollingTrail"
 import SpinningElement from "../../components/home-page-components/SpinningElement/SpinningElement"
 import TranslateTrail from "../../components/home-page-components/TranslateTrail/TranslateTrail"
 import MugHoodieIters from "../../components/home-page-components/MugHoodieInters/MugHoodieIters"
+
+import ScrollingImg from "../../components/ScrollingImg/ScrollingImg"
 import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
 import "../page.scss" 
 import "./homepage.scss"
+import { useScroll } from "framer-motion"
 
 const HomePage = () => {
+    const [smallScreenView, setSmallScreenView] = useState('Regular')
     
     const rollingIcons: string[] = [
         'dahlia_icon_charcoal.webp',
@@ -23,18 +28,62 @@ const HomePage = () => {
         'bd-landing-img-5.webp'
     ]
 
+    const handleResize = () => {
+        window.innerWidth < 800
+            ? setSmallScreenView('SmallScreen')
+            : setSmallScreenView('Regular')
+    }
+
+    useEffect(() => {
+        handleResize()
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+
     const { ref, inView } = useInView({
         threshold: 0.1,
         triggerOnce: false, // keep toggling when leaving/entering view
     })
+    
 
     return(
         <div className="page" id="HomePage">
             <section id="land-intro">
-                <h1 className="page_sub-headers-vr">Design with edge.</h1>
-                <h1 className="page_sub-headers-vr">Style with soul.</h1>
-                <p className="text-center page_paragraphText  my-30">Boutique branding & creative direction for the bold, the soulful, and the ones who dare to stand apart.</p>
-                <div className="col-12 flex flex-column-md-down flex-alignItems-center flex-justifyContent-center mt-30 buttonsHero">
+
+                <div className={smallScreenView === 'SmallScreen' ? 'IntroSmScreen top' : 'hide'} >
+                    <img
+                        className="whiteLogo mt-20"
+                        src={`${process.env.PUBLIC_URL}/images/white_logo 6.png`}
+                        alt={`Dahlia Small Screen Logo`}
+                        loading="lazy" 
+                        decoding="async"
+                    />
+                    <img
+                        className="circlesSmScreen mt-10"
+                        src={`${process.env.PUBLIC_URL}/images/home-page/dahlia-circles-sm-screen.png`}
+                        alt={`Dahlia Small Screen Intro`}
+                        loading="lazy" 
+                        decoding="async"
+                    />
+                </div>
+
+                <div className="flex flex-column flex-justifyContent-center flex-alignItems-center textContainerIntro">
+                    <h1 className="page_sub-headers">Design with edge.</h1>
+                    <h1 className="page_sub-headers">Style with soul.</h1>
+                    <p className="text-center page_paragraphText  my-30">Boutique branding & creative direction for the bold, the soulful, and the ones who dare to stand apart.</p>
+                </div>
+                
+                <div className={smallScreenView === 'SmallScreen' ? 'IntroSmScreen' : 'hide'} >
+                    <img
+                        className="circlesSmScreen mb-10"
+                        src={`${process.env.PUBLIC_URL}/images/home-page/circlesSmScreen.svg`}
+                        alt={`Dahlia Small Screen Intro`}
+                        loading="lazy" 
+                        decoding="async"
+                    />
+                </div>
+                
+                <div className="col-12 flex flex-column-md-down flex-alignItems-center flex-justifyContent-center buttonsHero mt-30">
 
                     <ButtonScribble className="primaryBtn" to={'/portfolio'} scribbleShift="50px">
                         Explore the Portfolio
@@ -51,13 +100,34 @@ const HomePage = () => {
                         Start your creative journey
                     </ButtonScribble>
                 </div>
+
+                <div className={smallScreenView === 'SmallScreen' ? 'IntroSmScreen mt-10' : 'hide'} >
+                    <img
+                        className="circlesSmScreen mb-10"
+                        src={`${process.env.PUBLIC_URL}/images/home-page/circlesSmScreen.svg`}
+                        alt={`Dahlia Small Screen Intro`}
+                        loading="lazy" 
+                        decoding="async"
+                    />
+                </div>
             </section>
+
+
             <section id="land-animation" className="py-50 my-30">
-                <TranslateTrail icons={translateIcons}></TranslateTrail>
+                <ScrollingImg image_url={`images/home-page/landing_page_hero_radius.png`}></ScrollingImg>
             </section>
             <section id="offer">
-                <h1 className="page_sub-headers">What We Offer</h1>
-                <div id="offer-cards-wrapper" className="flex flex-wrap">
+                <div className={smallScreenView === 'SmallScreen' ? 'IntroSmScreen my-45' : 'hide'} >
+                    <img
+                        className="circlesSmScreen mb-10"
+                        src={`${process.env.PUBLIC_URL}/images/home-page/circlesSmScreen.svg`}
+                        alt={`Dahlia Small Screen Intro`}
+                        loading="lazy" 
+                        decoding="async"
+                    />
+                </div>
+                <h1 className="page_sub-headers ">What We Offer</h1>
+                <div id="offer-cards-wrapper" className="flex flex-wrap my-45">
                     <div className="offer-cards"><p>LOGO DESIGN</p></div>
                     <div className="offer-cards"><p>BRAND IDENTITY</p></div>
                     <div className="offer-cards"><p>WEB DESIGN</p></div>
@@ -75,12 +145,7 @@ const HomePage = () => {
                     backColor="var(--primary-color)"
                     lineColor="var(--black-dahlia-white)"
                 >
-                    Explore Services
-                    <img 
-                        src={`${process.env.PUBLIC_URL}/images/icons/Arrow-icon.png`} 
-                        className="ml-20"
-                        alt="Explore Services arrow"
-                    />  
+                    Explore Services 
                 </ButtonScribble>
                 
             </section>

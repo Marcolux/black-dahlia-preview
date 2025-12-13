@@ -25,23 +25,19 @@
     }
     #offer {
         align-items: center;
-        background: linear-gradient(
-            to bottom,
-            var(--alternative-black) 0%,
-            var(--alternative-black) 65%,
-            var(--secondary-color) 65%,
-            var(--secondary-color) 100%
-        );
+        background-color: var(--alternative-black);
         color: var(--white-text);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        
         overflow: visible;
-        padding: 85px 0px;
+        padding: 0px 0px 85px;
 
         .primaryBtn {
-            width: 350px;
+            width: 260px;
         }
+        .page_sub-headers {color: var(--black-dahlia-white);}
         #offer-cards-wrapper {
             gap: 85px;
             justify-content: center;
@@ -49,9 +45,10 @@
             .offer-cards {
                 aspect-ratio: 1/1;
                 align-items: center;
-                background-color: var(--black-dahlia-white);
-                border-radius: var(--border-radius-cards);
-                color: #000;
+                // background-color: var(--black-dahlia-white);
+                border-radius: 50%;
+                border: 1px solid var(--black-dahlia-white);
+                color: var(--black-dahlia-white);
                 display: flex;
                 font-weight: 300;
                 justify-content: center;
@@ -291,30 +288,54 @@
     #HomePage {
         overflow-x: hidden;
         #land-intro {
-            height: calc(100dvh);
             align-items: start;
+            min-height: calc(100dvh);
             justify-content: center;
-
-            padding: 20px;
-            .page_sub-headers-vr {
-                text-align: left !important;
-                width: 100%;
-            }
-            h1:nth-child(1) { margin-top: 100px !important; }
+            padding: 0px 20px;
+            h1:nth-child(1) { margin-top: 0px !important; }
             
-            p { 
-                font-size: 18px !important;
-                text-align: left !important; 
-            }
             .buttonsHero {
                 --button-shift: 50px;
+                margin-top: 0px !important;
                 row-gap: 20px;
-                .buttonScr { width: 100%; }
+                .buttonScr { width: 70%; }
                 .primaryBtn-vr1 {margin-left: 0px !important;}
+            }
+            .textContainerIntro {
+                margin-top: 20px !important;
+                margin-bottom: 20px !important;
+                .page_sub-headers{
+                    text-align: center !important;
+                    width: 100%;
+                    line-height: 150%;
+                }
+                .page_paragraphText {
+                    margin-top: 20px !important;
+                    margin-bottom: 0px !important;
+                    font-size: 15px !important;
+                    line-height: 200%;
+                    text-align: center !important; 
+                }
+            }
+            .IntroSmScreen {
+                width: 100%;
+                height: fit-content;
+                display: flex ;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &.top{
+                    .dahliaSmScreen {
+                        height: 72px;
+                    }
+                }
+                .whiteLogo {
+                    height: 30px;
+                }
             }
         }  
         #land-animation {
-            padding: 50px 10px !important;
+            padding: 0px 0px !important;
             margin-top: 0px !important;
             margin-bottom: 0px !important;
             .translateDahlia  {
@@ -327,24 +348,18 @@
             }
         }
         #offer {
-            background: linear-gradient(
-                            to bottom, 
-                            var(--alternative-black) 0%, 
-                            var(--alternative-black) 65%, 
-                            var(--secondary-color) 76%, 
-                            var(--secondary-color) 100%
-                        );
-            padding: 50px 10px;
+           
+            padding: 0px 10px 50px;
             #offer-cards-wrapper {
                 gap: 20px;
-                padding: 30px 10px !important;
+                padding: 0px 10px !important;
                 .offer-cards {
-                    width: 40%;
+                    width: 85px;
                     line-height: 20px;
                     padding: 15px;
                     p {
                         word-wrap: break-word;
-                        font-size: 20px;
+                        font-size: 11px;
                         margin: 0px;
                     }
                 }

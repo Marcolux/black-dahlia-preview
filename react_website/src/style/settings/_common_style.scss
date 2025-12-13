@@ -13,13 +13,13 @@
 
 
 .primaryBtn {
-	font: var(--page-paragraphText-font);
+	font: var(--primary-btn-btn-font);
 	border-radius: 80px !important;
 }
 .primaryBtn-vr1 {
 	color:  var(--alternative-black);
 	background-color: var(--black-dahlia-white);
-	font: var(--page-paragraphText-font);
+	font: var(--primary-btn-btn-font);
 	border-radius: 80px !important;
 }
 .secondaryBtn {
@@ -27,7 +27,7 @@
 	border: 1px solid #fff;
 	border-radius: var(--border-radius-cards);
 	color: #fff;
-	font: var(--page-paragraphText-font);
+	font: var(--primary-btn-btn-font);
 	max-height: fit-content;
 	padding: 20px 100px;
 	text-align: center;
