@@ -1,0 +1,14 @@
+.IntroSmScreen {
+    width: 100%;
+    height: fit-content;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &.top{
+        .dahliaSmScreen { height: 72px; }
+    }
+    .whiteLogo {
+        height: 30px;
+    }
+}

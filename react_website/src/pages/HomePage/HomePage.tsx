@@ -3,6 +3,7 @@ import { useInView } from "react-intersection-observer"
 import RollingTrail from "../../components/home-page-components/RollingTrail/RollingTrail"
 import SpinningElement from "../../components/home-page-components/SpinningElement/SpinningElement"
 import MugHoodieIters from "../../components/home-page-components/MugHoodieInters/MugHoodieIters"
+import HomePageSeparator from "../../components/home-page-components/HomePageSeparator/HomePageSeparator"
 
 import ScrollingImg from "../../components/ScrollingImg/ScrollingImg"
 import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
@@ -18,13 +19,13 @@ const HomePage = () => {
         'dahlia_icon_biege.webp',
         'dahlia_icon_burgundy.webp',
     ]
-    const translateIcons: string[] = [
-        'bd-landing-img-1.webp',
-        'bd-landing-img-2.webp',
-        'bd-landing-img-3.webp',
-        'bd-landing-img-4.webp',
-        'bd-landing-img-5.webp'
-    ]
+    // const translateIcons: string[] = [
+    //     'bd-landing-img-1.webp',
+    //     'bd-landing-img-2.webp',
+    //     'bd-landing-img-3.webp',
+    //     'bd-landing-img-4.webp',
+    //     'bd-landing-img-5.webp'
+    // ]
 
     const handleResize = () => {
         window.innerWidth < 800
@@ -66,29 +67,30 @@ const HomePage = () => {
                 </div>
 
                 <div className="flex flex-column flex-justifyContent-center flex-alignItems-center textContainerIntro">
-                    <h1 className="page_sub-headers">Design with edge.</h1>
-                    <h1 className="page_sub-headers">Style with soul.</h1>
-                    <p className="text-center page_paragraphText  my-30">Boutique branding & creative direction for the bold, the soulful, and the ones who dare to stand apart.</p>
-                </div>
-                
-                <div className={smallScreenView === 'SmallScreen' ? 'IntroSmScreen' : 'hide'} >
                     <img
-                        className="circlesSmScreen mb-10"
-                        src={`${process.env.PUBLIC_URL}/images/home-page/circlesSmScreen.svg`}
-                        alt={`Dahlia Small Screen Intro`}
+                        className="mandalaIntro"
+                        src={`${process.env.PUBLIC_URL}/images/icons/DAHLIA_white_mandala.png`}
+                        alt={`Dahlia Mandala Intro`}
                         loading="lazy" 
                         decoding="async"
                     />
+                    <HomePageSeparator/>
+
+                    <h1 className="page_sub-headers">Design with edge.</h1>
+                    <h1 className="page_sub-headers">Style with soul.</h1>
+                    <p className="text-center page_paragraphText  mt-30 mb-0">Boutique branding & creative direction for the bold, the soulful, and the ones who dare to stand apart.</p>
                 </div>
                 
-                <div className="col-12 flex flex-column-md-down flex-alignItems-center flex-justifyContent-center buttonsHero mt-30">
+                <HomePageSeparator/>
+                
+                <div className="col-12 flex flex-column-md-down flex-alignItems-center flex-justifyContent-center buttonsHero">
 
                     <ButtonScribble className="primaryBtn" to={'/portfolio'} scribbleShift="50px">
                         Explore the Portfolio
                     </ButtonScribble>
 
                     <ButtonScribble 
-                        className="primaryBtn-vr1 ml-20" 
+                        className="primaryBtn-vr1 mt-0-lg mt-20 ml-20-md" 
                         to={'/portfolio'} 
                         scribbleShift="50px"
                         buttonBg="var(--black-dahlia-white)"
@@ -99,31 +101,15 @@ const HomePage = () => {
                     </ButtonScribble>
                 </div>
 
-                <div className={smallScreenView === 'SmallScreen' ? 'IntroSmScreen mt-10' : 'hide'} >
-                    <img
-                        className="circlesSmScreen mb-10"
-                        src={`${process.env.PUBLIC_URL}/images/home-page/circlesSmScreen.svg`}
-                        alt={`Dahlia Small Screen Intro`}
-                        loading="lazy" 
-                        decoding="async"
-                    />
-                </div>
             </section>
 
 
-            <section id="land-animation" className="py-50 my-30">
+            <section id="land-animation" className="">
+                <HomePageSeparator/>
                 <ScrollingImg image_url={`images/home-page/landing_page_hero_radius.png`}></ScrollingImg>
             </section>
             <section id="offer">
-                <div className={smallScreenView === 'SmallScreen' ? 'IntroSmScreen my-45' : 'hide'} >
-                    <img
-                        className="circlesSmScreen mb-10"
-                        src={`${process.env.PUBLIC_URL}/images/home-page/circlesSmScreen.svg`}
-                        alt={`Dahlia Small Screen Intro`}
-                        loading="lazy" 
-                        decoding="async"
-                    />
-                </div>
+                <HomePageSeparator/>
                 <h1 className="page_sub-headers ">What We Offer</h1>
                 <div id="offer-cards-wrapper" className="flex flex-wrap my-45">
                     <div className="offer-cards"><p>LOGO DESIGN</p></div>
@@ -149,8 +135,9 @@ const HomePage = () => {
             </section>
 
             <section id="transition-img">
+                <HomePageSeparator/>
                 <img 
-                    src={`${process.env.PUBLIC_URL}/images/home-page/street_mockup.webp`} 
+                    src={`${process.env.PUBLIC_URL}/images/home-page/landing_page_mockup_middle.png`} 
                     alt="Black Dahlia on street wall" 
                     loading="lazy" 
                     decoding="async"
@@ -158,13 +145,14 @@ const HomePage = () => {
             </section>
 
             <section id="why-black-dahlia">
-                <h1 className="page_sub-headers">why black dahlia</h1>
+                <HomePageSeparator/>
+                <h1 className="page_sub-headers">why black dahlia?</h1>
                 <div id="textBoxWrapper">
-                    <div id="intro" className="col-12 flex" >
-                        <p className="text-bold">Because we don’t just Design, we disrupt!</p>
-                        <RollingTrail icons={rollingIcons}></RollingTrail>
-                    </div>
+                    <RollingTrail icons={rollingIcons}></RollingTrail>
+                    {/* <div id="intro" className="col-12 flex" >
+                    </div> */}
                     <div id="text">
+                        <p>Because we don’t just Design, we disrupt!</p>
                         <p>
                             At Black Dahlia Creative, every project starts with purpose and ends with impact. 
                             <br />We believe design should do more than look beautiful!  

@@ -1,78 +1,14 @@
 
 .navBar {
-    align-items: center;
-    background-color: var(--navbar-background);
+    align-items: top;
+    background-color: var(--alternative-black);
     display: flex ; 
-    justify-content: center;
+    justify-content: space-between;
     min-height: var(--navbar-height);
-    &.homeBar  {
-        flex-direction: column;
-        #upper_home_bar {
-            align-items: center;
-            background-color: var(--navbar-home-bg);
-            display: flex;
-            justify-content: space-between;
-            max-height: 110px;
-            padding: 10px 10%;
-            position: relative;
-            width: 100%;
-            #homepage_logo {
-                max-height: 100px;
-            }
-            #dahlia_logo_wrapper {
-                align-items: center;
-                background-color: var(--navbar-home-bg);
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                height: fit-content;
-                left: calc(50% - 115px);
-                padding: 20px;
-                position: absolute;
-                top: 0;
-                z-index: 10;
-                #homepage_dahlia_logo {
-                    aspect-ratio: 1/1;
-                    max-height: 210px;
-                    z-index: 11;
-                }
-            }
-        }
-        #homePageLinks {
-            align-self: flex-end;
-            display: flex;
-            flex-wrap: wrap;
-            column-gap: 1em;
-            justify-content: space-evenly;
-            padding-top: 30px;
-            position: absolute;
-            top: 110px;
-            width: calc(50vw - 115px);
-            z-index: 2;
-            .navLinks { 
-                font-size: var(--navbar-fontsize);
-                color: var(--white-text);
-            }
-        }
-    }
-    &.notHome {
-        background-color: var(--navbar-bg);
-        padding: 15px 60px;
-        justify-content: space-between;
-        #homePageLinks { 
-            column-gap: 30px;
-        }
-        .navLinks {
-            font-size: var(--navbar-fontsize);
-            color: var(--white-text);
-        }
-    }
+    padding: 35px 35px 0px;
     .navLinks {
-        // border-radius: 8px;
-        // box-shadow: 0px 0px 0px var(--secondary-color);
         background-color: transparent;
         color: var(--white-text);
-        
         font-size: var(--navbar-fontsize);
         padding: 5px 10px;
         position: relative;
@@ -80,6 +16,7 @@
         text-transform: uppercase;
         transition: all .4s ease;
         z-index: 11;
+        #navbar_logo {height: 70px;}
         &:before,
         &:after {
             content: "";
@@ -103,18 +40,21 @@
             transform-origin: right bottom;
         }
         p {margin: 0px;}
-        &.active { 
-            background-color: var(--secondary-color);
-            box-shadow:  6px 6px 6px #0000006f;
-        }
-        &:hover, &.active {
-            color: var(--alternative-black);
-            border-radius: 10px;
-            &:before,
-            &:after {
-                transform: scale(1);
-                opacity: 1;
-                transition: all 0.2s linear 0s;
+        // &.active { 
+        //     background-color: var(--secondary-color);
+        //     box-shadow:  6px 6px 6px #0000006f;
+        // }
+        &:not(.logoLink) {
+            height: max-content;
+            &:hover, &.active {
+                color: var(--alternative-black);
+                border-radius: 10px;
+                &:before,
+                &:after {
+                    transform: scale(1);
+                    opacity: 1;
+                    transition: all 0.2s linear 0s;
+                }
             }
         }
     }
