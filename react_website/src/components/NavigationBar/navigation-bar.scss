@@ -4,8 +4,8 @@
     background-color: var(--alternative-black);
     display: flex ; 
     justify-content: space-between;
-    min-height: var(--navbar-height);
-    padding: 35px 35px 0px;
+    // min-height: var(--navbar-height);
+    padding: 15px 35px 0px;
     .navLinks {
         background-color: transparent;
         color: var(--white-text);
@@ -16,7 +16,7 @@
         text-transform: uppercase;
         transition: all .4s ease;
         z-index: 11;
-        #navbar_logo {height: 70px;}
+        #navbar_logo {height: 60px;}
         &:before,
         &:after {
             content: "";

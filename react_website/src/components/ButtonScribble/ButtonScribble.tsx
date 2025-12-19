@@ -9,6 +9,7 @@ type ButtonScribbleProps = {
     backColor?: string   // CSS variable or color value
     className?: string
     scribbleShift?: string
+    external?: '_blank' | null
 }
 
 const ButtonScribble: React.FC<ButtonScribbleProps> = ({
@@ -19,10 +20,12 @@ const ButtonScribble: React.FC<ButtonScribbleProps> = ({
     backColor = "var(--secondary-color)",
     className = "",
     scribbleShift = "",
+    external = null,
 
     ...rest
 }) => {
     const classes = `buttonScr ${className}`.trim()
+    const isExternal = external === '_blank' ? '_blank' : ''
 
     return (
         <Link
@@ -36,6 +39,7 @@ const ButtonScribble: React.FC<ButtonScribbleProps> = ({
                 ["--scribble-shift" as any]: scribbleShift,
                 backgroundColor: buttonBg ? buttonBg : '' 
             }}
+            target = {isExternal}
             {...rest}
         >
             <div className="buttonScr__line" />

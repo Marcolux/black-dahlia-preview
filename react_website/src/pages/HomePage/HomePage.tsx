@@ -10,6 +10,8 @@ import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
 import "../page.scss" 
 import "./homepage.scss"
 
+// import { ReactComponent as VectorHome } from '../../components/home-page-components/HomePageSeparator/HomePageSeparator'
+
 const HomePage = () => {
     const [smallScreenView, setSmallScreenView] = useState('Regular')
     
@@ -106,8 +108,12 @@ const HomePage = () => {
 
             <section id="land-animation" className="">
                 <HomePageSeparator/>
-                <ScrollingImg image_url={`images/home-page/landing_page_hero_radius.png`}></ScrollingImg>
+                <ScrollingImg 
+                    image_url={`images/home-page/landing_page_hero_radius.png`}
+                    image_alt="Black Dahlia wall design in living room"
+                ></ScrollingImg>
             </section>
+
             <section id="offer">
                 <HomePageSeparator/>
                 <h1 className="page_sub-headers ">What We Offer</h1>
@@ -131,33 +137,30 @@ const HomePage = () => {
                 >
                     Explore Services 
                 </ButtonScribble>
-                
             </section>
 
             <section id="transition-img">
                 <HomePageSeparator/>
-                <img 
-                    src={`${process.env.PUBLIC_URL}/images/home-page/landing_page_mockup_middle.png`} 
-                    alt="Black Dahlia on street wall" 
-                    loading="lazy" 
-                    decoding="async"
-                />
+                <ScrollingImg 
+                    image_url={`images/home-page/landing_page_mockup_middle.webp`}
+                    image_alt="Black Dahlia Logo in living room"
+                ></ScrollingImg>
             </section>
 
             <section id="why-black-dahlia">
                 <HomePageSeparator/>
                 <h1 className="page_sub-headers">why black dahlia?</h1>
-                <div id="textBoxWrapper">
-                    <RollingTrail icons={rollingIcons}></RollingTrail>
-                    {/* <div id="intro" className="col-12 flex" >
-                    </div> */}
+                <div className="col-12 mt-50" style={{backgroundColor: `var(--black-dahlia-white)`}}>
+                    <RollingTrail icons={rollingIcons} portionVisible={0.7}></RollingTrail>
+                </div>
+                <div id="textBoxWrapper" className="mt-50">
                     <div id="text">
                         <p>Because we don’t just Design, we disrupt!</p>
                         <p>
                             At Black Dahlia Creative, every project starts with purpose and ends with impact. 
-                            <br />We believe design should do more than look beautiful!  
+                            We believe design should do more than look beautiful!  
                             It should say something, move people, and make your brand impossible to ignore.
-                            <br />We blur the line between art and strategy, blending elegance with rebellion to create visuals that are as timeless as they are bold. 
+                            We blur the line between art and strategy, blending elegance with rebellion to create visuals that are as timeless as they are bold. 
                             Whether it’s a logo, a full rebrand, or packaging that demands attention, we design with meaning, not trends.
                         </p>
                         <p>
@@ -179,18 +182,21 @@ const HomePage = () => {
                 </div>
             </section>
 
-            <section id="spinningItersection">
-                <SpinningElement 
-                    duration={20000}
-                    pauseOnHover={true}
-                >
-                    <img 
-                        src={`${process.env.PUBLIC_URL}/images/home-page/bloom_against_the_grain_text.webp`}
-                        alt="Spinning bloom against the grain text"
-                        loading="lazy" 
-                        decoding="async"
-                    />
-                </SpinningElement>
+            <section id="spinningItersection" className="my-40">
+                <HomePageSeparator/>
+                <div className="spinWrapper mt-40">
+
+                    <SpinningElement 
+                        duration={20000}
+                        pauseOnHover={true}
+                    >
+                        <img 
+                            src={`${process.env.PUBLIC_URL}/images/home-page/bloom_against_the_grain_text.webp`}
+                            alt="Spinning bloom against the grain text"
+                            loading="lazy" 
+                            decoding="async"
+                        />
+                    </SpinningElement>
                     <img 
                         src={`${process.env.PUBLIC_URL}/images/home-page/bloom_against_the_grain_vec.webp`}
                         id="staticImg"
@@ -198,32 +204,54 @@ const HomePage = () => {
                         loading="lazy" 
                         decoding="async"
                     />
+                </div>
 
             </section>
 
             <section id="mugHoodie">
-                    <MugHoodieIters></MugHoodieIters>
-                    <div className="flex col-12" id="middlePicWrapper" >
-                        <img 
-                            id="picLeft"
-                            src={`${process.env.PUBLIC_URL}/images/home-page/bd_mugs.webp`}
-                            alt="Mugs Middle Page"
-                            loading="lazy" 
-                            decoding="async"
-                        />
-                        <img 
-                            id="picRight"
-                            src={`${process.env.PUBLIC_URL}/images/home-page/black_dahlia_mens_hoodie.webp`}
-                            alt="Hoodie Middle Page"
-                            loading="lazy" 
-                            decoding="async"
-                        />
+                <HomePageSeparator/>
+                <div className="flex flex-column col-12" id="middlePicWrapper" >
+                    <div className="flex col-12 flex-justifyContent-center breathingMug mb-40">
+                        <MugHoodieIters></MugHoodieIters>
+                        <div className="flex flex-alignItems-center flex-justifyContent-center col-12" style={{gap: '150px'}}>
 
+                            <img 
+                                id="picLeft"
+                                src={`${process.env.PUBLIC_URL}/images/home-page/bd_mugs.png`}
+                                alt="Mugs Middle Page"
+                                loading="lazy" 
+                                decoding="async"
+                            />
+                            <img 
+                                id="picRight"
+                                src={`${process.env.PUBLIC_URL}/images/home-page/black_dahlia_mens_hoodie.webp`}
+                                alt="Hoodie Middle Page"
+                                loading="lazy" 
+                                decoding="async"
+                            />
+                        </div>
                     </div>
+
+                    <div className={smallScreenView === 'SmallScreen' ? 'breathingTransition' : 'hide'} >
+                        <HomePageSeparator/>
+
+                        <div className="flex col-12 flex-justifyContent-center breathingMug pt-40">
+                            <MugHoodieIters></MugHoodieIters>
+                            <img 
+                                id="picRight"
+                                src={`${process.env.PUBLIC_URL}/images/home-page/black_dahlia_mens_hoodie.webp`}
+                                alt="Hoodie Middle Page"
+                                loading="lazy" 
+                                decoding="async"
+                            />
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section className="flex flex-column flex-justifyContent-center flex-alignItems-center" id="plannersInt">
-                <p className="textPlanners" id="top">We LOVE to create Planners!</p>
+            <HomePageSeparator/>
+            <section className="flex flex-column flex-justifyContent-center flex-alignItems-center my-40" id="plannersInt">
+                <p className="textPlanners" id="top">Planners, designed with intention.</p>
                 <img 
                     src={`${process.env.PUBLIC_URL}/images/home-page/blac_dahlia_planner_mockup.webp`} 
                     alt="Planner Mockup" 
@@ -233,14 +261,57 @@ const HomePage = () => {
                 <p className="textPlanners" id="bottom">Reach out to Create your own personalized Planner!</p>
             </section>
 
+            <section className="flex flex-column pb-50" id="wildNotes">
+                <HomePageSeparator/>
+                <div className="wildNotes_txt flex flex-column p-50">
+                    <p className="mt-0">
+                        Wild Notes and Wicked Notes are two sides of the same creative spirit. 
+                        Wild Notes is our boho inspired monthly planner and journal in one. 
+                        It’s earthy, intuitive, and free flowing.  
+                        Designed for those who plan with heart, reflection, and an organic rhythm. 
+                    </p>
+                    <p>
+                        Wicked Notes is its dark, witchy monthly planner and journal in one counterpart.  
+                        Bold, moody, and empowering! Created for those who thrive on intention, ritual, and unapologetic structure. 
+                        Whether you’re drawn to light and flow or shadow and strength, there’s a planner made to match your energy.
+                    </p>
+                    <div id="btnWrapper" className="flex col-12 flex-justifyContent-center mt-50 ">
+                        <ButtonScribble 
+                            className="primaryBtn" 
+                            to={'https://a.co/d/gviU8SW'} 
+                            scribbleShift="50px"
+                            external= '_blank'
+                        >
+                            Explore Wild Notes
+                        </ButtonScribble>
+
+                        <ButtonScribble 
+                            className="primaryBtn-vr1 mt-0-lg mt-20 ml-50-md" 
+                            to={'https://a.co/d/arojMXT'} 
+                            scribbleShift="50px"
+                            buttonBg="var(--black-dahlia-white)"
+                            backColor="var(--secondary-color)"
+                            lineColor="var(--secondary-color)"
+                            external= '_blank'
+                        >
+                            Discover Wicked Notes
+                        </ButtonScribble>
+                    </div>
+                    
+                </div>
+                <HomePageSeparator/>
+            </section>
+
+            <section id="bundle-img">
+                <ScrollingImg 
+                    image_url={`images/home-page/black_dahlia_box_set_mockup.webp`}
+                    image_alt="Black Dahlia bundle"
+                    ></ScrollingImg>
+            </section>
+
             <section className="flex flex-column" id="organizedInt">
-                <div id="animatedOrg">
-                    <img 
-                        src={`${process.env.PUBLIC_URL}/images/home-page/black_dahlia_box_set_mockup.webp`} 
-                        alt="Planners Set" 
-                        loading="lazy" 
-                        decoding="async"
-                    />
+                <div id="animatedOrg" className="py-30">
+                    <HomePageSeparator/>
                     <div className="flex" id="rollingDahliaTextWrap">
                         <h1 className="textOrg" id="bottom">Organized Chaos!</h1>
                         <img 
@@ -251,9 +322,11 @@ const HomePage = () => {
                             alt="Organized Chaos Spinning Dahlia"
                             loading="lazy" 
                             decoding="async" 
-                        />
+                            />
                     </div>
+                    <HomePageSeparator/>
                 </div>
+                
                 <div id="bookNowOrg">
                     <p>Schedule your complimentary Discover Call TODAY!</p>
                     <ButtonScribble 

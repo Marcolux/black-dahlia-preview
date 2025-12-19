@@ -10,6 +10,7 @@ $black-dahlia-white: #E1D8CE;
     --black-dahlia-white: #EEECE9;
     --primary-font-color: #000000;
     --primary-color: #34151D;
+    --primary-color-vr: #4F2934;
     --primary-color-lg: #34151d8d;
     --secondary-color: #A49586;
     --ternary-color: #232325;
@@ -45,13 +46,13 @@ $black-dahlia-white: #E1D8CE;
 
     //*==== Btn ====*/
     --primary-btn-bg: #AE8560;
-    --primary-btn-btn-font: 300 clamp(12px, 8.48vw, 20px) var(--primary-font);
+    --primary-btn-btn-font: 300 clamp(12px, 8.48vw, 18px) var(--primary-font);
 
     //*==== NAVIGATION BAR ====*/
     --navbar-height: 62px;
     --navbar-bg: #34151D;
     --navbar-home-bg: #E1D8CE;
-    --navbar-fontsize: clamp(16px, 1.48vw, 18px);
+    --navbar-fontsize: clamp(14px, 1.48vw, 16px);
     --navbar-fontsize-2: 20px;
     --navbar-fontFamily: 'Inter';
     --navbar-fontWeight: 600;

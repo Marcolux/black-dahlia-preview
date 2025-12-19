@@ -1,15 +1,11 @@
 import './home-page-separator.scss'
-
+import { ReactComponent as VectorHome } from './circlesSmScreen.svg'
 const HomePageSeparator = () => {
     
     return (
-        <div className={ 'IntroSmScreen my-25'} >
-            <img
+        <div className={ 'IntroSmScreen my-20'} >
+            <VectorHome
                 className="circlesSmScreen"
-                src={`${process.env.PUBLIC_URL}/images/home-page/circlesSmScreen.svg`}
-                alt={`Dahlia Small Screen Intro`}
-                loading="lazy" 
-                decoding="async"
             />
         </div>
     )
