@@ -68,23 +68,40 @@
         }
         .page_sub-headers {color: var(--black-dahlia-white);}
         #offer-cards-wrapper {
-            gap: 85px;
+            gap: 75px;
             justify-content: center;
             padding: 70px 100px;
             .offer-cards {
-                aspect-ratio: 1/1;
                 align-items: center;
-                // background-color: var(--black-dahlia-white);
+                aspect-ratio: 1/1;
                 border-radius: 50%;
                 border: 1px solid var(--black-dahlia-white);
                 color: var(--black-dahlia-white);
                 display: flex;
                 font-weight: 300;
                 justify-content: center;
-                width: 224px;
+                width: 245px;
                 p {
-                    font-size: 40px;
+                    animation: gradientShift 15s linear infinite alternate;
+                    background: linear-gradient(
+                        270deg,
+                        #e91e62e4 0%,
+                        #c1c2c0 60%,
+                        #e91e62e4 100%,
+                    );
+                    background-size: 150% 200%;
+                    font-size: 37px;
                     text-align: center;
+                    transform: translateZ(0);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    will-change: background-position;
+                }
+
+                @keyframes gradientShift {
+                    0%   { background-position: 0% 50%; }
+                    50%  { background-position: 50% 50%; }
+                    100% { background-position: 100% 100%; }
                 }
             }
         }
@@ -175,17 +192,15 @@
                     &#vect3 { transform: translateY(-85%);}
                     &#vect4 { transform: translateY(-135%);}
                     * {
+                        fill: var(--primary-color-vr);
                         stroke-width: 0px;
                         stroke: var(--primary-color-vr);
-                        fill: var(--primary-color-vr);
                     }
                 }
                 &.is-active {
-                    /* you can also add a subtle vertical bob/scale on the whole group if you like */
                     #vect2 { animation: vect2Move 5s ease-in-out infinite;}
                     #vect3 { animation: vect3Move 5s ease-in-out infinite;}
                     #vect4 { animation: vect4Move 5s ease-in-out infinite;}
-                    /* all strokes pulse together */
                     .vector * { animation: strokePulse 5s ease-in-out infinite;}
                 }
             }
@@ -224,9 +239,9 @@
 
     #plannersInt {
         background-color: var(--primary-color);
-        position: relative;
         max-width: 100%;
         overflow-x: hidden;
+        position: relative;
         img {  min-width: 0px; }
         .textPlanners {
            font: var(--page-secHeaders-font-vr); 
@@ -240,9 +255,7 @@
         }
     }
     #wildNotes {
-        a {
-            width: 400px;
-        }
+        a {  width: 400px; }
     }
     #bundle-img {
         img {
@@ -252,20 +265,18 @@
         }
     }
     #organizedInt {
-        // background-color: var(--secondary-color);
         max-width: 100%;
         overflow-x: hidden;
         padding-bottom: 75px;
         #animatedOrg {
-            position: relative;
-            height: 100dvh;
+            align-items: center;
             display: flex;
             flex-direction: column;
+            height: 100dvh;
             justify-content: center;
-            align-items: center;
+            position: relative;
             .IntroSmScreen {
                 position: absolute;
-
                 &:first-child {top: 0px;}
                 &:last-child {bottom: 0px;}
             }
@@ -275,8 +286,8 @@
             }
             #rollingDahliaTextWrap{
                 .textOrg {
-                    display: flex;
                     color: var(--alternative-black);
+                    display: flex;
                     font: var(--page-subHeaders-font);
                     max-width: 317px;
                     margin: 0px;
@@ -284,19 +295,16 @@
                     z-index: 3;
                 }
                 #orgRollDahlia{
-                    height: 500px;
-                    width: 500px;
-                    *{
-
-                        fill: #ffffff68;
-                     }
+                    *{ fill: #ffffff68;}
                     bottom: calc(50dvh - 245px);
+                    height: 500px;
                     left: calc(50vw - 249px);
                     position: absolute;
                     transform: translateX(500px) translateY(300px) rotate(0deg);
                     transition: all 2s ease-in-out;
+                    width: 500px;
                     &.is-active {
-                        transform: translateX(-6px) translateY(0px) rotate(361deg);
+                        transform: translateX(-7px) translateY(0px) rotate(360deg);
                     }
                 }
             }
@@ -317,9 +325,8 @@
             width: 100%;
             .linearTextAnimat__inner {
                 animation: scroll 15s linear infinite;
-                // color: var(--alternative-black);
-                font-weight: 200 !important;
                 display: inline-block;
+                font-weight: 200 !important;
                 font: var(--page-secHeaders-font-vr);
                 white-space: nowrap;
                 span {
@@ -338,18 +345,20 @@
 @media screen and (max-width: 900px) {
     #HomePage {
         overflow-x: hidden;
+        .IntroSmScreen {height: 65px !important;}
+        .buttonScr { 
+            padding: 10px 0px;
+            width: 75% !important; 
+        }
         #land-intro {
             align-items: start;
             min-height: calc(100dvh);
             justify-content: center;
             padding: 0px 20px;
             h1:nth-child(1) { margin-top: 0px !important; }
-            
             .buttonsHero {
                 --button-shift: 50px;
                 margin-top: 0px !important;
-                row-gap: 20px;
-                .buttonScr { width: 70%; }
                 .primaryBtn-vr1 {margin-left: 0px !important;}
             }
             .textContainerIntro {
@@ -369,48 +378,41 @@
                 }
             }
             .IntroSmScreen {
-                width: 100%;
-                height: fit-content;
+                align-items: center;
                 display: flex ;
                 flex-direction: column;
+                height: fit-content;
                 justify-content: center;
-                align-items: center;
-                &.top{
-                    .dahliaSmScreen {
-                        height: 72px;
-                    }
+                width: 100%;
+                &.top {
+                    .dahliaSmScreen { height: 72px; }
                 }
-                .whiteLogo {
-                    height: 30px;
-                }
+                .whiteLogo { height: 30px; }
             }
-
         }  
         #land-animation {
-            padding: 0px 0px !important;
-            margin-top: 0px !important;
             margin-bottom: 0px !important;
+            margin-top: 0px !important;
+            padding: 0px 0px !important;
             .translateDahlia  {
                 gap: 10px !important;
                 div {width: 20%;}
-                img {
-                    width: 100%;
-                }
+                img {width: 100%;}
             }
         }
         #offer {
-            padding: 0px 10px 50px;
+            padding: 0px 10px;
             #offer-cards-wrapper {
-                gap: 20px;
+                gap: 15px;
                 padding: 0px 10px !important;
                 .offer-cards {
                     line-height: 20px;
                     padding: 15px;
-                    width: 85px;
+                    width: 95px;
                     p {
-                        word-wrap: break-word;
                         font-size: 11px;
                         margin: 0px;
+                        word-wrap: break-word;
                     }
                 }
             }
@@ -422,112 +424,139 @@
         #why-black-dahlia {
             height: fit-content;
             padding: 0px 0px;
+            .rollingDahlia {
+                // background-color: var(--black-dahlia-white);
+                gap: 10px !important;
+                justify-content: center;
+                height: 70px !important;
+                .rollingIcon {
+                    height: 70px !important;
+                    width: 70px !important;
+                }
+                div {
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
             #textBoxWrapper {
                 border-radius: 0px;
-                margin-top: 20px;
+                margin-top: 0px !important;
                 padding: 0px;
-                .rollingDahlia {
-                    background-color: var(--black-dahlia-white);
-                    gap: 10px !important;
-                    justify-content: center;
-                    padding: 10px;
-                    div {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        img {height: 40px;}
-                    }
-                }
                 #text {
-                    padding: 30px;
                     line-height: 25px;
                     letter-spacing: 0.1em;
                     font-weight: 200;
+                    padding: 30px;
                 }
-                a {
-                    bottom: 65px;
-                    right: 7.5% !important;
+                .buttonScr {
+                    margin-top: 0px !important;
                 }
             }
         }
         #spinningItersection {
-            padding: 50px 10px;
+            margin-bottom: 0px !important;
+            padding: 10px;
             .RollingDahlia  {
-                height: calc(100vw - 20px);
-                width: calc(100vw - 20px);
-                display: flex;
-                justify-content: center;
                 align-items: center;
+                display: flex;
+                height: calc(100vw - 20px);
+                justify-content: center;
+                width: calc(100vw - 20px);
                 .RollingDahlia__content {
-                    width: calc(93vw - 10px);
                     height: calc(93vw - 10px);
+                    width: calc(93vw - 10px);
                     img {
-                        width: calc(93vw - 10px);
-                        height: calc(93vw - 10px);
+                        height: calc(93vw - 10px) !important;
+                        width: calc(93vw - 10px) !important;
                     }
                 }
             }
         }
         #mugHoodie {
-            padding: 50px 10px;
             height: fit-content;
+            padding: 10px 10px 50px;
+            #mugHoodieIters {
+                margin-top: -70dvh !important;
+                .vector {height: 130px !important;}
+            }
             #middlePicWrapper {
-                flex-direction: column-reverse;
                 column-gap: 0px;
+                flex-direction: column-reverse;
                 row-gap: 50px;
+            }
+            img#picLeft {
+                width: 90vw;
+            }
+        }
+        #wildNotes {
+            padding-bottom: 0px !important;
+            .wildNotes_txt {
+                padding: 30px !important;
+                line-height: 25px;
+                letter-spacing: 0.1em;
+                font-weight: 200;
             }
         }
         #plannersInt {
-            padding: 50px 10px;
             min-height: fit-content;
             max-width: 100vw;
+            padding: 10px;
             .textPlanners {
-                width: 100%;
                 position: relative !important;
                 text-align: center;
+                width: 100%;
                 &#top {
-                    top: 0px !important;
                     left: 0px !important;
+                    top: 0px !important;
                 }
             }
             img {
-                object-fit: contain;
                 max-width: 120vw;
+                object-fit: contain;
             }
         }
         #organizedInt {
-            padding: 0px 0px 50px 0px;
             min-height: fit-content;
             max-width: 100vw;
             overflow: hidden;
+            padding: 0px 0px 50px 0px;
             #animatedOrg {
-                width: 100%;
-                position: relative !important;
-                text-align: center;
                 display: flex;
                 flex-direction: column;
+                position: relative !important;
+                text-align: center;
+                width: 100%;
+                height: 600px;
                 img {
-                    object-fit: contain;
                     max-width: 100vw;
+                    object-fit: contain;
                 }
                 #rollingDahliaTextWrap {
-                    position: relative;
-                    left: 0px;
-                    width: 100%;
-                    height: 380px;
-                    text-align: center;
-                    justify-content: center;
                     align-items: center;
+                    // height: 600px;
+                    height: 380px;
+                    justify-content: center;
+                    left: 0px;
+                    position: relative;
+                    text-align: center;
+                    width: 100%;
                     .textOrg {
                         position: absolute;
-                        top: calc(50% - 40px);
+                        font-weight: 400;
+                        top: calc(50% - 10px);
                     }
                     #orgRollDahlia {
+                        bottom: calc(50% - 175px);
+                        left: calc(50% - 175px);
                         position: absolute;
-                        left: 0px;
-                        bottom: 0px;
+                        height: 350px;
+                        width: 350px;
                         &:not(.is-active) {
-                            transform: translateX(260px) translateY(300px) rotate(0deg)
+                            transform: translateX(20px) translateY(0%) rotate(0deg)
+                        }
+                        &.is-active {
+                            transform: translateX(0px) translateY(0%) rotate(180deg)
                         }
                     }
                 }
@@ -540,9 +569,7 @@
                 padding-top: 0px;
                 padding-bottom: 0px;
                 width: fit-content;
-                p {
-                    text-align: center;
-                }
+                p { text-align: center; }
                 a {
                     width: calc(100% - 40px);
                     margin-bottom: 50px;
@@ -552,25 +579,22 @@
     }
 }
 @media screen and (min-width: 1500px) {
-        #mugHoodie {
-            padding: 50px 10px;
-            height: fit-content;
-            #middlePicWrapper {
-                flex-direction: column-reverse;
-                column-gap: 0px;
-                row-gap: 50px;
-                .breathingMug {
-                    .vector.is-active {
-                        * {
-                            animation: strokePulse 5s ease-in-out infinite;
-                        }
-                    }
-                }
-
-                @keyframes strokePulse {
-                    0%, 100% { stroke-width: 0px; }
-                    40% { stroke-width: 0px; }
+    #mugHoodie {
+        height: fit-content;
+        padding: 50px 10px;
+        #middlePicWrapper {
+            column-gap: 0px;
+            flex-direction: column-reverse;
+            row-gap: 50px;
+            .breathingMug {
+                .vector.is-active {
+                    * { animation: strokePulse 5s ease-in-out infinite; }
                 }
             }
+            @keyframes strokePulse {
+                0%, 100% { stroke-width: 0px; }
+                40% { stroke-width: 0px; }
+            }
         }
+    }
 }
