@@ -28,24 +28,28 @@
             --button-shift: 50px;
         }
         .page_sub-headers {
+            font-weight: 700;
             background: linear-gradient(
                 270deg,
-                #ff9800,
-                #c1c2c0,
-                #c5b9ae,
-                #e91e62ba
+                #c1c2c0 0%,
+                #e91e62e4 25%,
+                // #e91e62d8 10%,
+                #c1c2c0 60%,
+                #ffa115c9 85%,
+                #c1c2c0 100%,
             );
-            background-size: 400% 400%;
+            background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-
-            animation: gradientShift 15s ease infinite;
+            will-change: background-position;
+            transform: translateZ(0);
+            animation: gradientShift 15s linear infinite alternate;
         }
 
         @keyframes gradientShift {
             0%   { background-position: 0% 50%; }
-            50%  { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            50%  { background-position: 50% 50%; }
+            100% { background-position: 100% 100%; }
         }
     }
     #offer {
@@ -94,9 +98,23 @@
         .rollingDahlia {
             justify-content: center ;
             gap: 50px !important;
-            padding: 15px;
-            overflow-x: hidden;
-            img {height: 70px;}
+            margin: 15px 0px;
+            overflow: hidden;
+            height: 120px;
+            #rollingDahlia_2 * {animation-delay: 3s;}
+            #rollingDahlia_3 * {animation-delay: 6s;}
+            #rollingDahlia_4 * {animation-delay: 9s;}
+                    
+            * { animation: strokePulse2 15s linear infinite;}
+                    
+                
+            @keyframes strokePulse2 {
+                0%, 100% {fill: #6a6a6b2b;}
+                35% { fill: #c1c2c02f; }
+                42% { fill: #ffa51d2b; }
+                50% { fill: #4719275d; }
+                75% { fill: #e91e622f; }
+            }
         }
         #textBoxWrapper {
             display: flex;
@@ -266,6 +284,12 @@
                     z-index: 3;
                 }
                 #orgRollDahlia{
+                    height: 500px;
+                    width: 500px;
+                    *{
+
+                        fill: #ffffff68;
+                     }
                     bottom: calc(50dvh - 245px);
                     left: calc(50vw - 249px);
                     position: absolute;

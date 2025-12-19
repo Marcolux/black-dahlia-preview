@@ -1,31 +1,17 @@
 .mandalaIntro {
-    .mandala_svg {
-        * {
-            // stroke-width: 0.77px;
-            // stroke: var(--primary-color-vr);
-            // fill: var(--primary-color-vr);
-        }
-        
-    }
+    aspect-ratio: 1/1;
+    width: 120px;
+    height: 120px;
     &.is-active {
-        .mandala_svg * { animation: strokePulse2 5s ease-in-out infinite;}
+        .mandala_svg {
+            * { animation: strokePulse2 10s ease-in-out infinite;}
+        }
     }
 }
 @keyframes strokePulse2 {
-    0%, 100% { 
-        // stroke-width: 0.1px; 
-        fill: #6a6a6b2b;
-    }
-    25% { 
-        // fill-width: 0.2px; 
-        fill: #c1c2c025;
-    }
-    50% { 
-        // fill-width: 0.1px; 
-        fill: #c5b9ae20;
-    }
-    75% { 
-        // fill-width: 0.2px; 
-        fill: #4719278a;
-    }
+    0%, 100% {fill: #6a6a6b2b;}
+    35% { fill: #c1c2c03d; }
+    42% { fill: #ffa51d57; }
+    50% { fill: #47192755; }
+    75% { fill: #e91e6232; }
 }

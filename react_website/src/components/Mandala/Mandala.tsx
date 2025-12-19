@@ -1,4 +1,3 @@
-import { useTrail, animated } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
 import { ReactComponent as VectorHome } from './mandala_dahlia.svg'
 import './mandala.scss'
@@ -9,7 +8,7 @@ const Mandala = () => {
     return (
         <div className={inView ? 'is-active mandalaIntro' : 'mandalaIntro'} >
             <VectorHome
-            ref={ref}
+                ref={ref}
                 className="mandala_svg"
             />
         </div>

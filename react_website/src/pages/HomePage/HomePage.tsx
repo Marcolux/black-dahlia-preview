@@ -9,6 +9,7 @@ import ScrollingImg from "../../components/ScrollingImg/ScrollingImg"
 import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
 import "../page.scss" 
 import "./homepage.scss"
+import { ReactComponent as Dahlia } from "./mandala_dahlia.svg";
 
 // import { ReactComponent as VectorHome } from '../../components/home-page-components/HomePageSeparator/HomePageSeparator'
 
@@ -16,10 +17,10 @@ const HomePage = () => {
     const [smallScreenView, setSmallScreenView] = useState('Regular')
     
     const rollingIcons: string[] = [
-        'dahlia_icon_charcoal.svg',
-        'dahlia_icon_silver.svg',
-        'dahlia_icon_biege.svg',
-        'dahlia_icon_burgundy.svg',
+        'mandala_dahlia.svg',
+        'mandala_dahlia.svg',
+        'mandala_dahlia.svg',
+        'mandala_dahlia.svg',
     ]
     // const translateIcons: string[] = [
     //     'bd-landing-img-1.webp',
@@ -145,8 +146,8 @@ const HomePage = () => {
             <section id="why-black-dahlia">
                 <HomePageSeparator/>
                 <h1 className="page_sub-headers">why black dahlia?</h1>
-                <div className="col-12 mt-50" style={{backgroundColor: `var(--black-dahlia-white)`}}>
-                    <RollingTrail icons={rollingIcons} portionVisible={0.7}></RollingTrail>
+                <div className="col-12 mt-50">
+                    <RollingTrail icons={[Dahlia,Dahlia,Dahlia,Dahlia]} portionVisible={0.7}></RollingTrail>
                 </div>
                 <div id="textBoxWrapper" className="mt-50">
                     <div id="text">
@@ -309,15 +310,11 @@ const HomePage = () => {
                     <HomePageSeparator/>
                     <div className="flex" id="rollingDahliaTextWrap">
                         <h1 className="textOrg" id="bottom">Organized Chaos!</h1>
-                        <img 
+                        <Dahlia
                             ref={ref} 
                             className={inView ? 'is-active' : ''} 
                             id="orgRollDahlia" 
-                            src={`${process.env.PUBLIC_URL}/images/home-page/dahlia_icon_lightgray.webp`} 
-                            alt="Organized Chaos Spinning Dahlia"
-                            loading="lazy" 
-                            decoding="async" 
-                            />
+                        />
                     </div>
                     <HomePageSeparator/>
                 </div>
