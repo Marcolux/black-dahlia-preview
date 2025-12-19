@@ -8,6 +8,9 @@
             stroke: #fff;
         }
     }
+    .buttonScr {
+        width: 400px !important;
+    }
     
     #land-intro {
         display: flex;
@@ -23,9 +26,26 @@
         }
         .buttonsHero {
             --button-shift: 50px;
-            .buttonScr {
-                width: 400px;
-            }
+        }
+        .page_sub-headers {
+            background: linear-gradient(
+                270deg,
+                #ff9800,
+                #c1c2c0,
+                #c5b9ae,
+                #e91e62ba
+            );
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%   { background-position: 0% 50%; }
+            50%  { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     }
     #offer {

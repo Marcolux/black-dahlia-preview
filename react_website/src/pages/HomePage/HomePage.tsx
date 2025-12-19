@@ -4,7 +4,7 @@ import RollingTrail from "../../components/home-page-components/RollingTrail/Rol
 import SpinningElement from "../../components/home-page-components/SpinningElement/SpinningElement"
 import MugHoodieIters from "../../components/home-page-components/MugHoodieInters/MugHoodieIters"
 import HomePageSeparator from "../../components/home-page-components/HomePageSeparator/HomePageSeparator"
-
+import Mandala from "../../components/Mandala/Mandala"
 import ScrollingImg from "../../components/ScrollingImg/ScrollingImg"
 import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
 import "../page.scss" 
@@ -16,10 +16,10 @@ const HomePage = () => {
     const [smallScreenView, setSmallScreenView] = useState('Regular')
     
     const rollingIcons: string[] = [
-        'dahlia_icon_charcoal.webp',
-        'dahlia_icon_silver.webp',
-        'dahlia_icon_biege.webp',
-        'dahlia_icon_burgundy.webp',
+        'dahlia_icon_charcoal.svg',
+        'dahlia_icon_silver.svg',
+        'dahlia_icon_biege.svg',
+        'dahlia_icon_burgundy.svg',
     ]
     // const translateIcons: string[] = [
     //     'bd-landing-img-1.webp',
@@ -51,7 +51,7 @@ const HomePage = () => {
         <div className="page" id="HomePage">
             <section id="land-intro">
 
-                <div className={smallScreenView === 'SmallScreen' ? 'IntroSmScreen top' : 'hide'} >
+                {/* <div className={smallScreenView === 'SmallScreen' ? 'IntroSmScreen top' : 'hide'} >
                     <img
                         className="whiteLogo mt-20"
                         src={`${process.env.PUBLIC_URL}/images/white_logo 6.png`}
@@ -66,16 +66,11 @@ const HomePage = () => {
                         loading="lazy" 
                         decoding="async"
                     />
-                </div>
+                </div> */}
 
                 <div className="flex flex-column flex-justifyContent-center flex-alignItems-center textContainerIntro">
-                    <img
-                        className="mandalaIntro"
-                        src={`${process.env.PUBLIC_URL}/images/icons/DAHLIA_white_mandala.png`}
-                        alt={`Dahlia Mandala Intro`}
-                        loading="lazy" 
-                        decoding="async"
-                    />
+
+                    <Mandala></Mandala>
                     <HomePageSeparator/>
 
                     <h1 className="page_sub-headers">Design with edge.</h1>
@@ -132,7 +127,7 @@ const HomePage = () => {
                     to={'/services'}
                     scribbleShift="50px"
                     buttonBg="var(--alternative-black)"
-                    backColor="var(--primary-color)"
+                    backColor="var(--primary-color-vr)"
                     lineColor="var(--black-dahlia-white)"
                 >
                     Explore Services 
@@ -170,11 +165,11 @@ const HomePage = () => {
                     </div>
                     
                     <ButtonScribble 
-                        className="primaryBtn" 
+                        className="primaryBtn mt-20" 
                         to={'/services'}
                         scribbleShift="50px"
                         buttonBg="var(--alternative-black)"
-                        backColor="var(--primary-color)"
+                        backColor="var(--primary-color-vr)"
                         lineColor="var(--black-dahlia-white)"
                     >
                         BOOK NOW
@@ -330,18 +325,18 @@ const HomePage = () => {
                 <div id="bookNowOrg">
                     <p>Schedule your complimentary Discover Call TODAY!</p>
                     <ButtonScribble 
-                        className="primaryBtn" 
+                        className="primaryBtn mt-40" 
                         to={'/services'}
                         scribbleShift="50px"
                         buttonBg="var(--alternative-black)"
-                        backColor="var(--primary-color)"
+                        backColor="var(--primary-color-vr)"
                         lineColor="var(--black-dahlia-white)"
                     >
                         BOOK NOW
                     </ButtonScribble>
                 </div>
-                <div className="linearTextAnimat">
-                    <div className="linearTextAnimat__inner">
+                <div className="linearTextAnimat mt-50">
+                    <div className="linearTextAnimat__inner mt-50">
                         <span>~ Dark Elegance meets bold design</span>
                         <span>~ Dark Elegance meets bold design</span>
                         <span>~ Dark Elegance meets bold design</span>
