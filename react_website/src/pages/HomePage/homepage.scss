@@ -272,8 +272,15 @@
             position: relative;
             .IntroSmScreen {
                 position: absolute;
-                &:first-child {top: 0px;}
-                &:last-child {bottom: 0px;}
+                width: fit-content;
+                &:first-child {
+                    top: 0px;
+                    left: calc(50vw - 9px)
+                }
+                &:last-child {
+                    bottom: 0px;
+                    left: calc(50vw - 6px)
+                }
             }
             img {
                 max-width: 1000px;
@@ -560,6 +567,18 @@
                         }
                     }
                 }
+                .IntroSmScreen {
+                    position: absolute;
+                    width: fit-content;
+                    &:first-child {
+                        top: 0px;
+                        left: calc(50vw - 4px)
+                    }
+                    &:last-child {
+                        bottom: 0px;
+                        left: calc(50vw - 1px)
+                    }
+                }
             }
             #bookNowOrg {
                 align-items: center;
@@ -584,11 +603,11 @@
 @media screen and (min-width: 1500px) {
     #mugHoodie {
         height: fit-content;
-        padding: 50px 10px;
+        padding: 0px 10px;
         #middlePicWrapper {
             column-gap: 0px;
             flex-direction: column-reverse;
-            row-gap: 50px;
+            row-gap: 20px;
             .breathingMug {
                 .vector.is-active {
                     * { animation: strokePulse 5s ease-in-out infinite; }
@@ -597,6 +616,18 @@
             @keyframes strokePulse {
                 0%, 100% { stroke-width: 0px; }
                 40% { stroke-width: 0px; }
+            }
+        }
+    }
+    #animatedOrg {
+        .IntroSmScreen {
+            &:first-child {
+                top: 0px;
+                left: calc(50vw - 12px)
+            }
+            &:last-child {
+                bottom: 0px;
+                left: calc(50vw - 8px)
             }
         }
     }
