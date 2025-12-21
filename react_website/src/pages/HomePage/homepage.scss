@@ -33,7 +33,6 @@
                 270deg,
                 #c1c2c0 0%,
                 #e91e62e4 25%,
-                // #e91e62d8 10%,
                 #c1c2c0 60%,
                 #ffa115c9 85%,
                 #c1c2c0 100%,
@@ -63,9 +62,7 @@
         overflow: visible;
         padding: 0px 0px 85px;
 
-        .primaryBtn {
-            width: 260px;
-        }
+        .primaryBtn { width: 260px; }
         .page_sub-headers {color: var(--black-dahlia-white);}
         #offer-cards-wrapper {
             gap: 75px;
@@ -82,14 +79,13 @@
                 justify-content: center;
                 width: 245px;
                 p {
-                    animation: gradientShift 15s linear infinite alternate;
+                    animation: gradientShift 5s linear infinite alternate;
                     background: linear-gradient(
-                        270deg,
+                        90deg,
                         #e91e62e4 0%,
-                        #c1c2c0 60%,
-                        #e91e62e4 100%,
+                        #ffffffe4 100%,
                     );
-                    background-size: 150% 200%;
+                    background-size: 150% 150%;
                     font-size: 37px;
                     text-align: center;
                     transform: translateZ(0);
@@ -99,9 +95,9 @@
                 }
 
                 @keyframes gradientShift {
-                    0%   { background-position: 0% 50%; }
-                    50%  { background-position: 50% 50%; }
-                    100% { background-position: 100% 100%; }
+                    0%   { background-position: 0% 75%; }
+                    50%  { background-position: 50% 75%; }
+                    100% { background-position: 100% 75%; }
                 }
             }
         }
@@ -362,8 +358,8 @@
                 .primaryBtn-vr1 {margin-left: 0px !important;}
             }
             .textContainerIntro {
-                margin-top: 20px !important;
-                margin-bottom: 20px !important;
+                margin-top: 0px !important;
+                margin-bottom: 0px !important;
                 .page_sub-headers{
                     text-align: center !important;
                     width: 100%;
@@ -394,6 +390,7 @@
             margin-bottom: 0px !important;
             margin-top: 0px !important;
             padding: 0px 0px !important;
+            .img_wrapper {margin-bottom: 5px !important;} 
             .translateDahlia  {
                 gap: 10px !important;
                 div {width: 20%;}
@@ -420,6 +417,7 @@
         #transition-img {
             height: fit-content;
             padding: 0px 0px;
+            .img_wrapper {margin-bottom: 5px !important;} 
         }
         #why-black-dahlia {
             height: fit-content;
@@ -455,6 +453,7 @@
             }
         }
         #spinningItersection {
+            margin-top: 10px !important;
             margin-bottom: 0px !important;
             padding: 10px;
             .RollingDahlia  {
@@ -483,11 +482,13 @@
             #middlePicWrapper {
                 column-gap: 0px;
                 flex-direction: column-reverse;
-                row-gap: 50px;
+                margin-top: 5px;
+                row-gap: 25px;
             }
             img#picLeft {
                 width: 90vw;
             }
+            .breathingMug {margin-bottom: 0px !important;}
         }
         #wildNotes {
             padding-bottom: 0px !important;
@@ -543,7 +544,7 @@
                     width: 100%;
                     .textOrg {
                         position: absolute;
-                        font-weight: 400;
+                        font-weight: 4009;
                         top: calc(50% - 10px);
                     }
                     #orgRollDahlia {
@@ -553,10 +554,10 @@
                         height: 350px;
                         width: 350px;
                         &:not(.is-active) {
-                            transform: translateX(20px) translateY(0%) rotate(0deg)
+                            transform: translateX(0px) translateY(0%) rotate(0deg)
                         }
                         &.is-active {
-                            transform: translateX(0px) translateY(0%) rotate(180deg)
+                            transform: translateX(0px) translateY(0%) rotate(360deg)
                         }
                     }
                 }
@@ -574,6 +575,9 @@
                     width: calc(100% - 40px);
                     margin-bottom: 50px;
                 }
+            }
+            .linearTextAnimat {
+                margin-top: 0px !important;
             }
         }
     }

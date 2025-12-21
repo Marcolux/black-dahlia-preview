@@ -3,7 +3,7 @@ import { ReactComponent as VectorHome } from './mandala_dahlia.svg'
 import './mandala.scss'
 
 const Mandala = () => {
-    const [ref, inView] = useInView({ threshold : 1 })
+    const [ref, inView] = useInView({ threshold : 0.1 })
    
     return (
         <div className={inView ? 'is-active mandalaIntro' : 'mandalaIntro'} >

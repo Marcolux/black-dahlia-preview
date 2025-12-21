@@ -27,7 +27,7 @@ const HomePage = () => {
     }, [])
 
     const { ref, inView } = useInView({
-        threshold: 0.7,
+        threshold: 0.2,
         triggerOnce: false, // keep toggling when leaving/entering view
     })
     
@@ -48,7 +48,7 @@ const HomePage = () => {
                         Explore the Portfolio
                     </ButtonScribble>
                     <ButtonScribble 
-                        className="primaryBtn-vr1 mt-0-lg mt-20 ml-20-md" 
+                        className="primaryBtn-vr1 mt-0-lg mt-10 ml-20-md" 
                         to={'/portfolio'} 
                         scribbleShift="50px"
                         buttonBg="var(--black-dahlia-white)"
@@ -184,7 +184,7 @@ const HomePage = () => {
                     <div className={smallScreenView === 'SmallScreen' ? 'breathingTransition' : 'hide'} >
                         <div className="flex col-12 flex-justifyContent-center breathingMug mb-40">
                             <MugHoodieIters></MugHoodieIters>
-                            <div className="flex flex-column col-12 flex-alignItems-center flex-justifyContent-center pt-40">
+                            <div className="flex flex-column col-12 flex-alignItems-center flex-justifyContent-center">
                                 <img 
                                     id="picLeft"
                                     src={`${process.env.PUBLIC_URL}/images/home-page/bd_mugs.png`}
