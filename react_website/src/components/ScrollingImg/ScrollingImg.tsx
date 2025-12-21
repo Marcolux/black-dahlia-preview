@@ -161,7 +161,7 @@ export default function ScrollingImg({ image_url, image_alt }: { image_url: stri
   return (
     <div
       ref={ref}
-      className="img_wrapper col-12 my-25"
+      className="img_wrapper col-12 py-25"
       style={{ overflow: "hidden" }}
     >
       <animated.img

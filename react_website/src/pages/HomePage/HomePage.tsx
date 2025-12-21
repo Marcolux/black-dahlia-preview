@@ -27,8 +27,8 @@ const HomePage = () => {
     }, [])
 
     const { ref, inView } = useInView({
-        threshold: 0.2,
-        triggerOnce: false, // keep toggling when leaving/entering view
+        threshold: smallScreenView ===  'SmallScreen' ? 0.1 : 0.7 ,
+        triggerOnce: true, // keep toggling when leaving/entering view
     })
     
     return(
@@ -70,7 +70,7 @@ const HomePage = () => {
 
             <section id="offer">
                 <HomePageSeparator/>
-                <h1 className="page_sub-headers ">What We Offer</h1>
+                <h1 className="page_sub-headers mt-10">What We Offer</h1>
                 <div id="offer-cards-wrapper" className="flex flex-wrap my-45">
                     <div className="offer-cards"><p>LOGO DESIGN</p></div>
                     <div className="offer-cards"><p>BRAND IDENTITY</p></div>
@@ -102,7 +102,7 @@ const HomePage = () => {
 
             <section id="why-black-dahlia">
                 <HomePageSeparator/>
-                <h1 className="page_sub-headers">why black dahlia?</h1>
+                <h1 className="page_sub-headers pt-10">why black dahlia?</h1>
                 <div className="col-12 mt-50">
                     <RollingTrail icons={[Dahlia,Dahlia,Dahlia,Dahlia]} portionVisible={0.7}></RollingTrail>
                 </div>
@@ -134,7 +134,7 @@ const HomePage = () => {
                 </div>
             </section>
 
-            <section id="spinningItersection" className="my-40">
+            <section id="spinningItersection" className="mt-40">
                 <HomePageSeparator/>
                 <div className="spinWrapper mt-40">
                     <SpinningElement 
@@ -159,10 +159,10 @@ const HomePage = () => {
             </section>
 
             <section id="mugHoodie">
-                <div className="flex flex-column col-12" id="middlePicWrapper" >
+                <div className="flex flex-column col-12 pt-20" id="middlePicWrapper" >
                 
                     <HomePageSeparator/>
-                    <div className={smallScreenView !== 'SmallScreen' ? "flex col-12 flex-justifyContent-center breathingMug mb-40" : "hide"}>
+                    <div className={smallScreenView !== 'SmallScreen' ? "flex col-12 flex-justifyContent-center breathingMug pt-20 mb-40" : "hide"}>
                         <MugHoodieIters></MugHoodieIters>
                         <div  className='flex flex-alignItems-center flex-justifyContent-center col-12' style={{gap: '150px'}}>
                             <img 
@@ -219,7 +219,7 @@ const HomePage = () => {
                 <p className="textPlanners" id="bottom">Reach out to Create your own personalized Planner!</p>
             </section>
 
-            <section className="flex flex-column pb-50" id="wildNotes">
+            <section className="flex flex-column" id="wildNotes">
                 <HomePageSeparator/>
                 <div className="wildNotes_txt flex flex-column p-50">
                     <p className="mt-0">
@@ -258,7 +258,7 @@ const HomePage = () => {
                 <HomePageSeparator/>
             </section>
 
-            <section id="bundle-img">
+            <section id="bundle-img" className="py-20">
                 <ScrollingImg 
                     image_url={`images/home-page/black_dahlia_box_set_mockup.webp`}
                     image_alt="Black Dahlia bundle"
@@ -266,9 +266,10 @@ const HomePage = () => {
             </section>
 
             <section className="flex flex-column" id="organizedInt">
-                <div id="animatedOrg" className="py-30">
+                <div id="animatedOrg">
+
                     <HomePageSeparator/>
-                    <div className="flex" id="rollingDahliaTextWrap">
+                    <div className="flex py-40" id="rollingDahliaTextWrap">
                         <h1 className="textOrg" id="bottom">Organized Chaos!</h1>
                         <Dahlia
                             ref={ref} 

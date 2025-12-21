@@ -60,7 +60,7 @@
         justify-content: space-between;
         
         overflow: visible;
-        padding: 0px 0px 85px;
+        padding: 0px 0px 35px;
 
         .primaryBtn { width: 260px; }
         .page_sub-headers {color: var(--black-dahlia-white);}
@@ -207,7 +207,6 @@
             column-gap: 150px;
             display: flex;
             justify-content: center;
-            margin-top: 5dvh;
             img {
                 z-index: 4;
                 &#picRight { height: 95dvh;}
@@ -292,7 +291,7 @@
                 }
                 #orgRollDahlia{
                     *{ fill: #ffffff68;}
-                    bottom: calc(50dvh - 245px);
+                    bottom: calc(50dvh - 250px);
                     height: 500px;
                     left: calc(50vw - 249px);
                     position: absolute;
@@ -398,7 +397,7 @@
             }
         }
         #offer {
-            padding: 0px 10px;
+            padding: 0px 10px 20px;
             #offer-cards-wrapper {
                 gap: 15px;
                 padding: 0px 10px !important;
