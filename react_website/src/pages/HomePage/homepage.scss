@@ -102,8 +102,6 @@
             }
         }
     }
-
-
     #why-black-dahlia {
         position: relative;
         width: 100%;
@@ -119,15 +117,6 @@
             #rollingDahlia_4 * {animation-delay: 9s;}
                     
             * { animation: strokePulse2 15s linear infinite;}
-                    
-                
-            @keyframes strokePulse2 {
-                0%, 100% {fill: #6a6a6b2b;}
-                35% { fill: #c1c2c02f; }
-                42% { fill: #ffa51d2b; }
-                50% { fill: #4719275d; }
-                75% { fill: #e91e622f; }
-            }
         }
         #textBoxWrapper {
             display: flex;
@@ -139,7 +128,6 @@
             a { width: 315px;}
         }
     }
-
     #spinningItersection {
         .spinWrapper{
 

@@ -1,162 +1,64 @@
 #AboutPage {
-    padding: 0px !important;
+    background-color: var(--alternative-black);
     #introAbout {
-        background: 
-            linear-gradient(
-                to bottom,
-                var(--black-dahlia-white) 0%,
-                var(--black-dahlia-white) calc(20% + 40px),
-                var(--primary-color) calc(20% + 40px),
-                var(--primary-color) 100%
+        justify-content: space-evenly;
+        height: calc(100dvh - 210px);
+        .page_sub-headers {
+            font-weight: 700;
+            background: linear-gradient(
+                270deg,
+                #c1c2c0 0%,
+                #e91e62e4 25%,
+                #c1c2c0 60%,
+                #ffa115c9 85%,
+                #c1c2c0 100%,
             );
-        justify-content: space-between;
-        min-height: calc(100dvh - 65px);
-        #leftIntro {
-            #heyImTrish {
-                align-items: end;
-                column-gap: 60px;
-                p {
-                    color: var(--black-dahlia-white);
-                    font: var(--page-paragraphTitle-font);
-                    margin: 0px;
-                }
-                img#aboutLndArrow {
-                    height: 38px;
-                    margin-bottom: -20px;
-                    width: 46px;
-                }
-            }
-            #intro-text {
-                background-color: var(--black-dahlia-white) ;
-                color: var(--alternative-black);
-                border-top-right-radius: 250px;
-                border-bottom-right-radius: 250px;
-                padding: 55px 65px 55px 45px;
-                width: calc(100% - 45px);
-            }
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            will-change: background-position;
+            transform: translateZ(0);
+            animation: gradientShift 15s linear infinite alternate;
         }
-        #rightIntro {
-            flex: auto;
-            #pic {
-                background-color: transparent;
-                border: 6px solid var(--secondary-color);
-                border-top-left-radius: 160px;
-                border-top-right-radius: 160px;
-                width: fit-content;
-                img {
-                    border-top-left-radius: 160px;
-                    border-top-right-radius: 160px;
-                }
-            }
-            #spinningIntroAbt {
-                background-color: var(--black-dahlia-white);
-                justify-content: center;
-                padding: 10px 40px;
-                width: 380px;
-                img {
-                    animation: spinningR 12s linear infinite;
-                    &#spinner-1{
-                        animation-delay: 0s; 
-                        animation-direction: reverse;
-                        animation-duration: 20s;
-                    }
-                    &#spinner-2{
-                        animation-delay: 1s;
-                        animation-duration: 16s;
-                    }
-                    &#spinner-3{
-                        animation-delay: 2s;
-                        animation-direction: reverse;
-                    }
-                    &#spinner-4{
-                        animation-delay: 3s;
-                        animation-duration: 18s;
-                    }
-                }
-                @keyframes spinningR {
-                    0% { transform: rotate(0deg); }
-                    100% { transform: rotate(360deg); }
-                }
-                @keyframes spinningL {
-                    0% { transform: rotate(0deg); }
-                    100% { transform: rotate(-360deg); }
-                }
-            }
-        }
-    }
-    #favorite_things {
-        background-color: var(--alternative-black);
-        justify-content: space-between;
-        min-height: 100dvh;
-        padding: 85px 0px;
-        .page_sec-headers-vr { color: var(--black-dahlia-white);}
-        #cardWrapper {
-            max-width: 1500px;
-            width: 100%;
-            #c_wrap {
-                flex: auto;
-                gap: 30px;
-            }
-            .singleCard {
-                align-items: center;
-                background-color: var(--black-dahlia-white);
-                border-radius: var(--border-radius-cards);
-                box-shadow: -8px 10px 10px rgba(0, 0, 0, 0.393),      /* soft outer shadow */
-                            -10px 13px 0px rgba(255, 255, 255, 0.934); /* colored glow */
-                display: flex;
-                flex: 1;
-                justify-content: center;
-                min-width: 365px;
-                max-width: 40%;
-                padding: 20px;
-                ul {
-                    gap: 18px;
-                    li {
-                        align-items: center;
-                        column-gap: 10px;
-                        display: flex;
-                        font: var(--page-paragraphText-font);
-                        letter-spacing: 0.04em;
-                        line-height: 40px;
-                        list-style: none;
-                    }
-                }
-            }
-            .blink_vector {
-                height: 60px;
-                width: 80px;
-                &.is-active {
-                    * {
-                        animation: blinking 5s infinite linear;
-                        box-shadow: 10px 10px 10px 10px red;
-                        fill: var(--primary-color);
-                        stroke: rgb(255, 255, 255);
-                        stroke-width: 2px;
-                    }
 
-                }
-                @keyframes blinking {
-                    0% { 
-                        stroke: #ffffff;
-                        stroke-width: 0px;
-                    }
-                    20% { 
-                        filter: url(#yellowGlow);
-                        height: 110%;
-                        stroke: #ffff00b7;
-                        stroke-width: 2px;
-                    }
-                    30% { 
-                        filter: url(#whiteGlow);
-                        stroke: #ffffff;
-                        stroke-width: 2px;
-                    }
-                    100% { 
-                        stroke: #ffff00b7;
-                        stroke-width: 1px;
-                    }
+    }
+    @keyframes gradientShift {
+        0%   { background-position: 0% 50%; }
+        50%  { background-position: 50% 50%; }
+        100% { background-position: 100% 100%; }
+    }
+    #trishIntro {
+        #heyImTrish {
+            align-items: end;
+            column-gap: 60px;
+            p {
+                color: var(--black-dahlia-white);
+                font: var(--page-paragraphTitle-font);
+                margin: 0px;
+                width: 205px;
+            }
+            img {
+                display: block;
+                width: 27vw;
+                max-height: 90dvh;
+                object-fit: cover;
+                border-radius: 10px;
+
+                padding: 2px;
+                background: linear-gradient(90deg, rgb(255, 0, 85) 0%, var(--black-dahlia-white) 50%, rgb(255, 0, 85) 100%);
+                background-size: 200% 400%;
+                animation: gradientShift 5s linear infinite alternate;
+
+                @keyframes gradientShift {
+                    0%   { background-position: 0% 0%; }
+                    50%  { background-position: 100% 50%; }
+                    100% { background-position: 200% 50%; }
                 }
             }
+        }
+        #intro-text {
+            color: var(--black-dahlia-white);
+            font-weight: 200;
         }
     }
     #journey_sec {
@@ -168,50 +70,7 @@
         #journeyTitle {
             font-style: normal;
             margin-top: 0px;
-            margin-bottom: 75px;
-        }
-        &::before {
-            background-image: url('../../../public/images/about-page/aboutPageBg_middle.webp');
-            background-size: cover;
-            background-repeat: no-repeat;
-            content: '';
-            inset: 0;
-            opacity: 0.1;
-            position: absolute;
-            z-index: 0;
-        }
-        #journey_wrapper {
-            #article_wrapper {
-                .journey_articles {
-                    .journey_titles {
-                        background-color: var(--black-dahlia-white);
-                        border-radius: 20px;
-                        border: 1px solid var(--alternative-black);
-                        font: var(--page-paragraphTitle-font);
-                        padding: 8px 56px;
-                        width: fit-content;
-                    }
-                    .journey_texts { padding-left: 50px; }
-                }
-            }
-            #timeline_wrapper{
-                display: flex;
-                flex-direction: column;
-                flex: auto;
-                position: relative;
-                .moon_phase {
-                    align-items: top;
-                    display: flex;
-                    height: 25%;
-                    justify-content: center;
-                    position: sticky;
-                    top: 0px;
-                    img {
-                        height: 50px;
-                        transform: translateY(100px);
-                    }
-                }
-            }
+            margin-bottom: 25px;
         }
         #journeyBottomSec {
             p {
@@ -237,31 +96,96 @@
         color: var(--black-dahlia-white);
         display: flex;
         flex-direction: column;
+        padding: 100px;
         #initialIntro {
-            margin: 160px 0px;
             row-gap: 50px;
             h4 {
                 font: var(--page-paragraphTitle-font);
                 margin: 0px;
             }
         }
-        #textBottom {
-            background-color: #D9D9D9;
-            border-radius: var(--border-radius-cards);
-            color: var(--alternative-black);
-            font: var(--page-secHeaders-font-vr);
-            font-style: normal;
-            margin: 120px 0px;
-            padding: 30px 80px;
-        }
-        #spiningDahliaAboutPg {
-            animation: spin360 15s linear infinite;
-            margin-bottom: 90px;
+        .buttonScr { width: 450px !important;}
+        #aboutDahlia {
+            animation: spin360 30s linear infinite;
+            height: 390px;
+            width: 390px;
         }
         @keyframes spin360 {
             0% { transform: rotate(0deg); }
             40% { transform: rotate(180deg); }
             100% {transform:  rotate(360deg);}
+        }
+    }
+}
+@media screen and (max-width: 900px) {
+
+    #AboutPage {
+        padding: 40px 0px !important;
+        #introAbout {
+            height: 100dvh;
+            .page_sub-headers {font-size: 35px !important;}
+        }
+        #trishIntro {
+            #heyImTrish {
+                align-items: center;
+                row-gap: 60px;
+                p {
+                    color: var(--black-dahlia-white);
+                    font: var(--page-paragraphTitle-font);
+                    font-size: 25px !important;
+                    margin: 0px;
+                    width: fit-content;
+                }
+                #pic {
+                    padding: 0px !important;
+                    margin: 0px !important;
+                    border-radius: 10px;
+                    img { width: 65vw;}
+                }
+                .text-left {
+                    margin-top: 0px !important;
+                    padding-top: 0px !important;
+                }
+            }
+            #intro-text {
+                padding: 0px 30px;
+                width: 100vw !important;
+            }
+        }
+        #journey_sec {
+            padding: 30px;
+            #journeyTitle {
+                margin-bottom: 10px;
+            }
+            #journeyBottomSec {
+                p {
+                    padding: 25px;
+                }
+            }
+        }
+        #whatWaitFor {
+            padding: 30px;
+            #initialIntro {
+                row-gap: 20px;
+                h4 {
+                    font: var(--page-paragraphTitle-font);
+                    font-size: 17px;
+                }
+            }
+            #aboutDahlia {
+                animation: spin360 30s linear infinite;
+                height: 390px;
+                width: 390px;
+            }
+            .buttonScr { 
+                width: 350px !important;
+                font-size: 16px !important;
+            }
+            @keyframes spin360 {
+                0% { transform: rotate(0deg); }
+                40% { transform: rotate(180deg); }
+                100% {transform:  rotate(360deg);}
+            }
         }
     }
 }
