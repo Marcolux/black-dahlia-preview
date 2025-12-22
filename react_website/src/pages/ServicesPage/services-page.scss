@@ -1,10 +1,10 @@
 #ServicesPage {
     background-color: var(--alternative-black);
     #introSection {
-        height: calc(100dvh - 210px);
+        height: calc(100dvh - 136px - 50px);
     }
     .page_sub-headers {
-        font-weight: 700;
+        animation: gradientShift 15s linear infinite alternate;
         background: linear-gradient(
             270deg,
             #c1c2c0 0%,
@@ -14,11 +14,11 @@
             #c1c2c0 100%
         );
         background-size: 300% 300%;
+        font-weight: 700;
+        transform: translateZ(0);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         will-change: background-position;
-        transform: translateZ(0);
-        animation: gradientShift 15s linear infinite alternate;
     }
     #servicesWrapper {
         gap: 30px;

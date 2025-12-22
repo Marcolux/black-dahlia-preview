@@ -4,9 +4,28 @@
     display: flex;
     flex-direction: column;
     padding: 0px;
+    #introPortfolio {
+        height: calc(100dvh - 136px);
+        .page_sub-headers {
+            font-weight: 700;
+            background: linear-gradient(
+                270deg,
+                #c1c2c0 0%,
+                #e91e62e4 25%,
+                #c1c2c0 60%,
+                #ffa115c9 85%,
+                #c1c2c0 100%
+            );
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            will-change: background-position;
+            transform: translateZ(0);
+            animation: gradientShift 15s linear infinite alternate;
+        }        
+    }
     .page_sub-headers {
         color: var(--black-dahlia-white);
-        margin: 100px 0px;
         text-align: center;
         width: 100%;
     }
@@ -119,5 +138,68 @@
         }
         #scheduleText {color: var(--black-dahlia-white);}
         .primaryBtn-vr1 { width: 570px; }
+    }
+}
+@media screen and (max-width: 900px ) {
+    #PortfolioPage {
+        #introPortfolio {
+            height: 100dvh;     
+        }
+        .page_sub-headers {
+            color: var(--black-dahlia-white);
+            text-align: center;
+            width: 100%;
+        }
+        .page_sec-headers {
+            font-size: 19px !important;
+            letter-spacing: 0em !important;
+            margin-bottom: 50px;
+            padding: 15px 10px;
+            width: 100%;
+        }
+        .page_paragraphText {
+            color: var(--black-dahlia-white);
+            font-size: clamp(16px, 3vw - 1rem, 40px);
+            font-weight: 100;
+            margin-bottom: 50px;
+            padding: 0px 20px;
+        }
+        .flipping-card_wrapper {
+            background-color: var(--black-dahlia-white);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            min-width: 100%;
+            padding: 50px 20px;
+            .pricing-card-wrapper {
+                display: flex;
+                height: calc(100vw - 40px) ;
+                min-width: calc(100vw - 40px);
+                max-width: calc(100vw - 40px);
+                width: calc(100vw - 40px);
+                .flipcard__face {
+                    .flipcard__trigger {
+                        p {
+                            font-size: 24px;
+                            margin-right: 20px;
+                            opacity: .5;
+                        }
+                    }
+                }
+            }
+        }
+        #bottom_portfolio {
+            padding: 20px;
+            .page_paragraphTitle {
+                color: var(--black-dahlia-white);
+                font-family: Nunito;
+                font-weight: 400;
+                margin: 0px;
+                text-align: center;
+            }
+            #scheduleText {
+                color: var(--black-dahlia-white);}
+            .primaryBtn-vr1 { width: 90vw; }
+        }
     }
 }

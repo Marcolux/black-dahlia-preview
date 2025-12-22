@@ -1,8 +1,8 @@
 #AboutPage {
     background-color: var(--alternative-black);
     #introAbout {
-        justify-content: space-evenly;
-        height: calc(100dvh - 210px);
+        justify-content: space-between;
+        height: calc(100dvh - 136px - 50px);
         .page_sub-headers {
             font-weight: 700;
             background: linear-gradient(

@@ -9,7 +9,7 @@ const ServicesPage = () => {
 
     return(
         <div className="page" id="ServicesPage">
-            <section className="flex flex-column flex-justifyContent-spaceAround flex-alignItems-center col-12" id="introSection">
+            <section className="flex flex-column flex-justifyContent-spaceBetween flex-alignItems-center col-12" id="introSection">
                 <Mandala/>
                 <HomePageSeparator/>
                 <div className="flex flex-column py-20 col-12 flex-alignItems-center" style={{rowGap: '20px'}}>

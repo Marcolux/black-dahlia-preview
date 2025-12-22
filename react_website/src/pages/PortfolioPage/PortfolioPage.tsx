@@ -1,6 +1,8 @@
 import { ReactComponent as VectorHome } from "./Arrow 23.svg"
 import FlippingCard from "../../components/FlippingCard/flippingCard"
 import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
+import HomePageSeparator from "../../components/home-page-components/HomePageSeparator/HomePageSeparator"
+import Mandala from "../../components/Mandala/Mandala"
 import "../page.scss"
 import "./portfolio-page.scss"
 
@@ -8,9 +10,15 @@ const PortfolioPage = () => {
 
     return(
         <div className="page" id="PortfolioPage">
-
-            <h1 className="page_sub-headers"> MOST RECENT WORK...</h1>
-            <article className="flex flex-column col-12 flex-alignItems-center">
+            <section className="flex flex-column flex-justifyContent-spaceBetween flex-alignItems-center col-12 pt-30 pb-20" id="introPortfolio">
+                <Mandala/>
+                <HomePageSeparator/>
+                <div className="flex flex-column py-20 col-12 flex-alignItems-center" style={{rowGap: '20px'}}>
+                    <h1 className="page_sub-headers text-center">MOST RECENT WORK</h1>
+                </div>
+                <HomePageSeparator/>
+            </section>
+            <article className="flex flex-column col-12 flex-alignItems-center pt-50">
                 <h4 className="page_sec-headers">Le Nicchie  (Restaurant Rebrand)</h4>
                 <p className="col-12 col-md-11 col-lg-10 col-xl-9 page_paragraphText">
                     Located in the heart of Bari, Italy, Le Nicchie embodies timeless sophistication and modern Italian elegance. 
