@@ -116,7 +116,7 @@
         transform: translateZ(0);
         animation: gradientShift 5s linear infinite alternate;
     }
-        #aboutDahlia {
+        .aboutDahlia {
             animation: 
             spin360 30s linear infinite, 
             strokePulse2 10s ease-in-out infinite;
@@ -210,7 +210,7 @@
             animation: gradientShift 5s linear infinite alternate;
         }
     }
-    #aboutDahlia {
+    .aboutDahlia {
         animation: 
         spin360 30s linear infinite, 
         strokePulse2 10s ease-in-out infinite;

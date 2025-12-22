@@ -298,11 +298,11 @@ const ContactPage = () => {
                     <p>Please allow 1-2 business days for a response</p>
                 </div>
             </form>
-                <div className='pt-40'>
-                    <Dahlia
-                        id="aboutDahlia" 
-                    />
-                </div>
+            <div className='pt-40'>
+                <Dahlia
+                    className="aboutDahlia" 
+                />
+            </div>
         </div>
     )
 }

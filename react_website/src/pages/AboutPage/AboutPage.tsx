@@ -135,8 +135,7 @@ const AboutPage = () => {
                 <div className='pt-20'>
                     <Dahlia
                         ref={ref} 
-                        className={inView ? 'is-active' : ''} 
-                        id="aboutDahlia" 
+                        className={inView ? 'is-active aboutDahlia' : 'aboutDahlia'}
                     />
                 </div>
             </section>

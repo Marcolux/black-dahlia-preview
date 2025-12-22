@@ -1,13 +1,32 @@
 #MembershipPage {
     background-color: var(--alternative-black);
+    #MembershipPageWrapper {
+        height: calc(100dvh - 136px - 60px);
+    }
     .page_sub-headers-vr {
         color: var(--black-dahlia-white);
         font-style: normal;
         margin: auto;
     }
-    #spiningDahliaMemberPg {
-        display: flex;
-        flex: auto;
-        animation: spin360 15s linear infinite;
+    .aboutDahlia {
+        animation: 
+        spin360 30s linear infinite, 
+        strokePulse2 10s ease-in-out infinite;
+        * { animation: strokePulse2 10s ease-in-out infinite;}
+        height: 390px !important;
+        width: 390px !important;
+    }
+}
+@media screen and (max-width: 900px) {
+    #MembershipPageWrapper {
+        height: 100dvh;
+    }
+    .aboutDahlia {
+        animation: 
+        spin360 30s linear infinite, 
+        strokePulse2 10s ease-in-out infinite;
+        * { animation: strokePulse2 10s ease-in-out infinite;}
+        height: 90vw !important;
+        width: 90vw !important;
     }
 }
