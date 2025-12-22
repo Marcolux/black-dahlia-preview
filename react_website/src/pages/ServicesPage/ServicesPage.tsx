@@ -17,7 +17,8 @@ const ServicesPage = () => {
                 </div>
                 <HomePageSeparator/>
             </section>
-            <div className="flex flex-wrap col-12 mt-50" id="servicesWrapper">
+
+            <section className="flex flex-wrap col-12 mt-50" id="servicesWrapper">
 
                 
                 <article className="servicesCard">
@@ -179,7 +180,7 @@ const ServicesPage = () => {
                         <p className="text-italic text-bold mt-15 mb-0 page_paragraphText">Note: Printing and production costs are not included in the base design fee. Full service print management is available upon request for a seamless, start to finish experience.</p>
                     </div>
                 </article>
-            </div>
+            </section>
 
         </div>
     )
