@@ -106,7 +106,10 @@
         }
         .buttonScr { width: 450px !important;}
         #aboutDahlia {
-            animation: spin360 30s linear infinite;
+            animation: 
+            spin360 30s linear infinite, 
+            strokePulse2 10s ease-in-out infinite;
+            * { animation: strokePulse2 10s ease-in-out infinite;}
             height: 390px;
             width: 390px;
         }
@@ -114,6 +117,13 @@
             0% { transform: rotate(0deg); }
             40% { transform: rotate(180deg); }
             100% {transform:  rotate(360deg);}
+        }
+        @keyframes strokePulse2 {
+            0%, 100% {fill: #6a6a6b2b;}
+            35% { fill: #c1c2c03d; }
+            42% { fill: #ffa51d32; }
+            50% { fill: #47192755; }
+            75% { fill: #e91e6232; }
         }
     }
 }

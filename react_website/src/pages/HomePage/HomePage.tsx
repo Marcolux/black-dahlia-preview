@@ -70,7 +70,7 @@ const HomePage = () => {
 
             <section id="offer">
                 <HomePageSeparator/>
-                <h1 className="page_sub-headers mt-10">What We Offer</h1>
+                <h1 className="page_sub-headers mt-50">What We Offer</h1>
                 <div id="offer-cards-wrapper" className="flex flex-wrap my-45">
                     <div className="offer-cards"><p>LOGO DESIGN</p></div>
                     <div className="offer-cards"><p>BRAND IDENTITY</p></div>
@@ -221,7 +221,7 @@ const HomePage = () => {
 
             <section className="flex flex-column" id="wildNotes">
                 <HomePageSeparator/>
-                <div className="wildNotes_txt flex flex-column p-50">
+                <div className="wildNotes_txt flex flex-column p-35">
                     <p className="mt-0">
                         Wild Notes and Wicked Notes are two sides of the same creative spirit. 
                         Wild Notes is our boho inspired monthly planner and journal in one. 
