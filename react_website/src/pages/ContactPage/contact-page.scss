@@ -8,7 +8,20 @@
     .page_paragraphTitle-vr { width: fit-content; }
 
     #contactForm {
-        background-color: #A2A1A116;
+        animation: gradientShift 5s linear infinite alternate;
+        background:
+            linear-gradient(var(--alternative-black), var(--alternative-black)) padding-box,
+            linear-gradient(
+                270deg,
+                    #c1c2c0 0%,
+                    #e91e62e4 25%,
+                    #c1c2c0 60%,
+                    #ffa115c9 85%,
+                    #c1c2c0 100%
+            ) border-box;
+
+        background-size: 100% 100%, 300% 300%;
+        border: 2px solid transparent;
         border-radius: var(--border-radius-cards);
         gap: 25px;
         max-width: 900px;
@@ -21,11 +34,24 @@
             border: 0px;
             border-radius: 0px;
             color: var(--black-dahlia-white);
-            padding: 25px;
+            padding: 15px;
             font: var(--page-paragraphText-font);
-            &:focus-visible{
-                outline-color: #34151D !important;
-                outline-width: 1px;
+            &:focus-visible, &:focus{
+                animation: gradientShift 2s linear infinite alternate;
+                background:
+                    linear-gradient(var(--alternative-black), var(--alternative-black)) padding-box,
+                    linear-gradient(
+                        270deg,
+                        #c1c2c0 0%,
+                        #e91e62e4 25%,
+                        #c1c2c0 60%,
+                        #ffa115c9 85%,
+                        #c1c2c0 100%
+                    ) border-box;
+                
+                background-size: 100% 100%, 300% 300%;
+                border: 0.2px solid transparent;
+                outline: none;
             }
             option { background-color: #171718; }
         }
@@ -58,6 +84,15 @@
                 .dropdown__option--selected { font-weight: 600; }
             }
         }
+        .primaryBtn-vr1{
+            width: 450px;
+            font: var(--primary-btn-btn-font);
+            &:hover {
+                cursor: pointer;
+
+                scale: 1.1;
+            }
+        }
     }
     .messageSent {
         opacity: 0;
@@ -65,5 +100,122 @@
         &.show { opacity: 1; }
     }
     .inputError { border-color: #ff4b4b;  }
-    .errorText { color: #ff4b4b; }
+    .errorText {
+        background: linear-gradient(
+            270deg,
+            #c1c2c0 0%,
+            #e91e62e4 25%,
+            #c1c2c0 60%,
+            #ffa115c9 85%,
+            #c1c2c0 100%
+        );
+        background-size: 300% 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        will-change: background-position;
+        transform: translateZ(0);
+        animation: gradientShift 5s linear infinite alternate;
+    }
+        #aboutDahlia {
+            animation: 
+            spin360 30s linear infinite, 
+            strokePulse2 10s ease-in-out infinite;
+            * { animation: strokePulse2 10s ease-in-out infinite;}
+            height: 390px;
+            width: 390px;
+        }
+        @keyframes spin360 {
+            0% { transform: rotate(0deg); }
+            40% { transform: rotate(180deg); }
+            100% {transform:  rotate(360deg);}
+        }
+        @keyframes strokePulse2 {
+            0%, 100% {fill: #6a6a6b2b;}
+            35% { fill: #c1c2c03d; }
+            42% { fill: #ffa51d32; }
+            50% { fill: #47192755; }
+            75% { fill: #e91e6232; }
+        }
+}
+
+@media screen and (max-width:900px) {
+    #ContactPage {
+        padding: 60px 20px 20px 20px !important;
+        .page_paragraphText {
+            margin-top: 20px;
+            width: 100%;
+            font-size: 15px !important;
+            font-weight: 200 !important;
+            text-align: left !important;
+        }
+        .page_paragraphTitle-vr { width: fit-content; }
+
+        #contactForm {
+            border-radius: 8px;
+            gap: 15px;
+            max-width: 100%;
+            padding: 10px;
+            width: 100%;
+            line-height: normal;
+            .field {
+                height: 125px;
+                width: 100%;
+                &.optionalFields {
+                    height: 125px !important;
+                }
+                label{ padding-top: 5px !important;}
+            }
+            .oneRow {
+                gap: 5px;
+                flex-direction: column;
+            }
+            .inputText {
+                background-color: #171718;
+                border: 0px;
+                border-radius: 0px;
+                color: var(--black-dahlia-white);
+                padding: 15px;
+                font: var(--page-paragraphText-font);
+            }
+            .errorTextDiv {line-height: normal !important;}
+            .primaryBtn-vr1{
+                width: 90%;
+                font: var(--primary-btn-btn-font);
+                &:hover {
+                    cursor: pointer;
+                    scale: 1.1;
+                }
+            }
+        }
+        .messageSent {
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            &.show { opacity: 1; }
+        }
+        .inputError { border-color: #ff4b4b;  }
+        .errorText {
+            background: linear-gradient(
+                270deg,
+                #c1c2c0 0%,
+                #e91e62e4 25%,
+                #c1c2c0 60%,
+                #ffa115c9 85%,
+                #c1c2c0 100%
+            );
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            will-change: background-position;
+            transform: translateZ(0);
+            animation: gradientShift 5s linear infinite alternate;
+        }
+    }
+    #aboutDahlia {
+        animation: 
+        spin360 30s linear infinite, 
+        strokePulse2 10s ease-in-out infinite;
+        * { animation: strokePulse2 10s ease-in-out infinite;}
+        height: 60vw !important;
+        width: 60vw !important;
+    }
 }

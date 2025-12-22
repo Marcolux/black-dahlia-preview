@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons"
 import "../page.scss"
 import "./contact-page.scss"
+import { ReactComponent as Dahlia } from "./mandala_dahlia.svg";
 
 emailjs.init("H3N6QwFNl137XPhBb")
 
@@ -128,7 +129,7 @@ const ContactPage = () => {
                         </div>
                         <div className="col-12 errorTextDiv">
                             {showErrors && !name && (
-                                <small className="errorText fontSize14">
+                                <small className="errorText fontSize15">
                                     Please enter a valid name.
                                 </small>
                             )}
@@ -156,7 +157,7 @@ const ContactPage = () => {
                         </div>
                         <div className="col-12 errorTextDiv">
                             {showErrors && !isEmailValid && (
-                                <small className="errorText fontSize14">
+                                <small className="errorText fontSize15">
                                     Please enter a valid email.
                                 </small>
                             )}
@@ -165,7 +166,7 @@ const ContactPage = () => {
                 </div>
 
                 {/* BUSINESS NAME (OPTIONAL) */}
-                <div className="field flex flex-column col-12">
+                <div className="field flex flex-column col-12 optionalFields">
                     <label htmlFor="business_name" className="mb-5">BUSINESS NAME (OPTIONAL):</label>
                     <input
                         placeholder="Your Business Name"
@@ -205,7 +206,7 @@ const ContactPage = () => {
                         />
                         <div className="col-12 errorTextDiv">
                             {showErrors && !subject && (
-                                <small className="errorText fontSize14">
+                                <small className="errorText fontSize15">
                                     Please select a project type.
                                 </small>
                             )}
@@ -234,7 +235,7 @@ const ContactPage = () => {
 
                         <div className="col-12 errorTextDiv">
                              {showErrors && !budget && (
-                                <small className="errorText fontSize14">
+                                <small className="errorText fontSize15">
                                     Please select a budget range.
                                 </small>
                             )}
@@ -257,14 +258,14 @@ const ContactPage = () => {
                         onChange={(e) => setMessage(e.target.value.slice(0, maxMessageLength)) }
                         required
                     />
-                    <div className="flex flex-alignItems-center flex-justifyContent-spaceBetween">
+                    <div className="flex flex-column-md-down flex-alignItems-start-md-down flex-alignItems-center flex-justifyContent-spaceBetween">
                         <div className="flex flex-justifyContent-spaceBetween mt-5">
                             <small> {message.length}/{maxMessageLength} characters </small>
                         </div>
 
                         <div>
                             {showErrors && !message && (
-                                <small className="errorText fontSize14">
+                                <small className="errorText fontSize15">
                                     Please enter a message before submit.
                                 </small>
                             )}
@@ -274,6 +275,8 @@ const ContactPage = () => {
 
                 {/* Submit + Status */}
                 <div className="field flex flex-column flex-justifyContent-center flex-alignItems-center">
+                    
+                    
                     <button
                         type="submit"
                         className="primaryBtn-vr1 py-10"
@@ -295,7 +298,11 @@ const ContactPage = () => {
                     <p>Please allow 1-2 business days for a response</p>
                 </div>
             </form>
-            <img className="col-2 mt-40" src={`${process.env.PUBLIC_URL}/images/about-page/dahlia_icon_biege 6.webp`} alt="Spining Black Dahlia on Contact Page" />
+                <div className='pt-40'>
+                    <Dahlia
+                        id="aboutDahlia" 
+                    />
+                </div>
         </div>
     )
 }

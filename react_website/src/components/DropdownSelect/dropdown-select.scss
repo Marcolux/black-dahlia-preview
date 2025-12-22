@@ -51,6 +51,7 @@
             transform 0.18s ease-out,
             opacity 0.18s ease-out,
             visibility 0s linear 0.18s; // hide after animation
+        z-index: 99;
         &.dropdown__list--open {
             transform: scaleY(1);
             opacity: 1;
