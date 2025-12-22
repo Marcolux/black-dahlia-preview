@@ -38,15 +38,20 @@
 /* SCROLLBAR SETTINGS*/
 
 ::-webkit-scrollbar {
-	width: 8px !important;
+	width: 10px !important;
 }
 ::-webkit-scrollbar-track {
-	background-color: #E3D7C84D;
-	border-radius: 20px;
+	background-color: #2f2f30;
+	border-radius: 0px;
 }
 ::-webkit-scrollbar-thumb {
-	background-color: #000000b1;
-	border-radius: 3px;
+	border: 1px solid #EEECE9;
+	background: linear-gradient(
+		180deg,
+		#c1c2c0 0%,
+		#e91e62e4 100%,
+	);
+	border-radius: 0px;
 }
 
 /* FOOTER */
