@@ -1,12 +1,22 @@
 import { Link } from "react-router-dom"
 import "../page.scss"
 import "./services-page.scss"
+import Mandala from "../../components/Mandala/Mandala"
+import HomePageSeparator from "../../components/home-page-components/HomePageSeparator/HomePageSeparator"
+import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
 
 const ServicesPage = () => {
 
     return(
         <div className="page" id="ServicesPage">
-            <h1 className="page_sub-headers my-30">SERVICES ...</h1>
+            <section className="flex flex-column flex-justifyContent-spaceAround flex-alignItems-center col-12" id="introSection">
+                <Mandala/>
+                <HomePageSeparator/>
+                <div className="flex flex-column py-20 col-12 flex-alignItems-center" style={{rowGap: '20px'}}>
+                    <h1 className="page_sub-headers text-center">SERVICES</h1>
+                </div>
+                <HomePageSeparator/>
+            </section>
             <div className="flex flex-wrap col-12 mt-50" id="servicesWrapper">
 
                 
@@ -41,12 +51,18 @@ const ServicesPage = () => {
                                 <li>The Empire Reign (comprehensive)</li>
                             </ul>
                     </div>
-                    <Link className="navLinks primaryBtn-vr1 col-12" to={'/services/explore-tiers'}>Explore the Tiers 
-                        <img      
-                            src={`${process.env.PUBLIC_URL}/images/icons/Arrow-bk.png`} 
-                            className="ml-20"
-                        />  
-                    </Link>
+                        <ButtonScribble 
+                            className="primaryBtn-vr1 col-12" 
+                            to={'/services/explore-tiers'} 
+                            scribbleShift="50px"
+                            buttonBg="var(--black-dahlia-white)"
+                            backColor="var(--secondary-color)"
+                            lineColor="var(--secondary-color)"
+                            external= '_blank'
+                        >
+                           Explore the Tiers
+                        </ButtonScribble>
+                    
                 </article>
 
                 <article className="servicesCard">
@@ -82,12 +98,17 @@ const ServicesPage = () => {
                         </ul>
                         <p><strong>Investment:</strong> Starts at $3,000</p>
                     </div>
-                    <Link className="navLinks primaryBtn-vr1 col-12" to={'/services/web-design-development'}>Explore More
-                        <img      
-                            src={`${process.env.PUBLIC_URL}/images/icons/Arrow-bk.png`} 
-                            className="ml-20"
-                        />
-                    </Link>
+                    <ButtonScribble 
+                        className="primaryBtn-vr1 col-12" 
+                        to={'/services/web-design-development'} 
+                        scribbleShift="50px"
+                        buttonBg="var(--black-dahlia-white)"
+                        backColor="var(--secondary-color)"
+                        lineColor="var(--secondary-color)"
+                        external= '_blank'
+                    >
+                        Explore More
+                    </ButtonScribble>
                 </article>
 
                 <article className="servicesCard">
