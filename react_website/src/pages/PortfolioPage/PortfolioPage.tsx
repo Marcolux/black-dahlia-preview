@@ -10,10 +10,10 @@ const PortfolioPage = () => {
 
     return(
         <div className="page" id="PortfolioPage">
-            <section className="flex flex-column flex-justifyContent-spaceBetween flex-alignItems-center col-12 pt-30 pb-20" id="introPortfolio">
+            <section className="flex flex-column flex-justifyContent-spaceAround flex-alignItems-center col-12" id="introPortfolio">
                 <Mandala/>
                 <HomePageSeparator/>
-                <div className="flex flex-column py-20 col-12 flex-alignItems-center" style={{rowGap: '20px'}}>
+                <div className="flex flex-column py-20 col-12 flex-alignItems-center">
                     <h1 className="page_sub-headers text-center">MOST RECENT WORK</h1>
                 </div>
                 <HomePageSeparator/>

@@ -142,8 +142,10 @@
 }
 @media screen and (max-width: 900px ) {
     #PortfolioPage {
-        #introPortfolio {
-            height: 100dvh;     
+        padding: 40px 0px !important;
+        #introPortfolio { 
+            height: calc(100dvh - 40px);
+            .page_sub-headers {font-size: 30px !important;}
         }
         .page_sub-headers {
             color: var(--black-dahlia-white);

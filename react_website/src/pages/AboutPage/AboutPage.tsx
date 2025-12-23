@@ -16,7 +16,7 @@ const AboutPage = () => {
 
     return(
         <div className="page" id="AboutPage">
-            <section className="flex flex-column flex-alignItems-center col-12" id="introAbout">
+            <section className="flex flex-column flex-justifyContent-spaceAround flex-alignItems-center col-12" id="introAbout">
                 <Mandala/>
                 <HomePageSeparator/>
                 <div className="flex flex-column py-20 col-12 flex-alignItems-center" style={{rowGap: '20px'}}>

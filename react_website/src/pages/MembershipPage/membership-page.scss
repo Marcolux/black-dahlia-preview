@@ -9,24 +9,21 @@
         margin: auto;
     }
     .aboutDahlia {
-        animation: 
-        spin360 30s linear infinite, 
-        strokePulse2 10s ease-in-out infinite;
+        animation: spin360 30s linear infinite;
+        height: 390px;
+        width: 390px;
         * { animation: strokePulse2 10s ease-in-out infinite;}
-        height: 390px !important;
-        width: 390px !important;
     }
 }
 @media screen and (max-width: 900px) {
     #MembershipPageWrapper {
-        height: 100dvh;
+        height: 100dvh !important;
+        .page_sub-headers-vr {font-size: 40px;}
     }
     .aboutDahlia {
-        animation: 
-        spin360 30s linear infinite, 
-        strokePulse2 10s ease-in-out infinite;
+        animation: spin360 30s linear infinite;
         * { animation: strokePulse2 10s ease-in-out infinite;}
-        height: 90vw !important;
-        width: 90vw !important;
+        height: 275px !important;
+        width: 275px !important;
     }
 }

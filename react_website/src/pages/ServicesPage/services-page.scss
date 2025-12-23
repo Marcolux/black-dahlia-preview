@@ -67,8 +67,11 @@
 @media screen and (max-width: 900px ) {
     #ServicesPage {
         background-color: var(--alternative-black);
-        padding: 0px !important;
-        #introSection { height: 100dvh; }
+        padding: 40px 0px !important;
+        #introSection {             
+            height: calc(100dvh - 40px);
+            .page_sub-headers {font-size: 30px !important;} 
+        }
         #servicesWrapper {
             gap: 20px;
             margin-top: 0px !important;
