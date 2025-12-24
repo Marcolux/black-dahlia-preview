@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom"
 import "./explore-tiers-page.scss"
 import "../page.scss"
+import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
 
 const ExploreTiersPage = () => {
 
     return(
         <div className="page" id="ExploreTiersPage">
             <h1 className="mt-0 mb-30 page_sub-headers">BRAND IDENTITY SERVICES</h1>
-            <p className="col-10 page_paragraphTitle-vr">
+            <p className="col-12 col-10-lg page_paragraphTitle-vr">
                 At Black Dahlia Creative, 
                 we believe a brand is more than a logo.  
                 It’s an experience. Each package is crafted to help you define your voice, refine your visuals, 
                 and build a cohesive presence that’s unmistakably yours.
             </p>
-            <p className="col-10 page_paragraphTitle-vr mt-35">From concept to legacy, your brand deserves to be as extraordinary as your vision.</p>
-            <div className="flex" id="cardsTierWrapper">
+            <p className="col-12 col-10-lg page_paragraphTitle-vr mt-35">From concept to legacy, your brand deserves to be as extraordinary as your vision.</p>
+            <div className="flex flex-column-md-down" id="cardsTierWrapper">
                 <article className="singleTier">
                     <div>
                         <div className="flex flex-justifyContent-spaceBetween flex-alignItems-center tierWrapper">
@@ -91,11 +92,16 @@ const ExploreTiersPage = () => {
                     </div>
                 </article>
             </div>
-
-            <Link 
+            <ButtonScribble 
+                className="primaryBtn-vr1 col-11 mt-45" 
                 to={'/contact'} 
-                className="primaryBtn-vr1 fontSize20 col-11 mt-45"
-            >INQUIRE ABOUT ONE OF THESE PACKAGES</Link>
+                scribbleShift="50px"
+                buttonBg="var(--black-dahlia-white)"
+                backColor="var(--secondary-color)"
+                lineColor="var(--secondary-color)"
+            >
+                INQUIRE ABOUT ONE OF THESE PACKAGES
+            </ButtonScribble>
            
         </div>
     )

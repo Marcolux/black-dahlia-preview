@@ -22,9 +22,22 @@
         padding-top: 80px;
         width: 100%;
         .singleTier {
-            border: 1px solid #FFFFFE;
+            animation: gradientShift 15s linear infinite alternate;
+            background:
+                linear-gradient(var(--alternative-black), var(--alternative-black)) padding-box,
+                linear-gradient(
+                270deg,
+                    #c1c2c0 0%,
+                    #e91e62e4 25%,
+                    #c1c2c0 60%,
+                    #ffa115c9 85%,
+                    #c1c2c0 100%
+                ) border-box;
+
+            background-size: 100% 100%, 300% 300%;
+            border: 2px solid transparent;
             border-radius: var(--border-radius-cards);
-            box-shadow: 10px 10px 15px #FFFFFE22;
+
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -39,6 +52,9 @@
                     color: var(--alternative-black);
                     padding: 1px 0px !important;
                     text-align: center;
+                    height: 30px;
+                    text-align: center;
+                    line-height: 30px;
                     width: 170px;
                     margin: 0px;
                 }
@@ -59,7 +75,61 @@
                     ul { padding-left: 30px; }
                 }
             }
-            .primaryBtn-vr1 { font-weight: 600; }
+            .primaryBtn-vr1 { 
+                font-weight: 600; 
+                width: 75%;
+                text-align: center;
+            }
+        }
+    }
+}
+@media screen and (max-width: 900px) {
+    #ExploreTiersPage {
+        padding: 90px 20px;
+        #cardsTierWrapper {
+            width: 100%;
+            .singleTier {
+
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 50px 25px 20px;
+                width: 100%;
+                .tierWrapper {
+                    height: 40px;
+                    .page_paragraphText.tier { color: #C7A770; }
+                    .mostChosen {
+                        background-color: #C7A770;
+                        border-radius: var(--border-radius-cards);
+                        color: var(--alternative-black);
+                        padding: 1px 0px !important;
+                        text-align: center;
+                        width: 170px;
+                        margin: 0px;
+                    }
+                }
+                .tierDescription {
+                    .page_paragraphTitle {
+                        height: 72px;
+                        width: 100%;
+                        text-align: center;
+                        span {
+                            display: flex;
+                            text-align: end;
+                            justify-content: end;
+                        }
+                    }
+                    .page_paragraphText {
+                        color: #B7B4AD;
+                        ul { padding-left: 30px; }
+                    }
+                }
+            }
+        }
+        .primaryBtn-vr1 {
+            font-size: 13px;
+            width: 100% !important;
         }
     }
 }

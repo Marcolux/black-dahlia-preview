@@ -1,5 +1,3 @@
-import { ReactComponent as VectorHome } from './Vector.svg'
-import { ReactComponent as BlinkingVectorHome } from './blinkingVector.svg'
 import { useInView } from "react-intersection-observer"
 import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
 import Mandala from '../../components/Mandala/Mandala'

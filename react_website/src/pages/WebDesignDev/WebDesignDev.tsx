@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import "../page.scss"
 import "./web-design-dev.scss"
+import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
 
 const WebDesignDevPage = () => {
 
@@ -33,10 +34,17 @@ const WebDesignDevPage = () => {
                     </ul>
                     <p className="page_paragraphText mt-30">Note: Ongoing maintenance plans are available at $100–$150 per month, covering routine updates, SEO adjustments, and performance monitoring to keep your website running smoothly and up to date.</p>
                 </div>
-                <Link 
+
+                <ButtonScribble 
+                    className="primaryBtn-vr1 col-11 mt-45" 
                     to={'/contact'} 
-                    className="primaryBtn-vr1 fontSize20 mt-45"
-                >Book Now</Link>
+                    scribbleShift="50px"
+                    buttonBg="var(--black-dahlia-white)"
+                    backColor="var(--secondary-color)"
+                    lineColor="var(--secondary-color)"
+                >
+                    Book Now
+                </ButtonScribble>
             </article>
         </main>
     )

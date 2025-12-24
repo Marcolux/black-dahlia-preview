@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import "../page.scss"
 import "./services-page.scss"
 import Mandala from "../../components/Mandala/Mandala"

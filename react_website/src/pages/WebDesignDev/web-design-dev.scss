@@ -4,9 +4,22 @@
     align-items: center;
     padding: 90px 50px;
     .singleTier {
-        border: 1px solid #FFFFFE;
+        animation: gradientShift 15s linear infinite alternate;
+        background:
+            linear-gradient(var(--alternative-black), var(--alternative-black)) padding-box,
+            linear-gradient(
+            270deg,
+                #c1c2c0 0%,
+                #e91e62e4 25%,
+                #c1c2c0 60%,
+                #ffa115c9 85%,
+                #c1c2c0 100%
+            ) border-box;
+
+        background-size: 100% 100%, 300% 300%;
+        border: 2px solid transparent;
         border-radius: var(--border-radius-cards);
-        box-shadow: 10px 10px 15px #FFFFFE22;
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -24,5 +37,16 @@
             }
         }
         .primaryBtn-vr1 { font-weight: 600; }
+    }
+}
+@media screen and (max-width: 900px) {
+    #WebDesignDevPage {
+        max-width: 100%;
+        padding: 90px 10px;
+        .singleTier {
+            border-width: 1px;
+            padding: 20px;
+            width: calc(100vw - 20px) !important;
+        }
     }
 }
