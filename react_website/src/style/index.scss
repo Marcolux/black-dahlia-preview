@@ -12,9 +12,10 @@ html, body, #root {
   padding: 0;
   width:100%;
 }
-body {  background-color: var(--page-primary-background); }
+body {  
+  background-color: #272626; /* your stage color */
+}
 #root { position: relative; }
-html { background-color: var(--primary-color);}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

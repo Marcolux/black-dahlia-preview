@@ -81,5 +81,11 @@
                 }
             }
         }
+        .aboutDahlia {
+            animation: spin360 30s linear infinite;
+            * { animation: strokePulse2 10s ease-in-out infinite;}
+            height: 45px !important;
+            width: 45px !important;
+        }
     }
 }

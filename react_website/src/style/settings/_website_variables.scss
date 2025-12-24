@@ -1,20 +1,19 @@
 $primary-color: #34151D;
 $secondary-color: #A49586;
 $ternary-color: #232325;
-$accent-color: #AE8560;
 $black-dahlia-white: #E1D8CE;
 // font: [font-style] [font-variant] [font-weight] [font-stretch]  <font-size> / <line-height> <font-family>
 :root {
     //*==== COLORS ====*/
-    --accent-color: #AE8560;
+    --alternative-black: #1D1D1E;
     --black-dahlia-white: #EEECE9;
+    --page-primary-background: #19191A;; 
     --primary-font-color: #000000;
     --primary-color: #34151D;
     --primary-color-vr: #4F2934;
     --primary-color-lg: #34151d8d;
     --secondary-color: #A49586;
     --ternary-color: #232325;
-    --alternative-black: #1D1D1E;
     --white-text: #ffffff;
 
     //*==== FONTS ====*/
