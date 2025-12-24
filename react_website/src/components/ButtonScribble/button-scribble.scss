@@ -101,11 +101,11 @@
     border-radius: 16px;
     transform-origin: 16px 16px;
 
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-    }
+    // &::before,
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    // }
 }
 
 .buttonScr__drow1 {
@@ -114,25 +114,25 @@
     width: 32px;
     height: 0;
     transform: rotate(30deg);
-    &::before {
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 32px;
-        border-radius: 16px;
-        transform-origin: 16px 16px;
-        transform: rotate(-60deg);
-    }
+    // &::before {
+    //     bottom: 0;
+    //     left: 0;
+    //     width: 0;
+    //     height: 32px;
+    //     border-radius: 16px;
+    //     transform-origin: 16px 16px;
+    //     transform: rotate(-60deg);
+    // }
 
-    &::after {
-        top: -10px;
-        left: 45px;
-        width: 0;
-        height: 32px;
-        border-radius: 16px;
-        transform-origin: 16px 16px;
-        transform: rotate(69deg);
-    }
+    // &::after {
+    //     top: -10px;
+    //     left: 45px;
+    //     width: 0;
+    //     height: 32px;
+    //     border-radius: 16px;
+    //     transform-origin: 16px 16px;
+    //     transform: rotate(69deg);
+    // }
 }
 
 .buttonScr__drow2 {
@@ -141,25 +141,25 @@
     width: 32px;
     height: 0;
     transform: rotate(-127deg);
-    &::before {
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 32px;
-        border-radius: 16px;
-        transform-origin: 16px 16px;
-        transform: rotate(-146deg);
-    }
+    // &::before {
+    //     bottom: 0;
+    //     left: 0;
+    //     width: 0;
+    //     height: 32px;
+    //     border-radius: 16px;
+    //     transform-origin: 16px 16px;
+    //     transform: rotate(-146deg);
+    // }
 
-    &::after {
-        bottom: 26px;
-        left: -40px;
-        width: 0;
-        height: 32px;
-        border-radius: 16px;
-        transform-origin: 16px 16px;
-        transform: rotate(-262deg);
-    }
+    // &::after {
+    //     bottom: 26px;
+    //     left: -40px;
+    //     width: 0;
+    //     height: 32px;
+    //     border-radius: 16px;
+    //     transform-origin: 16px 16px;
+    //     transform: rotate(-262deg);
+    // }
 }
 
 .buttonScr__drow1,
@@ -172,35 +172,35 @@
 }
 
 /* Hover animations */
-.buttonScr:hover .buttonScr__drow1 {
-    animation: drow1 ease-in 0.06s;
-    animation-fill-mode: forwards;
-}
+// .buttonScr:hover .buttonScr__drow1 {
+//     animation: drow1 ease-in 0.06s;
+//     animation-fill-mode: forwards;
+// }
 
-.buttonScr:hover .buttonScr__drow1::before {
-    animation: drow2 linear 0.08s 0.06s;
-    animation-fill-mode: forwards;
-}
+// .buttonScr:hover .buttonScr__drow1::before {
+//     animation: drow2 linear 0.08s 0.06s;
+//     animation-fill-mode: forwards;
+// }
 
-.buttonScr:hover .buttonScr__drow1::after {
-    animation: drow3 linear 0.03s 0.14s;
-    animation-fill-mode: forwards;
-}
+// .buttonScr:hover .buttonScr__drow1::after {
+//     animation: drow3 linear 0.03s 0.14s;
+//     animation-fill-mode: forwards;
+// }
 
-.buttonScr:hover .buttonScr__drow2 {
-    animation: drow4 linear 0.06s 0.2s;
-    animation-fill-mode: forwards;
-}
+// .buttonScr:hover .buttonScr__drow2 {
+//     animation: drow4 linear 0.06s 0.2s;
+//     animation-fill-mode: forwards;
+// }
 
-.buttonScr:hover .buttonScr__drow2::before {
-    animation: drow3 linear 0.03s 0.26s;
-    animation-fill-mode: forwards;
-}
+// .buttonScr:hover .buttonScr__drow2::before {
+//     animation: drow3 linear 0.03s 0.26s;
+//     animation-fill-mode: forwards;
+// }
 
-.buttonScr:hover .buttonScr__drow2::after {
-    animation: drow5 linear 0.06s 0.32s;
-    animation-fill-mode: forwards;
-}
+// .buttonScr:hover .buttonScr__drow2::after {
+//     animation: drow5 linear 0.06s 0.32s;
+//     animation-fill-mode: forwards;
+// }
 
 /* Keyframes */
 @keyframes drow1 {

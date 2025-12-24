@@ -25,7 +25,7 @@ const ButtonScribble: React.FC<ButtonScribbleProps> = ({
     ...rest
 }) => {
     const classes = `buttonScr ${className}`.trim()
-    const isExternal = external === '_blank' ? '_blank' : ''
+    const isExternal = external === "_blank" ? "_blank" : undefined
 
     return (
         <Link
@@ -39,7 +39,7 @@ const ButtonScribble: React.FC<ButtonScribbleProps> = ({
                 ["--scribble-shift" as any]: scribbleShift,
                 backgroundColor: buttonBg ? buttonBg : '' 
             }}
-            target = {isExternal}
+            target={isExternal}
             {...rest}
         >
             <div className="buttonScr__line" />

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import "./explore-tiers-page.scss"
 import "../page.scss"
 import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"

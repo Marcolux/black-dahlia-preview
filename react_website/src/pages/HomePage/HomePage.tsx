@@ -49,7 +49,7 @@ const HomePage = () => {
                     </ButtonScribble>
                     <ButtonScribble 
                         className="primaryBtn-vr1 mt-0-lg mt-10 ml-20-md" 
-                        to={'/portfolio'} 
+                        to={'/contact'} 
                         scribbleShift="50px"
                         buttonBg="var(--black-dahlia-white)"
                         backColor="var(--secondary-color)"
@@ -123,7 +123,7 @@ const HomePage = () => {
                     </div>
                     <ButtonScribble 
                         className="primaryBtn mt-20" 
-                        to={'/services'}
+                        to={'/contact'}
                         scribbleShift="50px"
                         buttonBg="var(--alternative-black)"
                         backColor="var(--primary-color-vr)"
@@ -283,7 +283,7 @@ const HomePage = () => {
                     <p>Schedule your complimentary Discover Call TODAY!</p>
                     <ButtonScribble 
                         className="primaryBtn mt-40" 
-                        to={'/services'}
+                        to={'/contact'}
                         scribbleShift="50px"
                         buttonBg="var(--alternative-black)"
                         backColor="var(--primary-color-vr)"

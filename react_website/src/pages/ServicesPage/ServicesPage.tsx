@@ -52,13 +52,12 @@ const ServicesPage = () => {
                             </ul>
                     </div>
                         <ButtonScribble 
-                            className="primaryBtn-vr1 col-12" 
+                            className="primaryBtn col-12" 
                             to={'/services/explore-tiers'} 
                             scribbleShift="50px"
                             buttonBg="var(--black-dahlia-white)"
                             backColor="var(--secondary-color)"
                             lineColor="var(--secondary-color)"
-                            external= '_blank'
                         >
                            Explore the Tiers
                         </ButtonScribble>
@@ -99,13 +98,12 @@ const ServicesPage = () => {
                         <p><strong>Investment:</strong> Starts at $3,000</p>
                     </div>
                     <ButtonScribble 
-                        className="primaryBtn-vr1 col-12" 
+                        className="primaryBtn col-12" 
                         to={'/services/web-design-development'} 
                         scribbleShift="50px"
                         buttonBg="var(--black-dahlia-white)"
                         backColor="var(--secondary-color)"
                         lineColor="var(--secondary-color)"
-                        external= '_blank'
                     >
                         Explore More
                     </ButtonScribble>
