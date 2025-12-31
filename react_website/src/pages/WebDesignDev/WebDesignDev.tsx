@@ -33,17 +33,19 @@ const WebDesignDevPage = () => {
                     </ul>
                     <p className="page_paragraphText mt-30">Note: Ongoing maintenance plans are available at $100–$150 per month, covering routine updates, SEO adjustments, and performance monitoring to keep your website running smoothly and up to date.</p>
                 </div>
+                <div className="col-12 flex flex-justifyContent-center">
 
-                <ButtonScribble 
-                    className="primaryBtn-vr1 col-11 mt-45" 
-                    to={'/contact'} 
-                    scribbleShift="50px"
-                    buttonBg="var(--black-dahlia-white)"
-                    backColor="var(--secondary-color)"
-                    lineColor="var(--secondary-color)"
-                >
-                    Book Now
-                </ButtonScribble>
+                    <ButtonScribble 
+                        className="primaryBtn-vr1 mt-45" 
+                        to={'/contact'} 
+                        scribbleShift="50px"
+                        buttonBg="var(--black-dahlia-white)"
+                        backColor="var(--secondary-color)"
+                        lineColor="var(--secondary-color)"
+                    >
+                        Book Now
+                    </ButtonScribble>
+                </div>
             </article>
         </main>
     )

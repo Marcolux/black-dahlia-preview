@@ -7,7 +7,7 @@ import HomePageSeparator from "../../components/home-page-components/HomePageSep
 import Mandala from "../../components/Mandala/Mandala"
 import ScrollingImg from "../../components/ScrollingImg/ScrollingImg"
 import ButtonScribble from "../../components/ButtonScribble/ButtonScribble"
-import { ReactComponent as Dahlia } from "./mandala_dahlia.svg";
+import { ReactComponent as Dahlia } from "./mandala_dahlia.svg"
 import "./homepage.scss"
 import "../page.scss" 
 
@@ -63,7 +63,7 @@ const HomePage = () => {
             <section id="land-animation" className="">
                 <HomePageSeparator/>
                 <ScrollingImg 
-                    image_url={`images/home-page/landing_page_hero_radius.png`}
+                    image_url={`images/home-page/landing_page_hero_radius.webp`}
                     image_alt="Black Dahlia wall design in living room"
                 ></ScrollingImg>
             </section>

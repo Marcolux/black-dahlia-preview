@@ -2,9 +2,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import './navigation-bar.scss'
 
 const NavigationBar = () => {
-    const location = useLocation()
     return (
-        
         <div className="navBar">
             <NavLink className="navLinks logoLink" to={'/'}>
                 <img id="navbar_logo" src={`${process.env.PUBLIC_URL}/images/black_dahlia_white_logo.png`} alt="Black Dahlia Creative logo White"/>

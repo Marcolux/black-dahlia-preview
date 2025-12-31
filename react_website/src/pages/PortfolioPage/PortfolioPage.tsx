@@ -38,7 +38,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/nicchie_storefront 1.webp`}
                                 alt={`Flip card front 1`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -46,7 +46,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/nicchie_storeback 1.webp`}
                                 alt={`Flip card back 1`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -63,7 +63,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/nicchie_menu2_front.webp`}
                                 alt={`Flip card front 2`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
 
@@ -72,7 +72,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/nicchie_menu2_back.webp`}
                                 alt={`Flip card front 2`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -89,7 +89,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/nicchie_inside_restaurant_front.webp`}
                                 alt={`Flip card front 3`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -97,7 +97,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/nicchie_inside_restaurant_back.webp`}
                                 alt={`Flip card front 3`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -114,7 +114,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/le_nicchie_front.webp`}
                                 alt={`Flip card front 4`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -122,7 +122,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/le_nicchie_back.webp`}
                                 alt={`Flip card front 4`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -153,7 +153,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/bauhaus_poster_front.webp`}
                                 alt={`Bauhaus Poster card front`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -161,7 +161,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/bauhaus_poster_back.webp`}
                                 alt={`Bauhaus Poster card back`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -190,7 +190,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/magazine_front_1.webp`}
                                 alt={`Traveler's magazine card 1 front`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -198,7 +198,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/magazine_back_1.webp`}
                                 alt={`Traveler's magazine card 1 back`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -210,7 +210,7 @@ const PortfolioPage = () => {
                     <img
                         src={`${process.env.PUBLIC_URL}/images/portfolio/magazine_front_only.webp`}
                         alt={`Traveler's magazine card 2`}
-                        loading="lazy" 
+                        // loading="lazy" 
                         decoding="async"
                         className="pricing-card-wrapper"
                     />
@@ -234,7 +234,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/root_ridge_card1_front.webp`}
                                 alt={`Root & Ride Magazine card 1 front`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -242,7 +242,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/root_ridge_card1_back.webp`}
                                 alt={`Root & Ride Magazine card 1 back`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -258,7 +258,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/root_ridge_card2_front.webp`}
                                 alt={`Root & Ride Magazine card 2 front`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -266,7 +266,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/root_ridge_card2_back.webp`}
                                 alt={`Root & Ride Magazine card 2 back`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -278,14 +278,14 @@ const PortfolioPage = () => {
                     <img
                         src={`${process.env.PUBLIC_URL}/images/portfolio/root_ridge_card4.webp`}
                         alt={`Root & Ride Magazine card 3`}
-                            loading="lazy" 
+                            // loading="lazy" 
                             decoding="async"
                             className="pricing-card-wrapper"
                     />
                     <img
                         src={`${process.env.PUBLIC_URL}/images/portfolio/root_ridge_card5.webp`}
                         alt={`Root & Ride Magazine card 4`}
-                            loading="lazy" 
+                            // loading="lazy" 
                             decoding="async"
                             className="pricing-card-wrapper"
                     />
@@ -309,7 +309,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/planner1_front.webp`}
                                 alt={`Planners Card 1 front`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -317,7 +317,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/planner1_back.webp`}
                                 alt={`Planners Card 1 back`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -333,7 +333,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/planner2_front.webp`}
                                 alt={`Planners Card 2 front`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -341,7 +341,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/planner2_back.webp`}
                                 alt={`Planners Card 2 back`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -357,7 +357,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/planner3_front.webp`}
                                 alt={`Planners Card 3 front`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -365,7 +365,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/planner3_back.webp`}
                                 alt={`Planners Card 3 back`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -381,7 +381,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/planner4_front.webp`}
                                 alt={`Planners Card 4 front`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -389,7 +389,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/planner4_back.webp`}
                                 alt={`Planners Card 4 back`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -418,7 +418,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/italian_book_front.webp`}
                                 alt={`Italian's children book front`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -426,7 +426,7 @@ const PortfolioPage = () => {
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/portfolio/italian_book_back.webp`}
                                 alt={`Italian's children book back`}
-                                loading="lazy" 
+                                // loading="lazy" 
                                 decoding="async"
                             />
                         }
@@ -448,7 +448,7 @@ const PortfolioPage = () => {
                 <p id="scheduleText" className="mt-50 mb-10">Schedule your complimentary Discover Call TODAY!</p>
                     <ButtonScribble 
                         className="primaryBtn-vr1 mt-50" 
-                        to={'/portfolio'} 
+                        to={'/contact'} 
                         scribbleShift="50px"
                         buttonBg="var(--black-dahlia-white)"
                         backColor="var(--secondary-color)"

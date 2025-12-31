@@ -1,4 +1,4 @@
-import { useTrail, animated, config } from '@react-spring/web';
+import { useTrail, animated} from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
 import './translate-trail.scss'
 

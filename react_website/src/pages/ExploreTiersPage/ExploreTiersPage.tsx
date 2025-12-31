@@ -91,16 +91,19 @@ const ExploreTiersPage = () => {
                     </div>
                 </article>
             </div>
-            <ButtonScribble 
-                className="primaryBtn-vr1 col-11 mt-45" 
-                to={'/contact'} 
-                scribbleShift="50px"
-                buttonBg="var(--black-dahlia-white)"
-                backColor="var(--secondary-color)"
-                lineColor="var(--secondary-color)"
-            >
-                INQUIRE ABOUT ONE OF THESE PACKAGES
-            </ButtonScribble>
+            <div className="flex col-12 flex-justifyContent-center">
+
+                <ButtonScribble 
+                    className="primaryBtn-vr1 mt-45" 
+                    to={'/contact'} 
+                    scribbleShift="50px"
+                    buttonBg="var(--black-dahlia-white)"
+                    backColor="var(--secondary-color)"
+                    lineColor="var(--secondary-color)"
+                >
+                    INQUIRE ABOUT ONE OF THESE PACKAGES
+                </ButtonScribble>
+            </div>
            
         </div>
     )

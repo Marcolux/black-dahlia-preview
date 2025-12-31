@@ -56,8 +56,8 @@ const ServicesPage = () => {
                             to={'/services/explore-tiers'} 
                             scribbleShift="50px"
                             buttonBg="var(--black-dahlia-white)"
-                            backColor="var(--secondary-color)"
-                            lineColor="var(--secondary-color)"
+                            backColor="var(--alternative-black)"
+                            lineColor="var(--alternative-black)"
                         >
                            Explore the Tiers
                         </ButtonScribble>
@@ -102,8 +102,8 @@ const ServicesPage = () => {
                         to={'/services/web-design-development'} 
                         scribbleShift="50px"
                         buttonBg="var(--black-dahlia-white)"
-                        backColor="var(--secondary-color)"
-                        lineColor="var(--secondary-color)"
+                        backColor="var(--alternative-black)"
+                        lineColor="var(--alternative-black)"
                     >
                         Explore More
                     </ButtonScribble>

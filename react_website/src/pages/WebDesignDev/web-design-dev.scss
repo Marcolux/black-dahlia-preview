@@ -36,7 +36,10 @@
                 ul { padding-left: 30px; }
             }
         }
-        .primaryBtn-vr1 { font-weight: 600; }
+        .primaryBtn-vr1 { 
+            font-weight: 600; 
+            width: 450px;
+        }
     }
 }
 @media screen and (max-width: 900px) {

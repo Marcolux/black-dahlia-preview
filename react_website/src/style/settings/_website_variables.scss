@@ -25,7 +25,8 @@ $black-dahlia-white: #E1D8CE;
 
     /* Font Shorthands  (vw = max-size / target-width * 100) */
     --page-headers-font: italic 300 clamp(50px, 5.7vw, 80px) / 1.1 var(--secondary-font);
-    --page-subHeaders-font: 400 clamp(24px, 4.4vw, 48px) / 1.1 var(--secondary-font);
+    --page-subHeaders-font: 400 clamp(24px, 4.4vw, 64px) / 1.1 var(--secondary-font);
+    --page-subHeaders-font-sm: 400 clamp(24px, 4.4vw, 48px) / 1.1 var(--secondary-font);
     --page-subHeaders-font-vr: italic 300 clamp(24px, 4.4vw, 64px) / 1.3 var(--primary-font);
     --page-secHeaders-font: italic 300 clamp(24px, 3.25vw, 44px) / 1.3 var(--secondary-font);
     --page-secHeaders-font-vr: italic 300 clamp(24px, 3.25vw, 44px) / 1.3 var(--primary-font);
