@@ -10,13 +10,9 @@ type RollingTrailProps = {
 }
 
 const RollingTrail = ({ icons, portionVisible }: RollingTrailProps) => {
-    const [smallScreenView, setSmallScreenView] = useState('Regular')
     const [offWidth, setOffWidth] = useState('0')
 
     const handleResize = () => {
-        window.innerWidth < 800
-            ? setSmallScreenView('SmallScreen')
-            : setSmallScreenView('Regular')
         window.innerWidth < 800
             ? setOffWidth('350')
             : setOffWidth('600')
