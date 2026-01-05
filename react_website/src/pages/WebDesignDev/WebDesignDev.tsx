@@ -40,8 +40,7 @@ const WebDesignDevPage = () => {
                         to={'/contact'} 
                         scribbleShift="50px"
                         buttonBg="var(--black-dahlia-white)"
-                        backColor="var(--secondary-color)"
-                        lineColor="var(--secondary-color)"
+                        lineColor="var(--alternative-black)"
                     >
                         Book Now
                     </ButtonScribble>

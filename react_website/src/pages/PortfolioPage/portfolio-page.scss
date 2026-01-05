@@ -73,28 +73,36 @@
                     &.flipcard__content--back { margin-top: 0px; }
                 }
                 .flipcard__trigger {
-                    bottom: 0px;
+                    bottom: -20px;
                     position: absolute;
                     right: 0px;
+                    width: 100%;
                     p {
+                        color: var(--alternative-black);
                         font-family: "Bellota";
                         font-size: 40px;
-                        margin-right: 60px;
-                        opacity: .2;
+                        // margin-right: 60px;
+                        // mix-blend-mode: difference;
+                        opacity: .5;
+                        right: calc(50% - 160px);
                         &:hover { opacity: 1; }
+                        &.light {
+                            color: var(--black-dahlia-white);
+                        }
                     }
                     &.flipcard__trigger--back {
                         align-items: end;
                         bottom: 40px !important;
                         display: flex;
                         height: calc(100% - 40px);
-                        right: 40px;
+                        right: 60px;
                         top: 0px;
                         width: 150px;
+                        // mix-blend-mode: difference;
                         svg path {
-                            fill: #E1D8CE !important;
+                            fill: #000000 !important;
                             stroke: #E1D8CE;
-                            stroke-width:  1px;
+                            stroke-width: 1px;
                         }
                         &:hover {
                             svg path{

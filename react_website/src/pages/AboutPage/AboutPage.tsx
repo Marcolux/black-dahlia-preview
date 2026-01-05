@@ -127,7 +127,12 @@ const AboutPage = () => {
                     <h4 className="col-12 text-center">YOUR COMPLIMENTARY DISCOVERY CALL AWAITS YOU!</h4>
                 </div>
                 <HomePageSeparator/>
-                <ButtonScribble className="primaryBtn-vr1 fontSize20 my-40" to={'/contact'} scribbleShift="50px">
+                <ButtonScribble 
+                    className="primaryBtn-vr1 fontSize20 my-40" 
+                    to={'/contact'} 
+                    scribbleShift="50px"
+                    lineColor="var(--alternative-black)"
+                >
                     Start your creative journey TODAY
                 </ButtonScribble>
                 <div className='pt-20'>

@@ -26,7 +26,7 @@ function App() {
   const location = useLocation()
 
   const handleResize = () => {
-    window.innerWidth < 800
+    window.innerWidth < 900
       ? setSmallScreenView('SmallScreen')
       : setSmallScreenView('Regular')
   }

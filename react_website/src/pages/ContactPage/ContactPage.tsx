@@ -250,7 +250,7 @@ const ContactPage = () => {
                         TELL US ABOUT YOUR VISION OR ASK ANY INQUIRIES HERE:
                     </label>
                     <textarea
-                        rows={5}
+                        // rows={5}
                         className="inputText p-5"
                         id="message"
                         name="message"

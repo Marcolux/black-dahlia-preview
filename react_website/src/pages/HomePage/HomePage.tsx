@@ -15,7 +15,7 @@ const HomePage = () => {
     const [smallScreenView, setSmallScreenView] = useState('Regular')
 
     const handleResize = () => {
-        window.innerWidth < 800
+        window.innerWidth < 1050
             ? setSmallScreenView('SmallScreen')
             : setSmallScreenView('Regular')
     }
@@ -44,7 +44,11 @@ const HomePage = () => {
                 </div>
                 <HomePageSeparator/>
                 <div className="col-12 flex flex-column-md-down flex-alignItems-center flex-justifyContent-center buttonsHero">
-                    <ButtonScribble className="primaryBtn" to={'/portfolio'} scribbleShift="50px">
+                    <ButtonScribble 
+                        className="primaryBtn" 
+                        to={'/portfolio'} 
+                        scribbleShift="50px"
+                    >
                         Explore the Portfolio
                     </ButtonScribble>
                     <ButtonScribble 
@@ -52,8 +56,8 @@ const HomePage = () => {
                         to={'/contact'} 
                         scribbleShift="50px"
                         buttonBg="var(--black-dahlia-white)"
-                        backColor="var(--secondary-color)"
-                        lineColor="var(--secondary-color)"
+                        backColor="var(--alternative-black)"
+                        lineColor="var(--alternative-black)"
                     >
                         Start your creative journey
                     </ButtonScribble>

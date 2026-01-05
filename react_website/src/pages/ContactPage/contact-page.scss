@@ -39,7 +39,10 @@
             &:focus-visible, &:focus{
                 animation: gradientShift 2s linear infinite alternate;
                 background:
-                    linear-gradient(var(--alternative-black), var(--alternative-black)) padding-box,
+                    linear-gradient(
+                        var(--alternative-black), 
+                        var(--alternative-black)
+                    ) padding-box,
                     linear-gradient(
                         270deg,
                         #c1c2c0 0%,
@@ -137,10 +140,18 @@
             75% { fill: #e91e6232; }
         }
 }
-
-@media screen and (max-width:900px) {
+@media screen and (min-width: 701px) and (max-width: 900px) {
+    #ContactPage {
+        padding: 60px 20px 20px !important;
+    }    
+}
+@media screen and (max-width:700px) {
     #ContactPage {
         padding: 60px 0px 20px !important;
+    }    
+}
+@media screen and (max-width:900px) {
+    #ContactPage {
         .page_paragraphText {
             margin-top: 20px;
             width: 100%;

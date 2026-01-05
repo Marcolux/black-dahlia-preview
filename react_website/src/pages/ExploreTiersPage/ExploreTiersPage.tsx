@@ -98,8 +98,7 @@ const ExploreTiersPage = () => {
                     to={'/contact'} 
                     scribbleShift="50px"
                     buttonBg="var(--black-dahlia-white)"
-                    backColor="var(--secondary-color)"
-                    lineColor="var(--secondary-color)"
+                    lineColor="var(--alternative-black)"
                 >
                     INQUIRE ABOUT ONE OF THESE PACKAGES
                 </ButtonScribble>
