@@ -62,7 +62,7 @@ const AboutPage = () => {
                         <article className="journey_articles col-12">
                             <p className="journey_texts">
                                 I explored it in countless forms over the years.  
-                                Designing jewelry, crafting, photography, doing hair, even hot gluing twigs to a jar just to make a pretty pen holder. 
+                                Designing jewelry, spinning fire, crafting, photography, doing hair, even hot gluing twigs to a jar just to make a pretty pen holder. 
                                 Creativity was never just a hobby for me.  
                                 It was how I moved through the world. 
                                 Even when I worked in industries that paid the bills but didn’t quite fill my cup, that creative spark never went quiet.

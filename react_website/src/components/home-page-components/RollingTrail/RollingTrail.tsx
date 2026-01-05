@@ -1,6 +1,6 @@
 import { useTrail, animated } from '@react-spring/web';
+import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import './rolling-trail.scss'
 
 type SvgIcon = React.FC<React.SVGProps<SVGSVGElement>>;
 
@@ -10,11 +10,32 @@ type RollingTrailProps = {
 }
 
 const RollingTrail = ({ icons, portionVisible }: RollingTrailProps) => {
-    const [ref, inView] = useInView({ threshold: portionVisible ? portionVisible : 1 })
+    const [smallScreenView, setSmallScreenView] = useState('Regular')
+    const [offWidth, setOffWidth] = useState('0')
+
+    const handleResize = () => {
+        window.innerWidth < 800
+            ? setSmallScreenView('SmallScreen')
+            : setSmallScreenView('Regular')
+        window.innerWidth < 800
+            ? setOffWidth('350')
+            : setOffWidth('600')
+    }
+
+    useEffect(() => {
+        handleResize()
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+
+    const { ref, inView } = useInView({
+        threshold: portionVisible ? portionVisible : 1,
+        triggerOnce: false, // keep toggling when leaving/entering view
+    })
 
     const trail = useTrail(icons.length, {
         from: {transform: `translateX(0%) rotate(0deg)`},
-        to: { transform: inView ? `translateX(0%) rotate(0deg)` : `translateX(600%) rotate(360deg)`},
+        to: { transform: inView ? `translateX(0%) rotate(0deg)` : `translateX(${offWidth}%) rotate(360deg)`},
         config: {
             tension: 120,
             duration: 1000,

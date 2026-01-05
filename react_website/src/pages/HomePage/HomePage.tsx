@@ -13,11 +13,15 @@ import "../page.scss"
 
 const HomePage = () => {
     const [smallScreenView, setSmallScreenView] = useState('Regular')
+    const [rollingTrialPortionVisible, setRollingTrialPortionVisible] = useState(1)
 
     const handleResize = () => {
         window.innerWidth < 1050
             ? setSmallScreenView('SmallScreen')
             : setSmallScreenView('Regular')
+        window.innerWidth < 800
+            ? setRollingTrialPortionVisible(0.3)
+            : setRollingTrialPortionVisible(0.7)
     }
 
     useEffect(() => {
@@ -108,7 +112,7 @@ const HomePage = () => {
                 <HomePageSeparator/>
                 <h1 className="page_sub-headers pt-10">why black dahlia?</h1>
                 <div className="col-12 mt-50">
-                    <RollingTrail icons={[Dahlia,Dahlia,Dahlia,Dahlia]} portionVisible={0.7}></RollingTrail>
+                    <RollingTrail icons={[Dahlia,Dahlia,Dahlia,Dahlia]} portionVisible={rollingTrialPortionVisible}></RollingTrail>
                 </div>
                 <div id="textBoxWrapper" className="mt-50">
                     <div id="text">
@@ -284,7 +288,7 @@ const HomePage = () => {
                     <HomePageSeparator/>
                 </div>
                 <div id="bookNowOrg">
-                    <p>Schedule your complimentary Discover Call TODAY!</p>
+                    <p>Schedule your complimentary Discovery Call TODAY!</p>
                     <ButtonScribble 
                         className="primaryBtn mt-40" 
                         to={'/contact'}

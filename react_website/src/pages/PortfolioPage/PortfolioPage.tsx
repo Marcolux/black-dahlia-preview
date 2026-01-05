@@ -19,7 +19,7 @@ const PortfolioPage = () => {
                 <HomePageSeparator/>
             </section>
             <article className="flex flex-column col-12 flex-alignItems-center pt-50">
-                <h4 className="page_sec-headers">Le Nicchie  (Restaurant Rebrand)</h4>
+                <h4 className="page_sec-headers">Le Nicchie (Restaurant Rebrand)</h4>
                 <p className="col-12 col-md-11 col-lg-10 col-xl-9 page_paragraphText">
                     Located in the heart of Bari, Italy, Le Nicchie embodies timeless sophistication and modern Italian elegance. 
                     I led a complete visual refresh for the restaurant, 
@@ -135,7 +135,7 @@ const PortfolioPage = () => {
             </article>
 
             <article className="flex flex-column col-12 flex-alignItems-center mt-50 pt-40">
-                <h4 className="page_sec-headers">Biophilic x Bauhaus  (Poster Design)</h4>
+                <h4 className="page_sec-headers">Biophilic x Bauhaus (Poster Design)</h4>
                 <p className="col-12 col-md-11 col-lg-10 col-xl-9 page_paragraphText">
                     This client was in search of a poster that had an organic flow of biophilic design with the geometric precision of Bauhaus principles, 
                     creating a balanced study of nature and form. 
@@ -445,16 +445,16 @@ const PortfolioPage = () => {
                 <p className="col-12 col-md-11 col-lg-10 col-xl-9 page_paragraphTitle my-10">
                     Let’s create something beautiful! . Reach out Now!
                 </p>
-                <p id="scheduleText" className="mt-50 mb-10">Schedule your complimentary Discover Call TODAY!</p>
-                    <ButtonScribble 
-                        className="primaryBtn-vr1 mt-50" 
-                        to={'/contact'} 
-                        scribbleShift="50px"
-                        buttonBg="var(--black-dahlia-white)"
-                        lineColor="var(--alternative-black)"
-                    >
-                        BOOK NOW
-                    </ButtonScribble>
+                <p id="scheduleText" className="col-12 mt-50 mb-10 text-center">Schedule your complimentary Discovery Call TODAY!</p>
+                <ButtonScribble 
+                    className="primaryBtn-vr1 mt-50" 
+                    to={'/contact'} 
+                    scribbleShift="50px"
+                    buttonBg="var(--black-dahlia-white)"
+                    lineColor="var(--alternative-black)"
+                >
+                    BOOK NOW
+                </ButtonScribble>
                 
             </article>
 

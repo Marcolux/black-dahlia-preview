@@ -224,6 +224,7 @@ const ContactPage = () => {
                             name="project_budget"
                             onChange={(value) => setBudget(value)}
                             options={[
+                                { value: "$0-$1000", label: "$0-$1000" },
                                 { value: "$1,000-$2000", label: "$1,000-$2000" },
                                 { value: "$3,000-$4000", label: "$3,000-$4000" },
                                 { value: "$5,000 + above", label: "$5,000 + above" },
