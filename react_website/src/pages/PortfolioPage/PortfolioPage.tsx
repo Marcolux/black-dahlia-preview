@@ -14,10 +14,124 @@ const PortfolioPage = () => {
                 <Mandala/>
                 <HomePageSeparator/>
                 <div className="flex flex-column py-20 col-12 flex-alignItems-center">
-                    <h1 className="page_sub-headers text-center">MOST RECENT WORK</h1>
+                    <h1 className="page_sub-headers text-center">Featured projects</h1>
                 </div>
                 <HomePageSeparator/>
             </section>
+            <article className="flex flex-column col-12 flex-alignItems-center pt-50">
+                <h4 className="page_sec-headers">Bravo Cafe (Branding)</h4>
+                <p className="col-12 col-md-11 col-lg-10 col-xl-9 page_paragraphText">
+                    Bravo Café is a luxury Italian café found in the heart of Bari, Italy.
+                    It’s rooted in tradition, ritual, and refined everyday moments.
+                    The brand was designed to capture the essence of Italian café culture.
+                    Where espresso is stood at the bar, conversations linger, and time slows just enough to savor flavor, connection, and atmosphere.
+                    The branding blends warm, earthy tones, elegant typography, and timeless visual details to evoke a sense of elevated comfort.
+                    Inspired by classic Italian cafés and modern European design, the identity balances sophistication with approachability.
+                    From logo design to visual direction, the goal was to create a brand that feels both authentically Italian and quietly luxurious, translating seamlessly across digital spaces, menus, social media, and future physical environments.
+                </p>
+                <div className="flipping-card_wrapper col-12">
+                    
+                    <FlippingCard
+                        classNameWrapper="pricing-card-wrapper"
+                        classNameCard="pricing-card bravoCard"
+                        frontContent={
+                            <img
+                                src={`${process.env.PUBLIC_URL}/images/portfolio/bravo_1_front.webp`}
+                                alt={`Flip Bravo card front 1`}
+                                loading="lazy" 
+                                decoding="async"
+                            />
+                        }
+                        backContent={
+                            <img
+                                src={`${process.env.PUBLIC_URL}/images/portfolio/bravo_1_back.webp`}
+                                alt={`Flip Bravo card back 1`}
+                                loading="lazy" 
+                                decoding="async"
+                            />
+                        }
+                        frontTrigger={ <p className="light">Explore more</p> }
+                        backTrigger={<VectorHome/>}
+                        closeOnOutsideClick={true}
+                        id="card_bravo_1"
+                    />
+                    
+                    <FlippingCard
+                        classNameWrapper="pricing-card-wrapper"
+                        classNameCard="pricing-card bravoCard"
+                        frontContent={
+                            <img
+                                src={`${process.env.PUBLIC_URL}/images/portfolio/bravo_2_front.webp`}
+                                alt={`Flip Bravo card front 2`}
+                                loading="lazy" 
+                                decoding="async"
+                            />
+                        }
+                        backContent={
+                            <img
+                                src={`${process.env.PUBLIC_URL}/images/portfolio/bravo_2_back.webp`}
+                                alt={`Flip Bravo card back 2`}
+                                loading="lazy" 
+                                decoding="async"
+                            />
+                        }
+                        frontTrigger={ <p className="light">Explore more</p> }
+                        backTrigger={<VectorHome/>}
+                        closeOnOutsideClick={true}
+                        id="card_bravo_2"
+                    />
+                    
+                    <FlippingCard
+                        classNameWrapper="pricing-card-wrapper"
+                        classNameCard="pricing-card bravoCard"
+                        frontContent={
+                            <img
+                                src={`${process.env.PUBLIC_URL}/images/portfolio/bravo_3_front.webp`}
+                                alt={`Flip Bravo card front 3`}
+                                loading="lazy" 
+                                decoding="async"
+                            />
+                        }
+                        backContent={
+                            <img
+                                src={`${process.env.PUBLIC_URL}/images/portfolio/bravo_3_back.webp`}
+                                alt={`Flip Bravo card back 3`}
+                                loading="lazy" 
+                                decoding="async"
+                            />
+                        }
+                        frontTrigger={ <p className="light">Explore more</p> }
+                        backTrigger={<VectorHome/>}
+                        closeOnOutsideClick={true}
+                        id="card_bravo_3"
+                    />
+                    
+                    <FlippingCard
+                        classNameWrapper="pricing-card-wrapper"
+                        classNameCard="pricing-card bravoCard"
+                        frontContent={
+                            <img
+                                src={`${process.env.PUBLIC_URL}/images/portfolio/bravo_4_front.webp`}
+                                alt={`Flip Bravo card front 4`}
+                                loading="lazy" 
+                                decoding="async"
+                            />
+                        }
+                        backContent={
+                            <img
+                                src={`${process.env.PUBLIC_URL}/images/portfolio/bravo_4_back.webp`}
+                                alt={`Flip Bravo card back 4`}
+                                loading="lazy" 
+                                decoding="async"
+                            />
+                        }
+                        frontTrigger={ <p className="light">Explore more</p> }
+                        backTrigger={<VectorHome/>}
+                        closeOnOutsideClick={true}
+                        id="card_bravo_4"
+                    />
+                </div>
+            </article>
             <article className="flex flex-column col-12 flex-alignItems-center pt-50">
                 <h4 className="page_sec-headers">Le Nicchie (Restaurant Rebrand)</h4>
                 <p className="col-12 col-md-11 col-lg-10 col-xl-9 page_paragraphText">
