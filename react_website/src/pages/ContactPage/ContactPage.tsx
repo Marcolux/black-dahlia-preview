@@ -118,7 +118,7 @@ const ContactPage = () => {
                             <input
                                 placeholder="Your Full Name"
                                 ref={nameRef}
-                                className="inputText"
+                                className={`inputText ${ showErrors && !name ? "inputError" : "" }`}
                                 type="text"
                                 id="form_name"
                                 name="form_name"
@@ -145,7 +145,7 @@ const ContactPage = () => {
                             </label>
                             <input
                                 placeholder="you@youremail.com"
-                                className={`inputText ${ email && !isEmailValid ? "inputError" : "" }`}
+                                className={`inputText ${ showErrors && !isEmailValid ? "inputError" : "" }`}
                                 type="email"
                                 id="email_address"
                                 name="email_address"
@@ -244,7 +244,6 @@ const ContactPage = () => {
                     </div>
                 </div>
 
-
                 {/* Message */}
                 <div className="flex flex-column">
                     <label htmlFor="message" className="mb-5">
@@ -252,7 +251,7 @@ const ContactPage = () => {
                     </label>
                     <textarea
                         // rows={5}
-                        className="inputText p-5"
+                        className={`inputText p-5 ${ showErrors && !message ? "inputError" : "" }`}
                         id="message"
                         name="message"
                         value={message}
