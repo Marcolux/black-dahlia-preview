@@ -29,7 +29,7 @@ const AboutPage = () => {
                     
                     <p className="text-right">Hey There!</p>
                     <div className="flex m-25 p-25" id="pic">
-                        <img  src={`${process.env.PUBLIC_URL}/images/about-page/BlackDahliaTrishPic.png`} alt="Black Dahlia Trish"/>
+                        <img  src={`${process.env.PUBLIC_URL}/images/about-page/BlackDahliaTrishPic.webp`} alt="Black Dahlia Trish"/>
                     </div>
                     <p className="text-left pt-50 mt-50">I'm Trish!</p>
                     
