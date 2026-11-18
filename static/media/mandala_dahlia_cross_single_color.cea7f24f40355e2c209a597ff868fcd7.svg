@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600" viewBox="0 0 90 90" fill="none" stroke="#eadfd9" stroke-width="0.4" stroke-linejoin="miter" stroke-miterlimit="10">
+    <defs>
+        <!-- One petal, base at the center (0, 0), tip pointing up -->
+        <g id="single-petal">
+            <path d="M 0 -44 C 0 -44 -11.4 -33.6 -9.7 -19.1 C -8.5 -8.4 0 0 0 0 C 0 0 8.5 -8.4 9.7 -19.1 C 11.4 -33.6 0 -44 0 -44 Z" stroke-width="0.5"/>
+            <path d="M 0 -44 L 0 0" fill="none" stroke-width="0.2"/>
+        </g>
+        <linearGradient id="color-porcelain" gradientUnits="userSpaceOnUse" x1="0" y1="-44" x2="0" y2="0">
+            <stop offset="0" stop-color="#eadfd9" stop-opacity="0"/>
+            <stop offset="1" stop-color="#eadfd9" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient id="fade-porcelain-light" gradientUnits="userSpaceOnUse" x1="0" y1="-44" x2="0" y2="0">
+            <stop offset="0" stop-color="#eadfd9" stop-opacity="0"/>
+            <stop offset="1" stop-color="#eadfd9" stop-opacity="0.5"/>
+        </linearGradient>
+        <linearGradient id="fade-blackberry" gradientUnits="userSpaceOnUse" x1="0" y1="-44" x2="0" y2="0">
+            <stop offset="0" stop-color="#1f1d1d" stop-opacity="0"/>
+            <stop offset="1" stop-color="#1f1d1d" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient id="fade-apricot" gradientUnits="userSpaceOnUse" x1="0" y1="-44" x2="0" y2="0">
+            <stop offset="0" stop-color="#df9b57" stop-opacity="0"/>
+            <stop offset="1" stop-color="#df9b57" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient id="fade-orchid" gradientUnits="userSpaceOnUse" x1="0" y1="-44" x2="0" y2="0">
+            <stop offset="0" stop-color="#be508f" stop-opacity="0"/>
+            <stop offset="1" stop-color="#be508f" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient id="fade-cobalt" gradientUnits="userSpaceOnUse" x1="0" y1="-44" x2="0" y2="0">
+            <stop offset="0" stop-color="#3a4c97" stop-opacity="0"/>
+            <stop offset="1" stop-color="#3a4c97" stop-opacity="1"/>
+        </linearGradient>
+        <!-- A cross: four petals pointing up, right, down and left -->
+        <g id="single-cross">
+            <use xlink:href="#single-petal" fill="url(#fade-porcelain-light)"/>
+            <use xlink:href="#single-petal" transform="rotate(90)" fill="url(#fade-apricot)"/>
+            <use xlink:href="#single-petal" transform="rotate(180)" fill="url(#fade-orchid)"/>
+            <use xlink:href="#single-petal" transform="rotate(270)" fill="url(#fade-cobalt)"/>
+        </g>
+        <g id="single-cross2">
+            <use xlink:href="#single-petal" fill="url(#fade-apricot)"/>
+            <use xlink:href="#single-petal" transform="rotate(90)" fill="url(#fade-orchid)"/>
+            <use xlink:href="#single-petal" transform="rotate(180)" fill="url(#fade-cobalt)"/>
+            <use xlink:href="#single-petal" transform="rotate(270)" fill="url(#fade-porcelain-light)"/>
+        </g>
+        <g id="single-cross3">
+            <use xlink:href="#single-petal" fill="url(#fade-orchid)"/>
+            <use xlink:href="#single-petal" transform="rotate(90)" fill="url(#fade-cobalt)"/>
+            <use xlink:href="#single-petal" transform="rotate(180)" fill="url(#fade-porcelain-light)"/>
+            <use xlink:href="#single-petal" transform="rotate(270)" fill="url(#fade-apricot)"/>
+        </g>
+        <g id="single-cross4">
+            <use xlink:href="#single-petal" fill="url(#fade-cobalt)"/>
+            <use xlink:href="#single-petal" transform="rotate(90)" fill="url(#fade-porcelain-light)"/>
+            <use xlink:href="#single-petal" transform="rotate(180)" fill="url(#fade-apricot)"/>
+            <use xlink:href="#single-petal" transform="rotate(270)" fill="url(#fade-orchid)"/>
+        </g>
+        <g id="single-cross5"> <!-- no fill here: each cross below sets it, so CSS can override it -->
+            <use xlink:href="#single-petal"/>
+            <use xlink:href="#single-petal" transform="rotate(90)"/>
+            <use xlink:href="#single-petal" transform="rotate(180)"/>
+            <use xlink:href="#single-petal" transform="rotate(270)"/>
+        </g>
+        <!-- Fill used by the CSS pulse: see-through at the tip, color toward the center.
+             preview-page.scss animates the stop colors. -->
+        <linearGradient id="pulse-single" gradientUnits="userSpaceOnUse" x1="0" y1="-44" x2="0" y2="0">
+            <stop offset="0" stop-color="#6a6a6b" stop-opacity="0.5"/>
+            <stop offset="1" stop-color="#6a6a6b" stop-opacity="0.7"/>
+        </linearGradient>
+    </defs>
+    <g transform="translate(45 45)">
+        <!-- The cross, then three copies each turned a further 22.5°.
+             Listed back to front: each cross is painted on top of the ones above it. -->
+        <use xlink:href="#single-cross5" transform="rotate(67.5)"  fill-opacity="1" fill="url(#fade-porcelain-light)"/>
+        <use xlink:href="#single-cross5" transform="rotate(22.5)"  fill="url(#fade-porcelain-light)"/>
+        <use xlink:href="#single-cross5" transform="rotate(45)"  fill="url(#fade-porcelain-light)"/>
+        <use xlink:href="#single-cross5"  fill="url(#fade-porcelain-light)"/>
+    </g>
+</svg>
