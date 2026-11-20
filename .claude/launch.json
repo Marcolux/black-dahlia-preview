@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "react-website",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "react_website", "start"],
+      "env": { "BROWSER": "none", "PORT": "3000" },
+      "port": 3000
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+// Registered so the browser can animate them smoothly (color fades, width grows).
+// Each petal reads these, so animating them on one petal changes only that petal.
+@property --petal-color { syntax: '<color>'; inherits: true; initial-value: #eeece9; }
+@property --petal-fill  { syntax: '<color>'; inherits: true; initial-value: transparent; }
+@property --petal-width { syntax: '<number>'; inherits: true; initial-value: 0.4; }
+
+.mandala-dahlia {
+    // Colors the animations move through. Override on .mandala-dahlia (or a parent):
+    //   .footer .mandala-dahlia { --dahlia-accent: gold; }
+    --dahlia-accent: #ffa51d;
+    --dahlia-accent-2: #e91e62;
+    --dahlia-deep: #471927;
+    --dahlia-glow-width: 1;   // how thick a petal gets at the peak of an animation
+
+    display: block;
+    overflow: visible;
+}
+
+.dahlia-petal {
+    fill: none;
+    stroke: #eeece9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    .dahlia-petal__outline {
+        fill: var(--petal-fill);
+        stroke-width: var(--petal-width);
+    }
+    // Midrib and veins stay finer than the outline, in the same proportions as the original
+    .dahlia-petal__midrib { stroke-width: calc(var(--petal-width) * 0.5); }
+    .dahlia-petal__veins  { stroke-width: calc(var(--petal-width) * 0.2); }
+}
+
+// ── wave: a highlight travels around the flower, one petal after another ──────────
+// Each petal starts its cycle a little later (--i = petal number), so the glow moves
+// clockwise. The negative delay starts the wave mid-way, so it's moving on first sight.
+.mandala-dahlia--wave .dahlia-petal {
+    animation: dahlia-wave var(--dahlia-duration) ease-in-out infinite;
+    animation-delay: calc(var(--dahlia-duration) / var(--petal-count) * var(--i) - var(--dahlia-duration));
+}
+
+@keyframes dahlia-wave {
+    0%, 30%, 100% {
+        --petal-color: var(--dahlia-base-color);
+        --petal-width: var(--dahlia-base-width);
+        --petal-fill: transparent;
+    }
+    10% {
+        --petal-color: var(--dahlia-accent);
+        --petal-width: var(--dahlia-glow-width);
+        --petal-fill: rgb(255 165 29 / 0.2);
+    }
+    20% {
+        --petal-color: var(--dahlia-accent-2);
+        --petal-width: 0.7;
+        --petal-fill: rgb(233 30 98 / 0.15);
+    }
+}
+
+// ── pulse: the whole flower breathes through the brand colors together ────────────
+// (the original effect, now also changing the outline color and width)
+.mandala-dahlia--pulse .dahlia-petal {
+    animation: dahlia-pulse var(--dahlia-duration) ease-in-out infinite;
+}
+
+@keyframes dahlia-pulse {
+    0%, 100% { --petal-fill: rgb(106 106 107 / 0.17); --petal-width: 0.55; --petal-color: var(--dahlia-base-color); }
+    35%      { --petal-fill: rgb(193 194 192 / 0.24); --petal-width: 0.55; --petal-color: var(--dahlia-base-color); }
+    42%      { --petal-fill: rgb(255 165 29 / 0.2);   --petal-width: 0.55; --petal-color: var(--dahlia-accent); }
+    50%      { --petal-fill: rgb(71 25 39 / 0.33);    --petal-width: 0.55; --petal-color: var(--dahlia-accent-2); }
+    75%      { --petal-fill: rgb(233 30 98 / 0.2);    --petal-width: 0.55; --petal-color: var(--dahlia-base-color); }
+}
+
+// ── bloom: plays once; petals draw themselves in, one after another ───────────────
+.mandala-dahlia--bloom .dahlia-petal path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: dahlia-draw 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(var(--i) * 60ms);
+}
+.mandala-dahlia--bloom .dahlia-petal .dahlia-petal__outline {
+    // the fill fades in after the line is drawn
+    fill-opacity: 0;
+    animation: dahlia-draw 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+               dahlia-fill-in 0.6s ease-out forwards;
+    animation-delay: calc(var(--i) * 60ms), calc(var(--i) * 60ms + 0.5s);
+}
+
+@keyframes dahlia-draw    { to { stroke-dashoffset: 0; } }
+@keyframes dahlia-fill-in { to { fill-opacity: 1; } }
+
+// Visitors who turn motion off see the flower still, fully drawn
+@media (prefers-reduced-motion: reduce) {
+    .mandala-dahlia .dahlia-petal,
+    .mandala-dahlia .dahlia-petal path {
+        animation: none !important;
+        stroke-dashoffset: 0 !important;
+        fill-opacity: 1 !important;
+    }
+}

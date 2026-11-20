@@ -1,0 +1,8 @@
+<!doctype html><meta charset="utf-8"><title>Mandala exports</title>
+<style>body{margin:0;font:10px sans-serif;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+div{padding:8px;text-align:center;overflow-wrap:anywhere}img{width:100%}.d{background:#1d1d1e;color:#eee}.l{background:#f4f1ee}</style>
+<script>
+const f=['blackberry-porcelain','porcelain-blackberry','brand-strokes','porcelain-fade','blackberry-lines','porcelain-lines'];
+for(const c of ['porcelain','porcelain-light','blackberry','apricot','orchid','cobalt'])f.push('white-fade-'+c,'blackberry-fade-'+c);
+for(const bg of ['d','l'])for(const n of f)document.write(`<div class=${bg}><img src="mandala-dahlia-${n}.svg"><br>${n}</div>`);
+</script>

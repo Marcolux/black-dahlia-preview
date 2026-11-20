@@ -14,7 +14,7 @@ const NavigationBar = () => {
                 <NavLink className="navLinks" to={'/portfolio'}><p>Portfolio</p></NavLink>
                 <NavLink className="navLinks" to={'/contact'}><p>Contact</p></NavLink>
                 <NavLink className="navLinks" to={'/membership'}><p>Membership</p></NavLink>
-            </div>
+                <NavLink className="navLinks" to={'/preview-page'}><p>Preview</p></NavLink>            </div>
         </div>
     )
 }

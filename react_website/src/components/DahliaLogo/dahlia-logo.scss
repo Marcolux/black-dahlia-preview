@@ -1,0 +1,182 @@
+// Timing variables (set from props, with per-animation defaults below):
+//   --dl-stagger   delay between petals
+//   --dl-duration  time each petal takes
+// Each petal carries --i (0–15), its position clockwise from 12:00.
+
+.dahliaLogo {
+    display: block;
+    overflow: visible;
+    fill: none;
+    stroke: var(--dl-stroke, currentColor);
+    stroke-linejoin: miter;
+    stroke-miterlimit: 10;
+
+    &__outline {
+        fill: var(--dl-fill, none);
+        fill-opacity: var(--dl-fill-opacity, 0.55);
+    }
+
+    &__petal {
+        transform-origin: 0 0; // the petal's base, at the center of the flower
+    }
+
+    &--glow {
+        filter: drop-shadow(0 0 1px var(--dl-stroke, currentColor))
+                drop-shadow(0 0 4px var(--dl-stroke, currentColor));
+    }
+
+    // ---- Draw (and Bloom): outlines draw from the tip, then the fill fades in ----
+    &--draw {
+        .dahliaLogo__outline,
+        .dahliaLogo__vein {
+            stroke-dasharray: 1;
+            stroke-dashoffset: 1;
+        }
+        .dahliaLogo__outline {
+            fill-opacity: 0;
+        }
+
+        &.is-active {
+            .dahliaLogo__outline {
+                animation:
+                    dl-draw var(--dl-duration, 0.9s) ease-in-out both,
+                    dl-fill calc(var(--dl-duration, 0.9s) * 0.8) ease-out both;
+                animation-delay:
+                    calc(var(--i) * var(--dl-stagger, 0.12s)),
+                    calc(var(--i) * var(--dl-stagger, 0.12s) + var(--dl-duration, 0.9s) * 0.8);
+            }
+            .dahliaLogo__vein {
+                animation: dl-draw calc(var(--dl-duration, 0.9s) * 0.8) ease-out both;
+                animation-delay: calc(var(--i) * var(--dl-stagger, 0.12s) + var(--dl-duration, 0.9s) * 0.35);
+            }
+        }
+    }
+
+    // ---- Tick: petals pop in one per beat ----
+    &--tick {
+        .dahliaLogo__petal {
+            opacity: 0;
+        }
+        &.is-active .dahliaLogo__petal {
+            animation: dl-pop var(--dl-duration, 0.45s) cubic-bezier(0.34, 1.56, 0.64, 1) both;
+            animation-delay: calc(var(--i) * var(--dl-stagger, 0.22s));
+        }
+    }
+}
+
+// ---- Assemble: one at a time, clockwise from 12:00, each petal floats in ----
+// It starts beyond the window edge in the direction it points (--dist, in logo units,
+// set by the component) and drifts inward, swaying gently like a falling leaf.
+//
+// The glide and the sway run on two separate elements, so the glide is one
+// unbroken slow-down curve (no stop-and-go between keyframes). The sway is a
+// small pendulum that slows at each turn and dies out as the petal lands.
+.dahliaLogo--assemble {
+    .dahliaLogo__flight {
+        opacity: 0;
+    }
+    .dahliaLogo__petal {
+        transform-origin: 0 -22px; // the middle of the petal, so the sway pivots there
+    }
+
+    &.is-active {
+        .dahliaLogo__flight {
+            animation:
+                dl-glide var(--dl-duration, 2s) cubic-bezier(0.25, 0.6, 0.3, 1) both,
+                dl-fade-in calc(var(--dl-duration, 2s) * 0.35) ease-out both;
+            animation-delay:
+                calc(var(--i) * var(--dl-stagger, 0.25s)),
+                calc(var(--i) * var(--dl-stagger, 0.25s));
+        }
+        .dahliaLogo__petal {
+            animation: dl-sway var(--dl-duration, 2s) linear both;
+            animation-delay: calc(var(--i) * var(--dl-stagger, 0.25s));
+        }
+    }
+
+    // Once the last petal (number 15) lands, the whole flower starts turning clockwise.
+    // It speeds up gently for 2s, then keeps one steady turn every 8s.
+    // The speed-up covers 45° along a t² curve, which ends exactly at the steady speed
+    // (2 × 45° / 2s = 45°/s = 360° / 8s), so there is no visible change of pace.
+    &.dahliaLogo--spin.is-active .dahliaLogo__spin {
+        transform-origin: 0 0;
+        --dl-spin-at: calc(15 * var(--dl-stagger, 0.25s) + var(--dl-duration, 2s));
+        animation:
+            dl-spin-up 2s cubic-bezier(0.333, 0, 0.667, 0.333) var(--dl-spin-at) both,
+            dl-spin 8s linear calc(var(--dl-spin-at) + 2s) infinite;
+    }
+}
+
+@keyframes dl-spin-up {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(45deg); }
+}
+
+@keyframes dl-spin {
+    from { transform: rotate(45deg); }
+    to   { transform: rotate(405deg); }
+}
+
+@keyframes dl-glide {
+    from { transform: translateY(calc(var(--dist, 0) * -1px)); }
+    to   { transform: translateY(0); }
+}
+
+@keyframes dl-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes dl-sway {
+    0%   { transform: rotate(9deg);  animation-timing-function: ease-in-out; }
+    32%  { transform: rotate(-5deg); animation-timing-function: ease-in-out; }
+    62%  { transform: rotate(2deg);  animation-timing-function: ease-in-out; }
+    84%  { transform: rotate(-0.6deg); animation-timing-function: ease-in-out; }
+    100% { transform: rotate(0deg); }
+}
+
+// ---- Palette: every petal's fill fades through the brand colors, on a loop ----
+// Lines keep the `color` prop. Fill order: orchid → cobalt → apricot.
+// Porcelain is left out so the fill never matches the white lines,
+// and Blackberry is left out because it is the background color.
+$orchid: #be508f;
+$apricot: #df9b57;
+$cobalt: #3a4c97;
+
+.dahliaLogo--palette.is-active .dahliaLogo__outline {
+    animation: dl-palette-fill var(--dl-duration, 8s) ease-in-out infinite;
+    // a negative delay starts each petal part-way through the cycle, so a stagger makes a wave
+    animation-delay: calc(var(--i) * var(--dl-stagger, 0s) * -1);
+}
+
+@keyframes dl-palette-fill {
+    0%, 100% { fill: $orchid; }
+    33.33%   { fill: $cobalt; }
+    66.67%   { fill: $apricot; }
+}
+
+@keyframes dl-draw {
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes dl-fill {
+    to { fill-opacity: var(--dl-fill-opacity, 0.55); }
+}
+
+@keyframes dl-pop {
+    from { opacity: 0; transform: scale(0.5); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+// Visitors who turn off motion see the finished logo right away
+@media (prefers-reduced-motion: reduce) {
+    .dahliaLogo.is-active * {
+        animation-duration: 1ms !important;
+        animation-delay: 0s !important;
+    }
+    // The color loop and the spin never end, so they are switched off instead of sped up
+    .dahliaLogo--palette.is-active *,
+    .dahliaLogo.is-active .dahliaLogo__spin {
+        animation: none !important;
+    }
+}

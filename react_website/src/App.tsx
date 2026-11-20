@@ -17,6 +17,7 @@ import MembershipPage from './pages/MembershipPage/MembershipPage'
 import PortfolioPage from './pages/PortfolioPage/PortfolioPage'
 import ServicesPage from './pages/ServicesPage/ServicesPage'
 import WebDesignDevPage from './pages/WebDesignDev/WebDesignDev'
+import PreviewPage from './pages/PreviewPage/PreviewPage'
 
 //********** Styles ************/
 import './style/App.scss'
@@ -58,7 +59,7 @@ function App() {
           <Route path="/membership" element={<PageTransition><MembershipPage /></PageTransition>} />
           <Route path="/services/explore-tiers" element={<PageTransition><ExploreTiersPage /></PageTransition>} />
           <Route path="/services/web-design-development" element={<PageTransition><WebDesignDevPage /></PageTransition>} />
-        </Routes>
+          <Route path="/preview-page" element={<PageTransition><PreviewPage /></PageTransition>} />        </Routes>
       </AnimatePresence>
 
       <Footer />

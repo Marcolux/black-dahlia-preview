@@ -1,0 +1,95 @@
+#PreviewPage {
+    background-color: var(--alternative-black);
+    color: var(--black-dahlia-white);
+    // align-items: center;
+    padding: 90px 50px;
+    display: flex;
+    // height: 100%;
+    justify-content: left;
+    overflow-x: hidden;
+    // height: 100dvh;
+    #previewImg3 {
+        // flex: 1;
+        position: relative;
+        height: 100dvh;
+        >svg {
+            // transform: rotate( 90deg);
+            height: 100dvh;
+            position: absolute;
+            left: -53px;
+            use { fill: url(#pulse-color); }
+            #pulse-color stop { animation: dahliaPulse 10s ease-in-out infinite; }
+        }
+    }
+    #previewImg4 {
+        // flex: 1;
+        position: relative;
+        height: 100dvh;
+        >svg {
+            // transform: rotate( 90deg);
+            height: 50dvh;
+            position: absolute;
+            left: -53px;
+            // No pulse here: each petal's color is set inside #cross..#cross4,
+            // and CSS can't reach petals nested that deep. It keeps its fixed colors.
+            // (To pulse it like Dahlia4, add back:
+            //   use { fill: url(#pulse-cross); }
+            //   #pulse-cross stop { animation: dahliaPulse2 10s ease-in-out infinite; }
+            //  and remove the fill="" from the petals inside #cross..#cross4.)
+        }
+    }
+    #previewImg5 {
+        // flex: 1;
+        position: relative;
+        height: 100dvh;
+        .mandalaIntro {
+            width: 600px;   // the mandala fills this box
+            height: 600px;
+        }
+        >svg {
+            // transform: rotate( 90deg);
+            height: 40dvh;
+            use { fill: url(#pulse-single); }
+            #pulse-single stop { animation: dahliaPulse2 10s ease-in-out infinite; }
+        }
+    }
+    #previewImg6 {
+        // flex: 1;
+        position: relative;
+        height: 100dvh;
+        
+    }
+    .mandalaIntro {
+        width: 600px;   // the mandala fills this box
+        height: 600px;
+        .mandala_svg {
+            width: 600px !important;
+            height: 600px !important;
+        }
+    }
+}
+
+// The petals are filled with a gradient (#pulse-*, inside each SVG).
+// CSS can't blend one url(#gradient) into another (it just jumps),
+// but it CAN blend the gradient's stop-color, so we animate that instead.
+@keyframes dahliaPulse {
+    0%, 100% { stop-color: #6a6a6b; }
+    35%      { stop-color: #1f1d1d; } // Blackberry
+    42%      { stop-color: #df9b57; } // Apricot
+    50%      { stop-color: #be508f; } // Orchid
+    75%      { stop-color: #3a4c97; } // Cobalt
+}
+
+@keyframes dahliaPulse2 {
+    0%, 100% { stop-color: #6a6a6b; }
+    35%      { stop-color: #1f1d1d; }
+    42%      { stop-color: #df9b57; }
+    50%      { stop-color: #be508f; }
+    75%      { stop-color: #3a4c97; }
+}
+@media screen and (max-width: 900px) {
+    #PreviewPage {
+        max-width: 100%;
+        padding: 90px 10px;
+    }
+}
