@@ -40,20 +40,21 @@
 }
 
 @keyframes dahlia-wave {
+    // Returns to each petal's own color, width and fill (set per petal in MandalaDahlia.tsx)
     0%, 30%, 100% {
         --petal-color: var(--dahlia-base-color);
         --petal-width: var(--dahlia-base-width);
         --petal-fill: transparent;
     }
     10% {
-        --petal-color: var(--dahlia-accent);
-        --petal-width: var(--dahlia-glow-width);
-        --petal-fill: rgb(255 165 29 / 0.2);
+        --petal-color:  var(--dahlia-base-color);
+        --petal-width: var(--dahlia-base-width);
+        --petal-fill: var(--dahlia-base-fill);
     }
     20% {
-        --petal-color: var(--dahlia-accent-2);
+        --petal-color:  var(--dahlia-base-color);
         --petal-width: 0.7;
-        --petal-fill: rgb(233 30 98 / 0.15);
+        --petal-fill: var(--dahlia-base-fill);
     }
 }
 

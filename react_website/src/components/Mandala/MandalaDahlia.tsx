@@ -54,6 +54,7 @@ const MandalaDahlia = ({
         '--petal-fill': fill,
         '--dahlia-base-color': color,       // where the animations start and return to
         '--dahlia-base-width': strokeWidth,
+        '--dahlia-base-fill': fill,
         '--dahlia-duration': `${duration}s`,
         '--petal-count': PETAL_COUNT,
         ...style,
@@ -73,11 +74,13 @@ const MandalaDahlia = ({
         >
             {Array.from({ length: PETAL_COUNT }, (_, i) => {
                 const own = petals[i] ?? {}
+                // The base values are what the animations return to, so a petal's own
+                // style survives the animation instead of resetting to the root defaults.
                 const petalStyle = {
                     '--i': i,
-                    ...(own.color && { '--petal-color': own.color }),
-                    ...(own.width !== undefined && { '--petal-width': own.width }),
-                    ...(own.fill && { '--petal-fill': own.fill }),
+                    ...(own.color && { '--petal-color': own.color, '--dahlia-base-color': own.color }),
+                    ...(own.width !== undefined && { '--petal-width': own.width, '--dahlia-base-width': own.width }),
+                    ...(own.fill && { '--petal-fill': own.fill, '--dahlia-base-fill': own.fill }),
                 } as CSSProperties
                 return (
                     <g key={i} className="dahlia-petal" transform={`rotate(${i * (360 / PETAL_COUNT)})`} style={petalStyle}>

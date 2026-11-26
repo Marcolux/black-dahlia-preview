@@ -18,6 +18,8 @@ import PortfolioPage from './pages/PortfolioPage/PortfolioPage'
 import ServicesPage from './pages/ServicesPage/ServicesPage'
 import WebDesignDevPage from './pages/WebDesignDev/WebDesignDev'
 import PreviewPage from './pages/PreviewPage/PreviewPage'
+import LabPage from './pages/LabPage/LabPage'
+import ImageConverter from './pages/LabPage/ImageConverterPage'
 
 //********** Styles ************/
 import './style/App.scss'
@@ -59,7 +61,11 @@ function App() {
           <Route path="/membership" element={<PageTransition><MembershipPage /></PageTransition>} />
           <Route path="/services/explore-tiers" element={<PageTransition><ExploreTiersPage /></PageTransition>} />
           <Route path="/services/web-design-development" element={<PageTransition><WebDesignDevPage /></PageTransition>} />
-          <Route path="/preview-page" element={<PageTransition><PreviewPage /></PageTransition>} />        </Routes>
+          <Route path="/preview-page" element={<PageTransition><PreviewPage /></PageTransition>} />
+      
+          <Route path="/lab" element={<PageTransition><LabPage /></PageTransition>} />
+          <Route path="/lab/image-converter" element={<PageTransition><ImageConverter /></PageTransition>} />
+        </Routes>
       </AnimatePresence>
 
       <Footer />
