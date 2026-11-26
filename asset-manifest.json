@@ -1,11 +1,8 @@
 {
   "files": {
-    "main.css": "/black-dahlia-preview/static/css/main.94ab99ca.css",
-    "main.js": "/black-dahlia-preview/static/js/main.e1ba1da1.js",
-    "static/css/485.a9622aa8.chunk.css": "/black-dahlia-preview/static/css/485.a9622aa8.chunk.css",
-    "static/js/485.e39f3d47.chunk.js": "/black-dahlia-preview/static/js/485.e39f3d47.chunk.js",
-    "static/js/453.c428c4c4.chunk.js": "/black-dahlia-preview/static/js/453.c428c4c4.chunk.js",
-    "static/js/236.f10378ab.chunk.js": "/black-dahlia-preview/static/js/236.f10378ab.chunk.js",
+    "main.css": "/black-dahlia-preview/static/css/main.651a965a.css",
+    "main.js": "/black-dahlia-preview/static/js/main.3a7f1261.js",
+    "static/js/453.a85ed1fb.chunk.js": "/black-dahlia-preview/static/js/453.a85ed1fb.chunk.js",
     "static/media/Inter-Regular.ttf": "/black-dahlia-preview/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
     "static/media/PlayfairDisplay-VariableFont_wght.ttf": "/black-dahlia-preview/static/media/PlayfairDisplay-VariableFont_wght.bf46a6bcddc9999a295e.ttf",
     "static/media/Nunito-VariableFont_wght.ttf": "/black-dahlia-preview/static/media/Nunito-VariableFont_wght.f55558447983dc135e34.ttf",
@@ -28,15 +25,12 @@
     "static/media/Arrow 23.svg": "/black-dahlia-preview/static/media/Arrow 23.0e23bd6cf6c21bfddf0e11b2a4b8195d.svg",
     "static/media/vector_home_page.svg": "/black-dahlia-preview/static/media/vector_home_page.c3d2a58a069ba6b2fcb523a5bf419083.svg",
     "static/media/circlesSmScreen.svg": "/black-dahlia-preview/static/media/circlesSmScreen.3060f3b976eef97b19809c0915807df1.svg",
-    "main.94ab99ca.css.map": "/black-dahlia-preview/static/css/main.94ab99ca.css.map",
-    "main.e1ba1da1.js.map": "/black-dahlia-preview/static/js/main.e1ba1da1.js.map",
-    "485.a9622aa8.chunk.css.map": "/black-dahlia-preview/static/css/485.a9622aa8.chunk.css.map",
-    "485.e39f3d47.chunk.js.map": "/black-dahlia-preview/static/js/485.e39f3d47.chunk.js.map",
-    "453.c428c4c4.chunk.js.map": "/black-dahlia-preview/static/js/453.c428c4c4.chunk.js.map",
-    "236.f10378ab.chunk.js.map": "/black-dahlia-preview/static/js/236.f10378ab.chunk.js.map"
+    "main.651a965a.css.map": "/black-dahlia-preview/static/css/main.651a965a.css.map",
+    "main.3a7f1261.js.map": "/black-dahlia-preview/static/js/main.3a7f1261.js.map",
+    "453.a85ed1fb.chunk.js.map": "/black-dahlia-preview/static/js/453.a85ed1fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.94ab99ca.css",
-    "static/js/main.e1ba1da1.js"
+    "static/css/main.651a965a.css",
+    "static/js/main.3a7f1261.js"
   ]
 }
